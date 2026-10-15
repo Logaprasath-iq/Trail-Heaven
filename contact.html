@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — TrailHaven Gear Advisors & Support Desk</title>
+  <meta name="description" content="Reach the TrailHaven expedition advisory desk in Chennai, Tamil Nadu. Connect for technical gear inquiries, order tracking, bulk trekking packs, and warranties.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/favicon.png">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            forest: { DEFAULT: '#263C2D', dark: '#1A2B20', light: '#37533F' },
+            orange: { DEFAULT: '#D77A3C', dark: '#BF652A', light: '#E0894F' },
+            sand: { DEFAULT: '#C6AD83', light: '#E8DECF', dark: '#A88F66' },
+            cream: { DEFAULT: '#F5F1E8', card: '#FFFFFF', dark: '#181C19' },
+            charcoal: '#222622'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-[#F5F1E8] dark:bg-[#181C19] text-[#1D241E] dark:text-[#F4EFE6] transition-colors duration-300">
+
+  <!-- STICKY NAVBAR -->
+  <header id="main-navbar" class="sticky top-0 z-40 bg-[#F5F1E8]/95 dark:bg-[#181C19]/95 backdrop-blur-md border-b border-[#E2DACB] dark:border-[#2D372F] py-3.5 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between gap-4">
+        <!-- Brand Logo with Adaptive Dark/Light Mode Typography -->
+        <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 flex-shrink-0 group" aria-label="TrailHaven Home">
+          <div class="w-11 sm:w-12 h-11 sm:h-12 rounded-xl bg-white dark:bg-[#222823] border border-[#E2DACB] dark:border-[#333C34] flex items-center justify-center p-1 shadow-sm flex-shrink-0 group-hover:border-[#D77A3C] transition-colors">
+            <img src="assets/images/trailhaven-emblem.png" alt="TrailHaven Compass Logo" class="h-9 sm:h-10 w-9 sm:w-10 object-contain rounded-lg group-hover:scale-105 transition-transform flex-shrink-0">
+          </div>
+          <div class="flex flex-col justify-center select-none">
+            <div class="flex items-baseline tracking-tight font-black leading-none font-display">
+              <span class="text-xl sm:text-2xl font-black text-black dark:text-white transition-colors duration-200">TRAIL</span><span class="text-xl sm:text-2xl font-black text-[#D77A3C]">HAVEN</span>
+            </div>
+            <div class="flex items-center gap-1.5 my-0.5">
+              <span class="h-[2px] w-5 sm:w-6 bg-[#D77A3C] rounded-full"></span>
+              <span class="h-1.5 w-1.5 rounded-full bg-[#C6AD83]"></span>
+              <span class="h-[1.5px] w-12 sm:w-16 bg-[#C6AD83]/70 rounded-full"></span>
+            </div>
+            <span class="text-[7.5px] sm:text-[8.5px] font-bold tracking-[0.2em] sm:tracking-[0.24em] uppercase text-black dark:text-white transition-colors duration-200 leading-none">
+              GEAR TODAY. GREATER TOMORROWS.
+            </span>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-5 xl:gap-6 text-sm font-semibold" aria-label="Main Navigation">
+          <!-- Home Dropdown -->
+          <div class="relative group" id="home-dropdown-nav">
+            <button class="nav-link text-forest dark:text-cream flex items-center gap-1.5 py-1 font-semibold group-hover:text-orange transition-colors" aria-expanded="false" aria-haspopup="true">
+              <span>Home</span>
+              <i class="fa-solid fa-chevron-down text-[10px] text-gray-400 group-hover:text-orange group-hover:rotate-180 transition-transform duration-200"></i>
+            </button>
+            <div class="absolute top-full left-0 mt-1.5 w-48 bg-[#F5F1E8] dark:bg-[#1E2420] rounded-2xl shadow-xl border border-[#E2DACB] dark:border-[#2D372F] p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <a href="index.html" class="block p-2.5 rounded-xl hover:bg-sand/20 dark:hover:bg-sand/10 text-xs font-bold text-forest dark:text-cream hover:text-orange transition">
+                <div>Home</div>
+                <div class="text-[10px] font-normal text-gray-500">Expedition Theme</div>
+              </a>
+              <div class="my-1 border-t border-[#E2DACB] dark:border-[#2D372F]"></div>
+              <a href="home2.html" class="block p-2.5 rounded-xl hover:bg-sand/20 dark:hover:bg-sand/10 text-xs font-bold text-forest dark:text-cream hover:text-orange transition">
+                <div>Home 2</div>
+                <div class="text-[10px] font-normal text-gray-500">Wilderness Theme</div>
+              </a>
+            </div>
+          </div>
+          <a href="about.html" class="nav-link text-forest dark:text-cream">About</a>
+          <a href="products.html" class="nav-link text-forest dark:text-cream">Products</a>
+          <a href="buying-guides.html" class="nav-link text-forest dark:text-cream">Buying Guides</a>
+          <a href="gallery.html" class="nav-link text-forest dark:text-cream">Gallery</a>
+          <a href="pricing.html" class="nav-link text-forest dark:text-cream">Pricing</a>
+          <a href="blog.html" class="nav-link text-forest dark:text-cream">Blog</a>
+          <a href="contact.html" class="nav-link text-forest dark:text-cream">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-2 sm:gap-3">
+          <button class="open-search-btn p-2 rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass text-forest dark:text-sand text-base"></i>
+          </button>
+          <button class="theme-toggle-btn p-2 rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Switch theme">
+            <i class="fa-solid fa-sun text-amber-400 text-base theme-icon-sun hidden"></i>
+            <i class="fa-solid fa-moon text-forest dark:text-sand text-base theme-icon-moon"></i>
+          </button>
+          <!-- Direction (RTL / LTR) Toggle with Double Arrow Symbol -->
+          <button class="dir-toggle-btn px-2.5 py-1 rounded-lg text-xs font-bold border border-sand hover:bg-sand/20 dark:hover:bg-sand/10 transition inline-flex items-center gap-1.5" aria-label="Toggle text direction">
+            <i class="fa-solid fa-right-left text-[11px] dir-arrow-icon text-forest dark:text-sand"></i>
+            <span class="dir-label text-forest dark:text-sand">RTL</span>
+          </button>
+          <a href="wishlist.html" class="relative p-2 rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Wishlist">
+            <i class="fa-regular fa-heart text-forest dark:text-sand text-base"></i>
+            <span class="wishlist-count-badge hidden absolute -top-1 -right-1 bg-rose-500 text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">0</span>
+          </a>
+          <a href="order.html" class="relative p-2 rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Cart">
+            <i class="fa-solid fa-cart-shopping text-forest dark:text-sand text-base"></i>
+            <span class="cart-count-badge hidden absolute -top-1 -right-1 bg-orange text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">0</span>
+          </a>
+          <button id="mobile-menu-toggle" class="lg:hidden p-2 rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Mobile menu">
+            <i class="fa-solid fa-bars text-xl text-forest dark:text-cream"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer-backdrop" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden opacity-0 transition-opacity"></div>
+  <aside id="mobile-nav-drawer" class="fixed top-0 right-0 z-50 w-80 max-w-[85vw] h-full bg-[#F5F1E8] dark:bg-[#181C19] border-l border-[#E2DACB] dark:border-[#2D372F] p-6 shadow-2xl flex flex-col justify-between transform translate-x-full transition-transform duration-300">
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-[#E2DACB] dark:border-[#2D372F] mb-6">
+        <a href="index.html"><img src="assets/images/trailhaven-logo.svg" alt="TrailHaven" class="h-9 w-auto"></a>
+        <button id="mobile-drawer-close" class="p-2 text-gray-500 hover:text-white"><i class="fa-solid fa-xmark text-xl"></i></button>
+      </div>
+      <nav class="flex flex-col space-y-2 font-semibold text-base">
+        <!-- Home Accordion -->
+        <div class="border-b border-[#E2DACB]/60 dark:border-[#2D372F]/60 pb-2 mb-2">
+          <button id="mobile-home-toggle" class="w-full flex items-center justify-between py-2 px-3 rounded-lg hover:bg-sand/20 font-semibold text-base text-forest dark:text-cream transition">
+            <span class="flex items-center gap-2"><i class="fa-solid fa-house text-xs text-orange"></i> Home</span>
+            <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200" id="mobile-home-chevron"></i>
+          </button>
+          <div id="mobile-home-submenu" class="pl-4 pt-1 space-y-1">
+            <a href="index.html" class="mobile-nav-link block py-1.5 px-3 rounded-lg text-sm text-gray-700 dark:text-gray-300 hover:text-orange">
+              <div class="font-semibold">Home</div>
+              <div class="text-xs font-normal text-gray-500">Expedition Theme</div>
+            </a>
+            <div class="my-1 border-t border-[#E2DACB]/60 dark:border-[#2D372F]/60"></div>
+            <a href="home2.html" class="mobile-nav-link block py-1.5 px-3 rounded-lg text-sm text-gray-700 dark:text-gray-300 hover:text-orange">
+              <div class="font-semibold">Home 2</div>
+              <div class="text-xs font-normal text-gray-500">Wilderness Theme</div>
+            </a>
+          </div>
+        </div>
+        <a href="about.html" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-sand/20">About TrailHaven</a>
+        <a href="products.html" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-sand/20">Products Catalog</a>
+        <a href="buying-guides.html" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-sand/20">Buying Guides</a>
+        <a href="gallery.html" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-sand/20">Expedition Gallery</a>
+        <a href="pricing.html" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-sand/20">Gear Bundles</a>
+        <a href="blog.html" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-sand/20">Field Journal</a>
+        <a href="contact.html" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-sand/20">Contact Us</a>
+        <a href="wishlist.html" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-sand/20">Saved Wishlist</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-[#E2DACB] dark:border-[#2D372F] text-xs text-gray-500 space-y-1">
+      <div>Location: <strong class="text-forest dark:text-sand">Chennai, Tamil Nadu</strong></div>
+      <div>Support: <strong class="text-forest dark:text-sand">+91 98401 23456</strong></div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- SECTION 1: CONTACT HERO -->
+    <section class="relative py-14 sm:py-20 bg-forest text-white overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img src="assets/images/contact.jpg" 
+             alt="Mountain Valley Trail and Expedition Outpost" 
+             class="w-full h-full object-cover">
+        <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(22, 38, 27, 0.85) 0%, rgba(15, 24, 18, 0.92) 100%);"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-3xl mx-auto flex flex-col items-center">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-sand/20 border border-sand/40 text-sand mb-3 drop-shadow">
+            <i class="fa-solid fa-headset text-orange"></i> TrailHaven Field Desk
+          </div>
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-black font-display mt-1 mb-4 leading-tight drop-shadow-md">
+            We Are Here for Your Next Expedition
+          </h1>
+          <p class="text-sm sm:text-base text-sand font-medium leading-relaxed max-w-2xl mx-auto mb-6 drop-shadow-sm">
+            Have questions about tent weather ratings, backpack torso sizing, monsoon gear maintenance, or corporate expedition orders? Reach out to our technical specialists based in Chennai, Tamil Nadu.
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-4 text-xs">
+            <div class="flex items-center gap-2 bg-white/10 px-3.5 py-2 rounded-xl backdrop-blur-sm border border-white/10">
+              <i class="fa-solid fa-clock text-orange"></i>
+              <span>Mon – Sat: 9:00 AM – 8:00 PM IST</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white/10 px-3.5 py-2 rounded-xl backdrop-blur-sm border border-white/10">
+              <i class="fa-solid fa-bolt text-amber-400"></i>
+              <span>Avg Response Time: &lt; 4 Hours</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: CUSTOMER SUPPORT CHANNELS -->
+    <section class="py-12 bg-white dark:bg-[#1E2420] border-b border-[#E2DACB] dark:border-[#2D372F]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Channel 1: Phone -->
+          <div class="card-theme p-6 rounded-2xl border border-[#E2DACB] dark:border-[#2D372F] flex flex-col justify-between hover:border-orange transition group">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-forest/10 dark:bg-forest text-forest dark:text-sand flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <h3 class="font-bold text-base text-forest dark:text-cream mb-1">Direct Helpline</h3>
+              <p class="text-xs text-gray-500 mb-3">Speak directly with an equipment specialist during business hours.</p>
+              <div class="text-sm font-black text-orange">+91 98401 23456</div>
+            </div>
+            <div class="pt-4 mt-4 border-t border-[#E2DACB] dark:border-[#2D372F]">
+              <a href="tel:+919840123456" class="text-xs font-bold text-forest dark:text-sand hover:text-orange flex items-center gap-1">
+                Call Now <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Channel 2: WhatsApp -->
+          <div class="card-theme p-6 rounded-2xl border border-[#E2DACB] dark:border-[#2D372F] flex flex-col justify-between hover:border-emerald-500 transition group">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-600 flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <h3 class="font-bold text-base text-forest dark:text-cream mb-1">WhatsApp Chat</h3>
+              <p class="text-xs text-gray-500 mb-3">Quick photos of trail wear, order queries, and instant sizing advice.</p>
+              <div class="text-sm font-black text-emerald-600 dark:text-emerald-400">Available 7 Days</div>
+            </div>
+            <div class="pt-4 mt-4 border-t border-[#E2DACB] dark:border-[#2D372F]">
+              <a href="https://wa.me/919840123456?text=Hi%20TrailHaven,%20I%20would%20like%20to%20inquire%20about%20outdoor%20gear" target="_blank" rel="noopener" class="text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center gap-1">
+                Chat on WhatsApp <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Channel 3: Email -->
+          <div class="card-theme p-6 rounded-2xl border border-[#E2DACB] dark:border-[#2D372F] flex flex-col justify-between hover:border-orange transition group">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-orange/10 dark:bg-orange/20 text-orange flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <h3 class="font-bold text-base text-forest dark:text-cream mb-1">Email Advisory</h3>
+              <p class="text-xs text-gray-500 mb-3">Send detailed trip itineraries, corporate enquiries, or warranty claims.</p>
+              <div class="text-xs font-bold text-forest dark:text-sand truncate">support@trailhavenoutdoor.com</div>
+            </div>
+            <div class="pt-4 mt-4 border-t border-[#E2DACB] dark:border-[#2D372F]">
+              <a href="mailto:support@trailhavenoutdoor.com" class="text-xs font-bold text-forest dark:text-sand hover:text-orange flex items-center gap-1">
+                Send Email <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Channel 4: Headquarters Location -->
+          <div class="card-theme p-6 rounded-2xl border border-[#E2DACB] dark:border-[#2D372F] flex flex-col justify-between hover:border-sand transition group">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-sand/20 dark:bg-sand/10 text-sand-dark dark:text-sand flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <h3 class="font-bold text-base text-forest dark:text-cream mb-1">Fulfillment Hub</h3>
+              <p class="text-xs text-gray-500 mb-3">Central distribution, technical testing workshop, and customer service.</p>
+              <div class="text-xs font-bold text-forest dark:text-sand">Chennai, Tamil Nadu, India</div>
+            </div>
+            <div class="pt-4 mt-4 border-t border-[#E2DACB] dark:border-[#2D372F]">
+              <a href="#map-section" class="text-xs font-bold text-forest dark:text-sand hover:text-orange flex items-center gap-1">
+                View on Map <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3 & 4: CONTACT ENQUIRY FORM & LOCATION PROFILE -->
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          
+          <!-- SECTION 3: ENQUIRY FORM (7 COLS) -->
+          <div class="lg:col-span-7">
+            <div class="card-theme p-6 sm:p-10 rounded-3xl border border-[#E2DACB] dark:border-[#2D372F] shadow-sm">
+              <div class="mb-8">
+                <span class="text-xs font-bold uppercase tracking-wider text-orange">Send an Enquiry</span>
+                <h2 class="text-2xl sm:text-3xl font-black font-display text-forest dark:text-cream mt-1">
+                  Connect With Gear Specialists
+                </h2>
+                <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-2">
+                  Have a specific gear question, need advice on choosing between two sleeping bag temperature ratings, or want to check stock availability in Chennai? Fill out the details below.
+                </p>
+              </div>
+
+              <!-- Interactive Form handled by forms.js -->
+              <form id="contact-enquiry-form" class="space-y-5" novalidate>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label for="contact-name" class="block text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-300 mb-1.5">
+                      Full Name <span class="text-orange">*</span>
+                    </label>
+                    <input type="text" id="contact-name" name="name" required placeholder="e.g. Ramesh Krishnan"
+                           class="w-full px-4 py-3 rounded-xl bg-white dark:bg-black/30 border border-[#D5C9B3] dark:border-[#2D372F] text-sm text-[var(--color-text-main)] placeholder-gray-400 focus:outline-none focus:border-orange focus:ring-1 focus:ring-orange transition">
+                  </div>
+                  <div>
+                    <label for="contact-email" class="block text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-300 mb-1.5">
+                      Email Address <span class="text-orange">*</span>
+                    </label>
+                    <input type="email" id="contact-email" name="email" required placeholder="e.g. ramesh@gmail.com"
+                           class="w-full px-4 py-3 rounded-xl bg-white dark:bg-black/30 border border-[#D5C9B3] dark:border-[#2D372F] text-sm text-[var(--color-text-main)] placeholder-gray-400 focus:outline-none focus:border-orange focus:ring-1 focus:ring-orange transition">
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label for="contact-phone" class="block text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-300 mb-1.5">
+                      Phone Number <span class="text-orange">*</span>
+                    </label>
+                    <input type="tel" id="contact-phone" name="phone" required placeholder="e.g. +91 98401 23456"
+                           class="w-full px-4 py-3 rounded-xl bg-white dark:bg-black/30 border border-[#D5C9B3] dark:border-[#2D372F] text-sm text-[var(--color-text-main)] placeholder-gray-400 focus:outline-none focus:border-orange focus:ring-1 focus:ring-orange transition">
+                  </div>
+                  <div>
+                    <label for="contact-subject" class="block text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-300 mb-1.5">
+                      Subject / Topic <span class="text-orange">*</span>
+                    </label>
+                    <select id="contact-subject" name="subject" required
+                            class="w-full px-4 py-3 rounded-xl bg-white dark:bg-[#1E2420] border border-[#D5C9B3] dark:border-[#2D372F] text-sm text-[var(--color-text-main)] focus:outline-none focus:border-orange focus:ring-1 focus:ring-orange transition">
+                      <option value="" class="bg-white dark:bg-[#1A201C] text-[#1D241E] dark:text-[#F4EFE6]">Select an enquiry category...</option>
+                      <option value="Product Advice & Sizing" class="bg-white dark:bg-[#1A201C] text-[#1D241E] dark:text-[#F4EFE6]">Product Advice & Sizing</option>
+                      <option value="Order Tracking & Delivery" class="bg-white dark:bg-[#1A201C] text-[#1D241E] dark:text-[#F4EFE6]">Order Tracking & Delivery</option>
+                      <option value="Bulk / Expedition Group Order" class="bg-white dark:bg-[#1A201C] text-[#1D241E] dark:text-[#F4EFE6]">Bulk / Expedition Group Order</option>
+                      <option value="3-Year Warranty & Repairs" class="bg-white dark:bg-[#1A201C] text-[#1D241E] dark:text-[#F4EFE6]">3-Year Warranty & Repairs</option>
+                      <option value="Return & Trial Policy" class="bg-white dark:bg-[#1A201C] text-[#1D241E] dark:text-[#F4EFE6]">Return & Trial Policy</option>
+                      <option value="Other Question" class="bg-white dark:bg-[#1A201C] text-[#1D241E] dark:text-[#F4EFE6]">Other Question</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label for="contact-message" class="block text-xs font-bold uppercase tracking-wider text-gray-700 dark:text-gray-300 mb-1.5">
+                    Your Message / Gear Query <span class="text-orange">*</span>
+                  </label>
+                  <textarea id="contact-message" name="message" rows="5" required placeholder="Please provide details about your upcoming trek, gear requirements, or specific question..."
+                            class="w-full px-4 py-3 rounded-xl bg-white dark:bg-black/30 border border-[#D5C9B3] dark:border-[#2D372F] text-sm text-[var(--color-text-main)] placeholder-gray-400 focus:outline-none focus:border-orange focus:ring-1 focus:ring-orange transition"></textarea>
+                  <p class="text-[11px] text-gray-500 mt-1">Minimum 15 characters required for comprehensive field review.</p>
+                </div>
+
+                <!-- Prototype Note -->
+                <div class="p-3.5 bg-sand/15 dark:bg-sand/5 rounded-xl border border-sand/30 text-xs text-gray-600 dark:text-gray-400 flex items-start gap-2.5">
+                  <i class="fa-solid fa-shield-halved text-orange text-sm mt-0.5 flex-shrink-0"></i>
+                  <span>Your enquiry is encrypted and handled under strict privacy standards. We never share customer contact details with third-party marketing brokers.</span>
+                </div>
+
+                <button type="submit" class="w-full btn-primary py-3.5 justify-center text-sm font-bold shadow-md hover:shadow-lg">
+                  <i class="fa-solid fa-paper-plane mr-2"></i> Submit Gear Enquiry
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- SECTION 4: LOCATION & OPERATIONAL PROFILE (5 COLS) -->
+          <div class="lg:col-span-5 space-y-6">
+            
+            <div class="card-theme p-6 sm:p-8 rounded-3xl border border-[#E2DACB] dark:border-[#2D372F]">
+              <span class="text-xs font-bold uppercase tracking-wider text-orange">Operational Hub</span>
+              <h3 class="text-xl font-bold font-display text-forest dark:text-cream mt-1 mb-4">
+                TrailHaven Brand Headquarters
+              </h3>
+              
+              <div class="space-y-4 text-xs sm:text-sm text-gray-600 dark:text-gray-300">
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-orange/15 text-orange flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i class="fa-solid fa-building"></i>
+                  </div>
+                  <div>
+                    <strong class="text-forest dark:text-cream block">Registered Office & Fulfillment Center:</strong>
+                    <span>Chennai, Tamil Nadu, India</span>
+                    <p class="text-[11px] text-gray-500 mt-0.5">Official address maintained in Chennai corporate records.</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i class="fa-solid fa-truck-fast"></i>
+                  </div>
+                  <div>
+                    <strong class="text-forest dark:text-cream block">Pan-India Dispatch Reach:</strong>
+                    <span>Air express shipping to Mumbai, Delhi NCR, Bangalore, Pune, Kolkata, and 19,000+ Indian PIN codes within 2–4 business days.</span>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <div class="w-8 h-8 rounded-lg bg-sand/30 text-forest dark:text-sand flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <i class="fa-solid fa-compass"></i>
+                  </div>
+                  <div>
+                    <strong class="text-forest dark:text-cream block">Pack-Fitting Consultations:</strong>
+                    <span>In-person backpack torso fitting and tent pitching demonstrations available by prior appointment at our Chennai facility.</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6 pt-6 border-t border-[#E2DACB] dark:border-[#2D372F] flex flex-col sm:flex-row gap-3">
+                <a href="https://wa.me/919840123456?text=Hi%20TrailHaven,%20I%20would%20like%20to%20book%20a%20gear%20consultation" 
+                   target="_blank" rel="noopener" class="flex-1 btn-secondary text-xs py-2.5 justify-center">
+                  <i class="fa-brands fa-whatsapp text-emerald-600 mr-1.5"></i> Book Appointment
+                </a>
+                <a href="products.html" class="flex-1 btn-outline text-xs py-2.5 justify-center">
+                  Browse Catalog
+                </a>
+              </div>
+            </div>
+
+            <!-- Fast Contact Badge Card -->
+            <div class="bg-forest text-cream p-6 sm:p-8 rounded-3xl shadow-md relative overflow-hidden">
+              <div class="relative z-10">
+                <span class="text-xs font-bold uppercase tracking-wider text-orange">Trekking Organizers & Clubs</span>
+                <h4 class="text-lg font-bold font-display mt-1 mb-2">Planning a Group Himalayan Expedition?</h4>
+                <p class="text-xs text-sand/90 leading-relaxed mb-4">
+                  We supply subsidized expedition tents, rucksacks, and cookware bundles for collegiate mountaineering clubs, guided trail companies, and non-profit outdoor trusts.
+                </p>
+                <a href="pricing.html" class="inline-flex items-center gap-2 text-xs font-bold text-orange hover:underline">
+                  View Expedition Packages <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+              <div class="absolute -right-6 -bottom-6 w-32 h-32 rounded-full bg-sand/10 pointer-events-none"></div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: RESPONSIVE OPENSTREETMAP LOCATION EMBED -->
+    <section id="map-section" class="py-12 bg-[#EFE9DC] dark:bg-[#151916] border-y border-[#E2DACB] dark:border-[#2D372F]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+          <div>
+            <div class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-orange">
+              <i class="fa-solid fa-map-location-dot"></i> Interactive Coordinates
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-black font-display text-forest dark:text-cream mt-1">
+              Chennai Headquarters & Distribution Base
+            </h2>
+            <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-1">
+              Centrally situated in Chennai, Tamil Nadu, India — supporting seamless dispatch across South India and nationwide.
+            </p>
+          </div>
+          <div class="flex items-center gap-3">
+            <a href="https://www.openstreetmap.org/?mlat=13.0827&mlon=80.2707#map=12/13.0827/80.2707" 
+               target="_blank" rel="noopener" class="btn-secondary text-xs py-2 px-3.5">
+              <i class="fa-solid fa-arrow-up-right-from-square text-orange mr-1.5"></i> Open in OpenStreetMap
+            </a>
+            <a href="https://maps.google.com/?q=Chennai,+Tamil+Nadu,+India" 
+               target="_blank" rel="noopener" class="btn-outline text-xs py-2 px-3.5">
+              <i class="fa-brands fa-google mr-1.5"></i> Google Maps
+            </a>
+          </div>
+        </div>
+
+        <!-- Embedded Map Frame -->
+        <div class="rounded-3xl overflow-hidden border border-[#D5C9B3] dark:border-[#2D372F] shadow-lg bg-gray-200 dark:bg-black/40 h-80 sm:h-96 w-full relative">
+          <iframe 
+            title="TrailHaven Chennai Location Map"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=80.15%2C12.98%2C80.32%2C13.15&amp;layer=mapnik&amp;marker=13.0827%2C80.2707" 
+            class="w-full h-full border-0"
+            loading="lazy">
+          </iframe>
+          
+          <!-- Map Overlay Badge -->
+          <div class="absolute bottom-4 left-4 right-4 sm:right-auto sm:max-w-xs bg-forest/90 dark:bg-black/90 backdrop-blur-md text-white p-4 rounded-2xl shadow-xl border border-sand/30">
+            <div class="flex items-center gap-2 text-xs font-bold text-orange mb-1">
+              <i class="fa-solid fa-compass"></i> TrailHaven Operations Hub
+            </div>
+            <div class="text-sm font-black text-cream">Chennai, Tamil Nadu, India</div>
+            <div class="text-[11px] text-gray-300 mt-1">Pin: 600001 (HQ Service Zone)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: FREQUENTLY ASKED ADVISORY QUESTIONS (UNIFIED DETAILS ACCORDION) -->
+    <section id="faq-section" class="py-20 bg-[#F5F1E8] dark:bg-[#181C19]">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <span class="text-xs font-bold uppercase tracking-widest text-orange">Quick Answers</span>
+          <h2 class="text-3xl font-black font-display text-forest dark:text-cream mt-1">
+            Frequently Asked Advisory Questions
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-2">
+            Clear answers about domestic shipping timelines, trial periods, and equipment maintenance.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          
+          <details class="group bg-white dark:bg-[#202621] p-5 rounded-2xl border border-[#E2DACB] dark:border-[#2D372F]">
+            <summary class="flex justify-between items-center font-bold text-forest dark:text-cream cursor-pointer text-sm sm:text-base">
+              <span>What are the shipping timelines for orders across India?</span>
+              <i class="fa-solid fa-chevron-down text-orange text-xs group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mt-3 leading-relaxed">
+              Orders placed before 2:00 PM IST are dispatched the same day from our Chennai hub. Deliveries within South India (Chennai, Bangalore, Hyderabad, Kochi) typically arrive within 24 to 48 hours. Shipments to Mumbai, Pune, Delhi NCR, and Kolkata take 2 to 4 business days via BlueDart and Delhivery Express. We provide live tracking updates via WhatsApp and SMS for every dispatch.
+            </p>
+          </details>
+
+          <details class="group bg-white dark:bg-[#202621] p-5 rounded-2xl border border-[#E2DACB] dark:border-[#2D372F]">
+            <summary class="flex justify-between items-center font-bold text-forest dark:text-cream cursor-pointer text-sm sm:text-base">
+              <span>What is the TrailHaven 14-day Trail Trial and return policy?</span>
+              <i class="fa-solid fa-chevron-down text-orange text-xs group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mt-3 leading-relaxed">
+              You are welcome to pitch your tent in your living room, pack your rucksack with ballast weight, and test sleeping bag warmth in comfort. If the fit, volume, or dimensions are not right for your torso or trip requirements, return or exchange it within 14 days in clean, unsoiled condition with original tags intact for a 100% refund or instant exchange.
+            </p>
+          </details>
+
+          <details class="group bg-white dark:bg-[#202621] p-5 rounded-2xl border border-[#E2DACB] dark:border-[#2D372F]">
+            <summary class="flex justify-between items-center font-bold text-forest dark:text-cream cursor-pointer text-sm sm:text-base">
+              <span>How does the 3-Year TrailHaven Field Warranty work?</span>
+              <i class="fa-solid fa-chevron-down text-orange text-xs group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mt-3 leading-relaxed">
+              Every primary TrailHaven product (tents, backpacks, sleeping bags, and titanium stoves) carries a comprehensive 3-year warranty against manufacturing defects, zipper failures, pole snapping under rated wind conditions, and seam-tape degradation. If accidental rock tearing occurs during an extreme expedition, our Chennai workshop offers subsidized lifetime repairs with original Cordura fabric patches.
+            </p>
+          </details>
+
+          <details class="group bg-white dark:bg-[#202621] p-5 rounded-2xl border border-[#E2DACB] dark:border-[#2D372F]">
+            <summary class="flex justify-between items-center font-bold text-forest dark:text-cream cursor-pointer text-sm sm:text-base">
+              <span>Do you offer discounts for educational trekking clubs and NCC cadets?</span>
+              <i class="fa-solid fa-chevron-down text-orange text-xs group-open:rotate-180 transition-transform"></i>
+            </summary>
+            <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mt-3 leading-relaxed">
+              Yes. We believe youth mountaineering creates environmentally conscious citizens. Accredited university mountaineering clubs, Indian Mountaineering Foundation (IMF) trainees, and certified mountain guides are eligible for a 15% institutional discount across all expedition hardware. Please submit your request via the form above with the subject "Bulk / Expedition Group Order".
+            </p>
+          </details>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: NEWSLETTER & CTA STRIP -->
+    <section class="py-16 bg-[#263C2D] text-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="text-xs font-bold uppercase tracking-widest text-orange">Stay Connected</span>
+        <h2 class="text-2xl sm:text-3xl font-black font-display mt-2 mb-4">
+          Join 24,000+ Backcountry Trekkers Across India
+        </h2>
+        <p class="text-xs sm:text-sm text-sand max-w-xl mx-auto mb-8">
+          Subscribe to Trail Dispatches for seasonal trail condition alerts in the Western Ghats & Himalayas, member-only gear drops, and practical field guides.
+        </p>
+
+        <!-- Functional Newsletter Form validated by forms.js -->
+        <form class="newsletter-form max-w-md mx-auto flex flex-col sm:flex-row gap-3">
+          <input type="email" required placeholder="Enter your email address..."
+                 class="flex-1 px-4 py-3 rounded-xl bg-white/10 border border-sand/40 text-white placeholder-gray-300 text-sm focus:outline-none focus:border-orange">
+          <button type="submit" class="btn-primary py-3 px-6 justify-center text-sm font-bold shadow-md">
+            Subscribe Free
+          </button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- CONSISTENT BRAND FOOTER -->
+            <!-- FOOTER (Premium 4-Column Boutique Aesthetic) -->
+  <footer class="bg-[#181B18] text-[#F5F1E8] pt-16 pb-10 border-t border-[#29302A]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 pb-12">
+        
+        <!-- Column 1: Brand, Mission & Socials -->
+        <div>
+          <a href="index.html" class="inline-flex items-center gap-2.5 sm:gap-3 mb-4 group" aria-label="TrailHaven Home">
+            <div class="w-11 sm:w-12 h-11 sm:h-12 rounded-xl bg-[#222823] border border-[#333C34] flex items-center justify-center p-1 shadow-sm flex-shrink-0 group-hover:border-[#D77A3C] transition-colors">
+              <img src="assets/images/trailhaven-emblem.png" alt="TrailHaven Compass Logo" class="h-9 sm:h-10 w-9 sm:w-10 object-contain rounded-lg group-hover:scale-105 transition-transform flex-shrink-0">
+            </div>
+            <div class="flex flex-col justify-center select-none">
+              <div class="flex items-baseline tracking-tight font-black leading-none font-display">
+                <span class="text-xl sm:text-2xl font-black text-white">TRAIL</span><span class="text-xl sm:text-2xl font-black text-[#D77A3C]">HAVEN</span>
+              </div>
+              <div class="flex items-center gap-1.5 my-0.5">
+                <span class="h-[2px] w-5 sm:w-6 bg-[#D77A3C] rounded-full"></span>
+                <span class="h-1.5 w-1.5 rounded-full bg-[#C6AD83]"></span>
+                <span class="h-[1.5px] w-12 sm:w-16 bg-[#C6AD83]/70 rounded-full"></span>
+              </div>
+              <span class="text-[7.5px] sm:text-[8.5px] font-bold tracking-[0.2em] sm:tracking-[0.24em] uppercase text-[#F5F1E8] leading-none">
+                GEAR TODAY. GREATER TOMORROWS.
+              </span>
+            </div>
+          </a>
+          <p class="text-xs text-gray-400 leading-relaxed mb-6 max-w-sm">
+            A dedicated sanctuary for expedition-grade camping equipment, Leave No Trace conservation ethics, and field-tested outdoor survival gear engineered for Indian terrains and beyond.
+          </p>
+          <div class="flex items-center gap-2.5">
+            <a href="https://wa.me/919840123456?text=Hi%20TrailHaven,%20I%20would%20like%20to%20inquire%20about%20outdoor%20gear" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-[#222823] border border-[#333C34] hover:bg-[#25D366] hover:border-[#25D366] group flex items-center justify-center transition-all duration-200" aria-label="WhatsApp TrailHaven">
+              <svg class="w-4 h-4 fill-current text-[#25D366] group-hover:text-white transition-colors" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+            </a>
+            <a href="https://instagram.com/trailhaven.outdoor" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-[#222823] border border-[#333C34] hover:bg-[#E4405F] hover:border-[#E4405F] group flex items-center justify-center transition-all duration-200" aria-label="Instagram">
+              <svg class="w-4 h-4 fill-current text-[#E4405F] group-hover:text-white transition-colors" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+            </a>
+            <a href="https://twitter.com/trailhaven_gear" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-[#222823] border border-[#333C34] hover:bg-white hover:border-white group flex items-center justify-center transition-all duration-200" aria-label="Twitter X">
+              <svg class="w-3.5 h-3.5 fill-current text-white group-hover:text-black transition-colors" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+            </a>
+            <a href="https://facebook.com/trailhavenoutdoor" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-[#222823] border border-[#333C34] hover:bg-[#1877F2] hover:border-[#1877F2] group flex items-center justify-center transition-all duration-200" aria-label="Facebook">
+              <svg class="w-3.5 h-4 fill-current text-[#1877F2] group-hover:text-white transition-colors" viewBox="0 0 320 512"><path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Catalog & Store -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-white mb-4">CATALOG & STORE</h4>
+          <ul class="space-y-2.5 text-xs text-gray-400">
+            <li><a href="index.html" class="hover:text-[#D77A3C] transition">Home (Expedition)</a></li>
+            <li><a href="home2.html" class="hover:text-[#D77A3C] transition">Home 2 (Wilderness)</a></li>
+            <li><a href="products.html" class="hover:text-[#D77A3C] transition">Shop Gear Catalog</a></li>
+            <li><a href="products.html?cat=tents" class="hover:text-[#D77A3C] transition">Tents & Shelters</a></li>
+            <li><a href="gallery.html" class="hover:text-[#D77A3C] transition">Visual Gallery</a></li>
+            <li><a href="pricing.html" class="hover:text-[#D77A3C] transition">Pricing & Gear Bundles</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Customer Support -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-white mb-4">CUSTOMER SUPPORT</h4>
+          <ul class="space-y-2.5 text-xs text-gray-400">
+            <li><a href="order.html" class="hover:text-[#D77A3C] transition">Your Bag & Orders</a></li>
+            <li><a href="contact.html#faq-section" class="hover:text-[#D77A3C] transition">Shipping & Delivery Info</a></li>
+            <li><a href="about.html#quality" class="hover:text-[#D77A3C] transition">Return & Warranty Policy</a></li>
+            <li><a href="contact.html#faq-section" class="hover:text-[#D77A3C] transition">Frequently Asked Questions</a></li>
+            <li><a href="buying-guides.html" class="hover:text-[#D77A3C] transition">Outdoor Gear Guides</a></li>
+            <li><a href="contact.html" class="hover:text-[#D77A3C] transition">Help & Inquiries</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Chennai Lounge / Outpost -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-white mb-4">CHENNAI OUTPOST</h4>
+          <div class="text-xs text-gray-400 space-y-1 leading-relaxed">
+            <p class="text-white font-medium">TrailHaven Flagship Outpost</p>
+            <p>28 Khader Nawaz Khan Road, Nungambakkam</p>
+            <p>Chennai, Tamil Nadu, India - 600006</p>
+            <div class="pt-3 space-y-1.5">
+              <p><span class="text-white font-medium">Hours:</span> 10:00 AM – 9:00 PM</p>
+              <p><span class="text-white font-semibold">WhatsApp:</span> <a href="https://wa.me/919840123456?text=Hi%20TrailHaven,%20I%20would%20like%20to%20inquire%20about%20outdoor%20gear" target="_blank" rel="noopener" class="text-gray-300 hover:text-[#D77A3C] transition" dir="ltr">+91 98401 23456</a></p>
+              <p><span class="text-white font-semibold">Email:</span> <a href="mailto:support@trailhavenoutdoor.com" class="text-gray-300 hover:text-[#D77A3C] transition">support@trailhavenoutdoor.com</a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Divider & Copyright -->
+      <div class="border-t border-[#29302A] pt-8 text-center">
+        <p class="text-xs text-gray-500">© 2026 TrailHaven Outdoor Equipment. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/direction.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/wishlist.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script src="assets/js/forms.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

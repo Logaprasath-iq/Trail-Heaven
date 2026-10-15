@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%" fill="none">
+  <!-- Outer Compass Ring -->
+  <circle cx="50" cy="50" r="47" stroke="#C6AD83" stroke-width="3" fill="#263C2D"/>
+  <circle cx="50" cy="50" r="41" stroke="#F5F1E8" stroke-width="1.2" stroke-dasharray="3,3" opacity="0.45"/>
+
+  <!-- Compass Degree Ticks -->
+  <line x1="50" y1="3" x2="50" y2="9" stroke="#D77A3C" stroke-width="3" stroke-linecap="round"/>
+  <line x1="97" y1="50" x2="91" y2="50" stroke="#C6AD83" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="50" y1="97" x2="50" y2="91" stroke="#C6AD83" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="3" y1="50" x2="9" y2="50" stroke="#C6AD83" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Mountain Peaks Silhouette -->
+  <!-- Back Peak (Right) -->
+  <polygon points="46,46 68,23 88,60 70,60" fill="#3D5A45"/>
+  <polygon points="68,23 88,60 68,60" fill="#263C2D"/>
+  <polygon points="68,23 62,32 68,35 74,32" fill="#F5F1E8"/>
+
+  <!-- Main Front Peak (Center-Left) -->
+  <polygon points="17,68 44,14 67,68 42,68" fill="#4B6A54"/>
+  <polygon points="44,14 44,68 67,68" fill="#1C2E22"/>
+  <polygon points="44,14 36,26 44,30 52,26" fill="#FFFFFF"/>
+  <!-- Far Left Peak -->
+  <polygon points="12,68 26,43 42,68" fill="#324B39"/>
+
+  <!-- Winding Adventure Trail -->
+  <path d="M44,52 C45,58 38,64 42,72 C46,80 36,88 34,94" stroke="#D77A3C" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+  <path d="M44,52 C45,58 38,64 42,72 C46,80 36,88 34,94" stroke="#FFF0E5" stroke-width="1" stroke-dasharray="2,2" fill="none"/>
+
+  <!-- North Compass Pointer (Orange) -->
+  <polygon points="50,6 54,20 50,17" fill="#D77A3C"/>
+  <polygon points="50,6 46,20 50,17" fill="#BD5D22"/>
+  <!-- South Pointer -->
+  <polygon points="50,94 53,82 50,85" fill="#C6AD83"/>
+  <polygon points="50,94 47,82 50,85" fill="#A88F66"/>
+  <!-- East Pointer -->
+  <polygon points="94,50 82,47 85,50" fill="#C6AD83"/>
+  <polygon points="94,50 82,53 85,50" fill="#A88F66"/>
+  <!-- West Pointer -->
+  <polygon points="6,50 18,47 15,50" fill="#C6AD83"/>
+  <polygon points="6,50 18,53 15,50" fill="#A88F66"/>
+
+  <!-- Cardinal N -->
+  <text x="50" y="11" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="7" font-weight="900" fill="#FFFFFF" text-anchor="middle">N</text>
+</svg>

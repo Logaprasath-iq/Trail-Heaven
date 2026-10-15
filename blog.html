@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Trail Journal — TrailHaven Outdoor Dispatches</title>
+  <meta name="description" content="Field dispatches, expedition logs, camping tips, gear reviews, and Western Ghats & Himalayan hiking destinations.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/favicon.png">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            forest: { DEFAULT: '#263C2D', dark: '#1A2B20', light: '#37533F' },
+            orange: { DEFAULT: '#D77A3C', dark: '#BF652A', light: '#E0894F' },
+            sand: { DEFAULT: '#C6AD83', light: '#E8DECF', dark: '#A88F66' },
+            cream: { DEFAULT: '#F5F1E8', card: '#FFFFFF', dark: '#181C19' },
+            charcoal: '#222622'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-[#F5F1E8] dark:bg-[#181C19] text-[#1D241E] dark:text-[#F4EFE6] transition-colors duration-300">
+
+  <!-- STICKY NAVBAR -->
+  <header id="main-navbar" class="sticky top-0 z-40 bg-[#F5F1E8]/95 dark:bg-[#181C19]/95 backdrop-blur-md border-b border-[#E2DACB] dark:border-[#2D372F] py-3.5 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between gap-4">
+        <!-- Brand Logo with Adaptive Dark/Light Mode Typography -->
+        <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 flex-shrink-0 group" aria-label="TrailHaven Home">
+          <div class="w-11 sm:w-12 h-11 sm:h-12 rounded-xl bg-white dark:bg-[#222823] border border-[#E2DACB] dark:border-[#333C34] flex items-center justify-center p-1 shadow-sm flex-shrink-0 group-hover:border-[#D77A3C] transition-colors">
+            <img src="assets/images/trailhaven-emblem.png" alt="TrailHaven Compass Logo" class="h-9 sm:h-10 w-9 sm:w-10 object-contain rounded-lg group-hover:scale-105 transition-transform flex-shrink-0">
+          </div>
+          <div class="flex flex-col justify-center select-none">
+            <div class="flex items-baseline tracking-tight font-black leading-none font-display">
+              <span class="text-xl sm:text-2xl font-black text-black dark:text-white transition-colors duration-200">TRAIL</span><span class="text-xl sm:text-2xl font-black text-[#D77A3C]">HAVEN</span>
+            </div>
+            <div class="flex items-center gap-1.5 my-0.5">
+              <span class="h-[2px] w-5 sm:w-6 bg-[#D77A3C] rounded-full"></span>
+              <span class="h-1.5 w-1.5 rounded-full bg-[#C6AD83]"></span>
+              <span class="h-[1.5px] w-12 sm:w-16 bg-[#C6AD83]/70 rounded-full"></span>
+            </div>
+            <span class="text-[7.5px] sm:text-[8.5px] font-bold tracking-[0.2em] sm:tracking-[0.24em] uppercase text-black dark:text-white transition-colors duration-200 leading-none">
+              GEAR TODAY. GREATER TOMORROWS.
+            </span>
+          </div>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-5 xl:gap-6 text-sm font-semibold" aria-label="Main Navigation">
+          <!-- Home Dropdown -->
+          <div class="relative group" id="home-dropdown-nav">
+            <button class="nav-link text-forest dark:text-cream flex items-center gap-1.5 py-1 font-semibold group-hover:text-orange transition-colors" aria-expanded="false" aria-haspopup="true">
+              <span>Home</span>
+              <i class="fa-solid fa-chevron-down text-[10px] text-gray-400 group-hover:text-orange group-hover:rotate-180 transition-transform duration-200"></i>
+            </button>
+            <div class="absolute top-full left-0 mt-1.5 w-48 bg-[#F5F1E8] dark:bg-[#1E2420] rounded-2xl shadow-xl border border-[#E2DACB] dark:border-[#2D372F] p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <a href="index.html" class="block p-2.5 rounded-xl hover:bg-sand/20 dark:hover:bg-sand/10 text-xs font-bold text-forest dark:text-cream hover:text-orange transition">
+                <div>Home</div>
+                <div class="text-[10px] font-normal text-gray-500">Expedition Theme</div>
+              </a>
+              <div class="my-1 border-t border-[#E2DACB] dark:border-[#2D372F]"></div>
+              <a href="home2.html" class="block p-2.5 rounded-xl hover:bg-sand/20 dark:hover:bg-sand/10 text-xs font-bold text-forest dark:text-cream hover:text-orange transition">
+                <div>Home 2</div>
+                <div class="text-[10px] font-normal text-gray-500">Wilderness Theme</div>
+              </a>
+            </div>
+          </div>
+          <a href="about.html" class="nav-link text-forest dark:text-cream">About</a>
+          <a href="products.html" class="nav-link text-forest dark:text-cream">Products</a>
+          <a href="buying-guides.html" class="nav-link text-forest dark:text-cream">Buying Guides</a>
+          <a href="gallery.html" class="nav-link text-forest dark:text-cream">Gallery</a>
+          <a href="pricing.html" class="nav-link text-forest dark:text-cream">Pricing</a>
+          <a href="blog.html" class="nav-link text-forest dark:text-cream">Blog</a>
+          <a href="contact.html" class="nav-link text-forest dark:text-cream">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-2 sm:gap-3">
+          <button class="open-search-btn p-2 rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass text-forest dark:text-sand text-base"></i>
+          </button>
+          <button class="theme-toggle-btn p-2 rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Switch theme">
+            <i class="fa-solid fa-sun text-amber-400 text-base theme-icon-sun hidden"></i>
+            <i class="fa-solid fa-moon text-forest dark:text-sand text-base theme-icon-moon"></i>
+          </button>
+          <!-- Direction (RTL / LTR) Toggle with Double Arrow Symbol -->
+          <button class="dir-toggle-btn px-2.5 py-1 rounded-lg text-xs font-bold border border-sand hover:bg-sand/20 dark:hover:bg-sand/10 transition inline-flex items-center gap-1.5" aria-label="Toggle text direction">
+            <i class="fa-solid fa-right-left text-[11px] dir-arrow-icon text-forest dark:text-sand"></i>
+            <span class="dir-label text-forest dark:text-sand">RTL</span>
+          </button>
+          <a href="wishlist.html" class="relative p-2 rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Wishlist">
+            <i class="fa-regular fa-heart text-forest dark:text-sand text-base"></i>
+            <span class="wishlist-count-badge hidden absolute -top-1 -right-1 bg-rose-500 text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">0</span>
+          </a>
+          <a href="order.html" class="relative p-2 rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Cart">
+            <i class="fa-solid fa-cart-shopping text-forest dark:text-sand text-base"></i>
+            <span class="cart-count-badge hidden absolute -top-1 -right-1 bg-orange text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">0</span>
+          </a>
+          <button id="mobile-menu-toggle" class="lg:hidden p-2 rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Mobile menu">
+            <i class="fa-solid fa-bars text-xl text-forest dark:text-cream"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-drawer-backdrop" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden opacity-0 transition-opacity"></div>
+  <aside id="mobile-nav-drawer" class="fixed top-0 right-0 z-50 w-80 max-w-[85vw] h-full bg-[#F5F1E8] dark:bg-[#181C19] border-l border-[#E2DACB] dark:border-[#2D372F] p-6 shadow-2xl flex flex-col justify-between transform translate-x-full transition-transform duration-300">
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-[#E2DACB] dark:border-[#2D372F] mb-6">
+        <a href="index.html"><img src="assets/images/trailhaven-logo.svg" alt="TrailHaven" class="h-9 w-auto"></a>
+        <button id="mobile-drawer-close" class="p-2 text-gray-500 hover:text-white"><i class="fa-solid fa-xmark text-xl"></i></button>
+      </div>
+      <nav class="flex flex-col space-y-2 font-semibold text-base">
+        <!-- Home Accordion -->
+        <div class="border-b border-[#E2DACB]/60 dark:border-[#2D372F]/60 pb-2 mb-2">
+          <button id="mobile-home-toggle" class="w-full flex items-center justify-between py-2 px-3 rounded-lg hover:bg-sand/20 font-semibold text-base text-forest dark:text-cream transition">
+            <span class="flex items-center gap-2"><i class="fa-solid fa-house text-xs text-orange"></i> Home</span>
+            <i class="fa-solid fa-chevron-down text-xs transition-transform duration-200" id="mobile-home-chevron"></i>
+          </button>
+          <div id="mobile-home-submenu" class="pl-4 pt-1 space-y-1">
+            <a href="index.html" class="mobile-nav-link block py-1.5 px-3 rounded-lg text-sm text-gray-700 dark:text-gray-300 hover:text-orange">
+              <div class="font-semibold">Home</div>
+              <div class="text-xs font-normal text-gray-500">Expedition Theme</div>
+            </a>
+            <div class="my-1 border-t border-[#E2DACB]/60 dark:border-[#2D372F]/60"></div>
+            <a href="home2.html" class="mobile-nav-link block py-1.5 px-3 rounded-lg text-sm text-gray-700 dark:text-gray-300 hover:text-orange">
+              <div class="font-semibold">Home 2</div>
+              <div class="text-xs font-normal text-gray-500">Wilderness Theme</div>
+            </a>
+          </div>
+        </div>
+        <a href="about.html" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-sand/20">About TrailHaven</a>
+        <a href="products.html" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-sand/20">Products Catalog</a>
+        <a href="buying-guides.html" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-sand/20">Buying Guides</a>
+        <a href="gallery.html" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-sand/20">Expedition Gallery</a>
+        <a href="pricing.html" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-sand/20">Gear Bundles</a>
+        <a href="blog.html" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-sand/20">Field Journal</a>
+        <a href="contact.html" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-sand/20">Contact Us</a>
+        <a href="wishlist.html" class="mobile-nav-link py-2 px-3 rounded-lg hover:bg-sand/20">Saved Wishlist</a>
+      </nav>
+    </div>
+    <div class="pt-6 border-t border-[#E2DACB] dark:border-[#2D372F] text-xs text-gray-500 space-y-1">
+      <div>Location: <strong class="text-forest dark:text-sand">Chennai, Tamil Nadu</strong></div>
+      <div>Support: <strong class="text-forest dark:text-sand">+91 98401 23456</strong></div>
+    </div>
+  </aside>
+
+  <main>
+    <!-- SECTION 1: BLOG HERO & SEARCH -->
+    <section class="relative py-14 sm:py-20 bg-forest text-white overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1920&q=85" 
+             alt="Misty Pine Forest Canopy and Hiking Pathway" 
+             class="w-full h-full object-cover hero-bg-parallax" data-parallax>
+        <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(22, 38, 27, 0.85) 0%, rgba(15, 24, 18, 0.92) 100%);"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-3xl mx-auto flex flex-col items-center">
+          <span class="text-xs font-bold uppercase tracking-widest text-orange drop-shadow">Field Dispatches</span>
+          <h1 class="text-3xl sm:text-4xl md:text-5xl font-black font-display mt-2 mb-4 leading-tight drop-shadow-md">
+            The TrailHaven Journal & Field Notes
+          </h1>
+          <p class="text-sm sm:text-base text-sand font-medium leading-relaxed max-w-2xl mx-auto mb-6 drop-shadow-sm">
+            Chronicles of remote expeditions, ultralight wilderness packing strategies, backcountry culinary masterclasses, and trekking destinations across India.
+          </p>
+
+          <!-- Working search bar within blog (Centered) -->
+          <div class="max-w-md w-full relative mx-auto">
+            <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-sand text-sm z-10 pointer-events-none"></i>
+            <input type="text" id="blog-search-input" placeholder="Search articles by title, region, or topic..."
+                   class="w-full pl-10 pr-4 py-3 rounded-xl bg-white/15 border border-sand/50 text-white placeholder-gray-200 text-sm focus:outline-none focus:border-orange shadow-md backdrop-blur-md">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: FEATURED ARTICLE SPOTLIGHT BANNER -->
+    <section class="py-12 bg-white dark:bg-[#202621] border-b border-[#E2DACB] dark:border-[#2D372F]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="card-theme p-6 sm:p-10 rounded-3xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#F5F1E8]/50 dark:bg-black/20" data-tilt>
+          <div class="lg:col-span-7 rounded-2xl overflow-hidden shadow-xl aspect-[16/10] bg-gray-200">
+            <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=85" alt="Western Ghats Monsoon" class="w-full h-full object-cover">
+          </div>
+          <div class="lg:col-span-5 space-y-4">
+            <div class="flex items-center gap-2">
+              <span class="badge-orange uppercase font-bold">Featured Story</span>
+              <span class="text-xs text-gray-500">• 6 min read</span>
+            </div>
+            <h2 class="text-2xl sm:text-3xl font-black font-display text-forest dark:text-cream leading-tight">
+              Top 7 Dramatic Monsoon Treks in the Western Ghats for 2026
+            </h2>
+            <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+              From the misty ridges of Kudremukh to the cascading roaring waterfalls of Dudhsagar, explore the most awe-inspiring tropical routes with mandatory safety protocols.
+            </p>
+            <div class="pt-2 flex items-center justify-between">
+              <span class="text-xs text-gray-400">By Kavitha Natarajan • Oct 5, 2026</span>
+              <a href="blog-details.html?id=top-western-ghats-treks" class="btn-primary text-xs py-2.5 px-4">
+                Read Full Story <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: LATEST ARTICLES GRID -->
+    <section class="py-16 bg-[#F5F1E8] dark:bg-[#181C19]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between mb-10">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-widest text-orange">Fresh Publications</span>
+            <h2 class="text-2xl sm:text-3xl font-black font-display text-forest dark:text-cream mt-1">
+              Latest Articles & Dispatches
+            </h2>
+          </div>
+          <span class="text-xs text-gray-500" id="blog-count-display">Showing 9 articles</span>
+        </div>
+
+        <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Article 1: Ultralight Packing -->
+          <article class="card-theme overflow-hidden flex flex-col justify-between group" data-tilt>
+            <div>
+              <div class="img-zoom-container h-52 bg-gray-200">
+                <img src="https://i.pinimg.com/1200x/c7/0f/72/c70f7219bc5e2930683e5255cc7f0e1c.jpg" alt="Ultralight Packing" class="w-full h-full object-cover">
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-[10px] font-bold text-orange uppercase tracking-wider">Gear Tips</span>
+                  <span class="text-xs text-gray-500">• 8 min read</span>
+                </div>
+                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors">
+                  <a href="blog-details.html?id=ultralight-packing-secrets">Drop 5 Kilos: The Art of Ultralight Wilderness Backpacking</a>
+                </h3>
+                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-2">
+                  Trimming base weight does not mean sacrificing comfort. How modern titanium, silnylon, and smart multi-use gear revolutionize trekking.
+                </p>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <a href="blog-details.html?id=ultralight-packing-secrets" class="text-xs font-bold text-orange flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                Read More <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 2: Camp Cooking -->
+          <article class="card-theme overflow-hidden flex flex-col justify-between group" data-tilt>
+            <div>
+              <div class="img-zoom-container h-52 bg-gray-200">
+                <img src="https://i.pinimg.com/736x/5f/77/bf/5f77bfa81550eb143020224c99244fa4.jpg" alt="Camp Cooking" class="w-full h-full object-cover">
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-[10px] font-bold text-orange uppercase tracking-wider">Camp Life</span>
+                  <span class="text-xs text-gray-500">• 5 min read</span>
+                </div>
+                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors">
+                  <a href="blog-details.html?id=camp-cooking-gourmet">Beyond Instant Noodles: Camp Chef Techniques for Forest Feasts</a>
+                </h3>
+                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-2">
+                  Elevate your backcountry cuisine with pre-mixed spice blends, cast-iron campfire magic, and titanium boiling methods.
+                </p>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <a href="blog-details.html?id=camp-cooking-gourmet" class="text-xs font-bold text-orange flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                Read More <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 3: Cold Weather Camping -->
+          <article class="card-theme overflow-hidden flex flex-col justify-between group" data-tilt>
+            <div>
+              <div class="img-zoom-container h-52 bg-gray-200">
+                <img src="https://i.pinimg.com/1200x/32/d5/ed/32d5ed04af4bb984d3095862a07a2b83.jpg" alt="Winter Camping" class="w-full h-full object-cover">
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-[10px] font-bold text-orange uppercase tracking-wider">Alpine Trekking</span>
+                  <span class="text-xs text-gray-500">• 7 min read</span>
+                </div>
+                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors">
+                  <a href="blog-details.html?id=cold-weather-camping-tricks">10 Winter Camping Tricks to Stay Warm in Sub-Zero Alpine Winds</a>
+                </h3>
+                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-2">
+                  Hard-won wisdom from high-altitude Himalayan winter bivouacs. Keep your toes toasty and your water bottle unfrozen.
+                </p>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <a href="blog-details.html?id=cold-weather-camping-tricks" class="text-xs font-bold text-orange flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                Read More <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 4: Hiking Footwear -->
+          <article class="card-theme overflow-hidden flex flex-col justify-between group" data-tilt>
+            <div>
+              <div class="img-zoom-container h-52 bg-gray-200">
+                <img src="https://i.pinimg.com/1200x/6e/16/e2/6e16e24fee15633cfc6fea929d0e46b8.jpg" alt="Footwear Guide" class="w-full h-full object-cover">
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-[10px] font-bold text-orange uppercase tracking-wider">Gear Reviews</span>
+                  <span class="text-xs text-gray-500">• 6 min read</span>
+                </div>
+                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors">
+                  <a href="blog-details.html?id=hiking-boots-vs-trail-runners">Trail Runners vs. Stiff Hiking Boots: The Modern Trekker's Dilemma</a>
+                </h3>
+                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-2">
+                  Which is superior for Indian trails? We compare ankle support, breathability, drying time, and weight penalty.
+                </p>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <a href="blog-details.html?id=hiking-boots-vs-trail-runners" class="text-xs font-bold text-orange flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                Read More <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 5: Dark Sky Camps -->
+          <article class="card-theme overflow-hidden flex flex-col justify-between group" data-tilt>
+            <div>
+              <div class="img-zoom-container h-52 bg-gray-200">
+                <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80" alt="Stargazing Camps" class="w-full h-full object-cover">
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-[10px] font-bold text-orange uppercase tracking-wider">Destinations</span>
+                  <span class="text-xs text-gray-500">• 5 min read</span>
+                </div>
+                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors">
+                  <a href="blog-details.html?id=stargazing-remote-camps">Dark Sky Sanctuaries: Best Campgrounds for Astronomy Across India</a>
+                </h3>
+                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-2">
+                  Witness the galactic core of the Milky Way in full brilliance from Ladakh's Hanle Dark Sky Reserve to Spiti and Nilgiris.
+                </p>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <a href="blog-details.html?id=stargazing-remote-camps" class="text-xs font-bold text-orange flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                Read More <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 6: High Altitude Passes (Article 7 in data.js) -->
+          <article class="card-theme overflow-hidden flex flex-col justify-between group" data-tilt>
+            <div>
+              <div class="img-zoom-container h-52 bg-gray-200">
+                <img src="https://i.pinimg.com/1200x/39/88/6f/39886f7c3799c527f1cd57fc651b8c41.jpg" alt="High Altitude Passes Navigation" class="w-full h-full object-cover">
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-[10px] font-bold text-orange uppercase tracking-wider">Alpine Trekking</span>
+                  <span class="text-xs text-gray-500">• 7 min read</span>
+                </div>
+                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors">
+                  <a href="blog-details.html?id=high-altitude-passes-navigation">Navigating High-Altitude Himalayan Passes: Crevasses, Scree & Fog</a>
+                </h3>
+                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-2">
+                  Crossing 5,000m cols demands acute terrain analysis, GPS waypoint caching, and recognizing altitude sickness onset before it's too late.
+                </p>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <a href="blog-details.html?id=high-altitude-passes-navigation" class="text-xs font-bold text-orange flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                Read More <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 7: Solo Backpacking (Article 8 in data.js) -->
+          <article class="card-theme overflow-hidden flex flex-col justify-between group" data-tilt>
+            <div>
+              <div class="img-zoom-container h-52 bg-gray-200">
+                <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80" alt="Solo Backpacking Mindset" class="w-full h-full object-cover">
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-[10px] font-bold text-orange uppercase tracking-wider">Camp Life</span>
+                  <span class="text-xs text-gray-500">• 6 min read</span>
+                </div>
+                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors">
+                  <a href="blog-details.html?id=solo-backpacking-first-timers">The Mindset of Solo Backpacking: Finding Solitude Without Loneliness</a>
+                </h3>
+                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-2">
+                  Facing wilderness silence alone is transformative. Practical guidance on trail psychology, nocturnal sounds, and building self-reliance.
+                </p>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <a href="blog-details.html?id=solo-backpacking-first-timers" class="text-xs font-bold text-orange flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                Read More <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 8: Water Filtration Protocols -->
+          <article class="card-theme overflow-hidden flex flex-col justify-between group" data-tilt>
+            <div>
+              <div class="img-zoom-container h-52 bg-gray-200">
+                <img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=800&q=80" alt="Backcountry Water Filtration" class="w-full h-full object-cover">
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-[10px] font-bold text-orange uppercase tracking-wider">Trail Survival</span>
+                  <span class="text-xs text-gray-500">• 6 min read</span>
+                </div>
+                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors">
+                  <a href="blog-details.html?id=water-filtration-protocols">Leave No Trace Water Filtration: Backcountry River & Glacial Silt Protocols</a>
+                </h3>
+                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-2">
+                  Turbid monsoon runoff and glacial silt quickly clog standard hollow-fiber filters. Learn settling methods, pre-filtering, and chemical disinfection.
+                </p>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <a href="blog-details.html?id=water-filtration-protocols" class="text-xs font-bold text-orange flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                Read More <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 9: Geodesic vs Tunnel Tents -->
+          <article class="card-theme overflow-hidden flex flex-col justify-between group" data-tilt>
+            <div>
+              <div class="img-zoom-container h-52 bg-gray-200">
+                <img src="https://images.unsplash.com/photo-1445307806294-bff7f67ff225?auto=format&fit=crop&w=800&q=80" alt="Geodesic vs Tunnel Tents in Winds" class="w-full h-full object-cover">
+              </div>
+              <div class="p-6">
+                <div class="flex items-center gap-2 mb-2">
+                  <span class="text-[10px] font-bold text-orange uppercase tracking-wider">Shelter Tech</span>
+                  <span class="text-xs text-gray-500">• 8 min read</span>
+                </div>
+                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors">
+                  <a href="blog-details.html?id=geodesic-vs-tunnel-tents">Geodesic vs. Tunnel Tents: Surviving 90 km/h Himalayan Ridge Gale Winds</a>
+                </h3>
+                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-2">
+                  High-altitude mountain ridges subject camping shelters to brutal multi-directional gusts. We evaluate structural hoop geometry, guyline vectors, and snow loads.
+                </p>
+              </div>
+            </div>
+            <div class="p-6 pt-0">
+              <a href="blog-details.html?id=geodesic-vs-tunnel-tents" class="text-xs font-bold text-orange flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                Read More <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4B: TRAIL OF THE MONTH SPOTLIGHT -->
+    <section class="py-16 bg-white dark:bg-[#202621] border-y border-[#E2DACB] dark:border-[#2D372F]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-10 text-center max-w-3xl mx-auto">
+          <span class="text-xs font-bold uppercase tracking-widest text-orange">Expedition Dispatch</span>
+          <h2 class="text-2xl sm:text-3xl font-black font-display text-forest dark:text-cream mt-1">
+            Trail of the Month: Pin Parvati Pass Traverse
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-2">
+            A transatlantic-scale crossing from the lush verdant pine forests of Parvati Valley in Kullu to the stark, lunar cold desert of Spiti across a 5,319m glaciated col.
+          </p>
+        </div>
+
+        <div class="card-theme p-6 sm:p-10 rounded-3xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#F5F1E8]/40 dark:bg-black/20" data-tilt>
+          <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[4/3] bg-gray-200">
+            <img src="https://i.pinimg.com/736x/8b/d5/54/8bd554b3876c616fad8be7bb2aa8393b.jpg" alt="Pin Parvati Col Traverse" class="w-full h-full object-cover">
+          </div>
+          <div class="lg:col-span-6 space-y-5">
+            <div class="flex items-center gap-2">
+              <span class="badge-orange uppercase font-bold">Grade: Demanding Alpine</span>
+              <span class="text-xs text-gray-500">• 110 km Total</span>
+            </div>
+            <h3 class="text-2xl font-black font-display text-forest dark:text-cream">
+              Crossing Between Two Worlds: From Parvati Greenery to Spiti Sand
+            </h3>
+            <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+              Navigating raging river crossings over natural rock boulders (pula), crevassed glacier snouts, and sub-zero bivouacs at Mantalai Lake requires uncompromising shelter geometry and certified high-altitude sleep insulation.
+            </p>
+
+            <!-- Rolling stats counters -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2">
+              <div class="p-3 rounded-xl bg-white dark:bg-[#181C19] border border-[#E2DACB] dark:border-[#2D372F] text-center">
+                <div class="text-lg font-black text-orange stat-counter-number" data-target="5319">0</div>
+                <div class="text-[10px] text-gray-500 font-bold uppercase mt-0.5">Meters Summit</div>
+              </div>
+              <div class="p-3 rounded-xl bg-white dark:bg-[#181C19] border border-[#E2DACB] dark:border-[#2D372F] text-center">
+                <div class="text-lg font-black text-forest dark:text-sand stat-counter-number" data-target="110">0</div>
+                <div class="text-[10px] text-gray-500 font-bold uppercase mt-0.5">Kilometers</div>
+              </div>
+              <div class="p-3 rounded-xl bg-white dark:bg-[#181C19] border border-[#E2DACB] dark:border-[#2D372F] text-center">
+                <div class="text-lg font-black text-forest dark:text-sand stat-counter-number" data-target="11">0</div>
+                <div class="text-[10px] text-gray-500 font-bold uppercase mt-0.5">Days Remote</div>
+              </div>
+              <div class="p-3 rounded-xl bg-white dark:bg-[#181C19] border border-[#E2DACB] dark:border-[#2D372F] text-center">
+                <div class="text-lg font-black text-rose-500 stat-counter-number" data-target="15">0</div>
+                <div class="text-[10px] text-gray-500 font-bold uppercase mt-0.5">°C Sub-Zero</div>
+              </div>
+            </div>
+
+            <div class="pt-2 flex flex-wrap items-center gap-3">
+              <a href="blog-details.html?id=high-altitude-passes-navigation" class="btn-primary text-xs py-2.5 px-4">
+                <span>Read Full Route Guide</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a href="product-details.html?id=camping-tent-01" class="btn-outline text-xs py-2.5 px-4">
+                <span>View Expedition Geodesic Tent</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4C: EDITORIAL FIELD CONTRIBUTORS & MOUNTAIN GUIDES -->
+    <section class="py-16 bg-[#F5F1E8] dark:bg-[#181C19]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-10 text-center max-w-2xl mx-auto">
+          <span class="text-xs font-bold uppercase tracking-widest text-orange">Certified Voices</span>
+          <h2 class="text-2xl sm:text-3xl font-black font-display text-forest dark:text-cream mt-1">
+            Editorial Guides & Technical Contributors
+          </h2>
+          <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-2">
+            Every TrailHaven article is written, stress-tested, and fact-checked by practicing mountain professionals.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Guide 1 -->
+          <div class="card-theme p-6 rounded-2xl flex flex-col justify-between" data-tilt>
+            <div>
+              <div class="w-16 h-16 rounded-full overflow-hidden mb-4 shadow-md ring-2 ring-forest dark:ring-sand flex-shrink-0">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" alt="Kavitha Natarajan" class="w-full h-full object-cover">
+              </div>
+              <h3 class="font-bold text-base text-forest dark:text-cream">Kavitha Natarajan</h3>
+              <p class="text-xs text-orange font-semibold mb-3">Western Ghats Naturalist & Monsoon Specialist</p>
+              <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+                Over 12 years studying shola cloud forests and high biodiversity corridors in Karnataka and Kerala. Lead author of our monsoon trail protocols.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-[#E2DACB] dark:border-[#2D372F] text-[11px] text-gray-500 font-semibold flex items-center justify-between">
+              <span>Authored: 4 Articles</span>
+              <span class="text-forest dark:text-sand">IMF Member</span>
+            </div>
+          </div>
+
+          <!-- Guide 2 -->
+          <div class="card-theme p-6 rounded-2xl flex flex-col justify-between" data-tilt>
+            <div>
+              <div class="w-16 h-16 rounded-full overflow-hidden mb-4 shadow-md ring-2 ring-orange flex-shrink-0">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80" alt="Vikram Rathore" class="w-full h-full object-cover">
+              </div>
+              <h3 class="font-bold text-base text-forest dark:text-cream">Vikram Rathore</h3>
+              <p class="text-xs text-orange font-semibold mb-3">IMF High-Altitude Col Lead & Mountaineer</p>
+              <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+                Has summitted 6 Himalayan cols above 5,200m including Pin Parvati and Auden's Col. Specializes in crevasse safety and alpine camp wind dynamics.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-[#E2DACB] dark:border-[#2D372F] text-[11px] text-gray-500 font-semibold flex items-center justify-between">
+              <span>Authored: 5 Articles</span>
+              <span class="text-forest dark:text-sand">UIAGM Certified</span>
+            </div>
+          </div>
+
+          <!-- Guide 3 -->
+          <div class="card-theme p-6 rounded-2xl flex flex-col justify-between" data-tilt>
+            <div>
+              <div class="w-16 h-16 rounded-full overflow-hidden mb-4 shadow-md ring-2 ring-forest dark:ring-sand flex-shrink-0">
+                <img src="https://images.unsplash.com/photo-1548142813-c348350df52b?auto=format&fit=crop&w=300&q=80" alt="Sneha Ramachandran" class="w-full h-full object-cover">
+              </div>
+              <h3 class="font-bold text-base text-forest dark:text-cream">Sneha Ramachandran</h3>
+              <p class="text-xs text-orange font-semibold mb-3">Ultralight Thru-Hiker & Wilderness Nutritionist</p>
+              <p class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+                Completed over 3,000 kilometers of self-supported backcountry routes. Specializes in calorie density planning, camp culinary alchemy, and solo hiking psychology.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-[#E2DACB] dark:border-[#2D372F] text-[11px] text-gray-500 font-semibold flex items-center justify-between">
+              <span>Authored: 3 Articles</span>
+              <span class="text-forest dark:text-sand">LNT Master Educator</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: CAMPING TIPS & BEGINNER ADVICE -->
+    <section class="py-16 bg-white dark:bg-[#202621] border-y border-[#E2DACB] dark:border-[#2D372F]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-xs font-bold uppercase tracking-widest text-orange">Trail Wisdom</span>
+          <h2 class="text-2xl sm:text-3xl font-black font-display text-forest dark:text-cream mt-1">
+            Camping Tips & Wilderness Advice
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs sm:text-sm">
+          <div class="p-6 rounded-2xl bg-[#F5F1E8]/70 dark:bg-black/30 border border-[#E2DACB] dark:border-[#2D372F]">
+            <i class="fa-solid fa-cloud-rain text-orange text-2xl mb-3"></i>
+            <h4 class="font-bold text-forest dark:text-cream text-base mb-2">Monsoon Pack Liners</h4>
+            <p class="text-gray-600 dark:text-gray-400">Always line the interior of your rucksack with a heavy-duty contractor trash bag. Raincovers blow off in strong winds; internal liners keep down sleeping bags 100% dry.</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-[#F5F1E8]/70 dark:bg-black/30 border border-[#E2DACB] dark:border-[#2D372F]">
+            <i class="fa-solid fa-snowflake text-orange text-2xl mb-3"></i>
+            <h4 class="font-bold text-forest dark:text-cream text-base mb-2">Winter Water Bottle Trick</h4>
+            <p class="text-gray-600 dark:text-gray-400">Pour boiling water into a leakproof Nalgene bottle, wrap it in a wool sock, and tuck it into the footbox of your sleeping bag 15 minutes before bed for lasting warmth.</p>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-[#F5F1E8]/70 dark:bg-black/30 border border-[#E2DACB] dark:border-[#2D372F]">
+            <i class="fa-solid fa-fire text-orange text-2xl mb-3"></i>
+            <h4 class="font-bold text-forest dark:text-cream text-base mb-2">LNT Campfire Rules</h4>
+            <p class="text-gray-600 dark:text-gray-400">Never cut living alpine tree branches. Use a compact titanium canister stove like the Nomad for cooking, leaving delicate meadows pristine for wildlife.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: HIKING DESTINATIONS SPOTLIGHT -->
+    <section class="py-16 bg-[#F5F1E8] dark:bg-[#181C19]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-10">
+          <span class="text-xs font-bold uppercase tracking-widest text-orange">Geography & Trails</span>
+          <h2 class="text-2xl sm:text-3xl font-black font-display text-forest dark:text-cream mt-1">
+            Indian Hiking Destinations Spotlight
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="card-theme p-6 rounded-2xl flex flex-col justify-between">
+            <div>
+              <span class="badge-eco inline-block mb-3">South India</span>
+              <h3 class="text-xl font-bold font-display text-forest dark:text-cream">Kudremukh & The Shola Grasslands</h3>
+              <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-2 leading-relaxed">
+                Reaching 1,894m, Kudremukh showcases ancient shola rainforests interspersed with undulating high grasslands. Ideal for 2-day trekking pushes with our Cascade 2P and Vanguard 38L daypacks.
+              </p>
+            </div>
+            <a href="blog-details.html?id=top-western-ghats-treks" class="text-xs font-bold text-orange mt-4 inline-flex items-center gap-1">
+              Read Kudremukh Route Report <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+
+          <div class="card-theme p-6 rounded-2xl flex flex-col justify-between">
+            <div>
+              <span class="badge-orange inline-block mb-3">Himalayan Trans-Himalaya</span>
+              <h3 class="text-xl font-bold font-display text-forest dark:text-cream">Spiti Valley & Chandratal Lake</h3>
+              <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-2 leading-relaxed">
+                At 4,300m, high cold-desert terrain demands 4-season geodesic shelters and sub-zero 800-fill down insulation. Dark skies offer jaw-dropping astrophotography opportunities.
+              </p>
+            </div>
+            <a href="blog-details.html?id=stargazing-remote-camps" class="text-xs font-bold text-orange mt-4 inline-flex items-center gap-1">
+              Read Spiti Camping Report <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: GEAR REVIEWS & FIELD REPORTS -->
+    <section class="py-16 bg-forest text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="text-xs font-bold uppercase tracking-widest text-orange">Laboratory In The Elements</span>
+          <h2 class="text-3xl font-black font-display text-white mt-1">Gear Reviews & Tear-Downs</h2>
+          <p class="text-xs sm:text-sm text-sand mt-2">
+            Honest field breakdowns testing breathability, abrasion limits, and pole tensile strengths.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs sm:text-sm">
+          <div class="p-6 rounded-2xl bg-forest-dark/80 border border-sand/30">
+            <h4 class="font-bold text-white text-base mb-2">Trail Runners vs. Boots Field Verdict</h4>
+            <p class="text-sand/90 mb-4">We tested trail runners and leather boots side-by-side across 120km in the Nilgiris. Read our comprehensive data breakdown on drying speed and muscle energy.</p>
+            <a href="blog-details.html?id=hiking-boots-vs-trail-runners" class="text-orange font-bold hover:underline">
+              Read Field Test Analysis →
+            </a>
+          </div>
+
+          <div class="p-6 rounded-2xl bg-forest-dark/80 border border-sand/30">
+            <h4 class="font-bold text-white text-base mb-2">Titanium vs. Hard-Anodized Aluminum</h4>
+            <p class="text-sand/90 mb-4">Why our Nomad Titanium cookset saves 200g of weight and boils water 30% faster thanks to heat-exchanger flux rings.</p>
+            <a href="product-details.html?id=cook-titanium-nomad" class="text-orange font-bold hover:underline">
+              View Nomad Titanium Specifications →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: NEWSLETTER, WRITER CTA & FOOTER -->
+    <section class="py-16 bg-[#F5F1E8] dark:bg-[#181C19] border-t border-[#E2DACB] dark:border-[#2D372F] text-center">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-2xl sm:text-3xl font-black font-display text-forest dark:text-cream">Submit Your Adventure Story</h2>
+        <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-2 mb-6 max-w-xl mx-auto">
+          Are you a trek guide, mountain photographer, or wilderness enthusiast with a story to share? Reach out to our Chennai editorial desk.
+        </p>
+        <div class="flex items-center justify-center gap-4">
+          <a href="contact.html" class="btn-primary">
+            <i class="fa-solid fa-pen-nib"></i> Contact Editorial Team
+          </a>
+          <a href="products.html" class="btn-outline">
+            Browse Gear Catalog
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- CONSISTENT BRAND FOOTER -->
+            <!-- FOOTER (Premium 4-Column Boutique Aesthetic) -->
+  <footer class="bg-[#181B18] text-[#F5F1E8] pt-16 pb-10 border-t border-[#29302A]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 pb-12">
+        
+        <!-- Column 1: Brand, Mission & Socials -->
+        <div>
+          <a href="index.html" class="inline-flex items-center gap-2.5 sm:gap-3 mb-4 group" aria-label="TrailHaven Home">
+            <div class="w-11 sm:w-12 h-11 sm:h-12 rounded-xl bg-[#222823] border border-[#333C34] flex items-center justify-center p-1 shadow-sm flex-shrink-0 group-hover:border-[#D77A3C] transition-colors">
+              <img src="assets/images/trailhaven-emblem.png" alt="TrailHaven Compass Logo" class="h-9 sm:h-10 w-9 sm:w-10 object-contain rounded-lg group-hover:scale-105 transition-transform flex-shrink-0">
+            </div>
+            <div class="flex flex-col justify-center select-none">
+              <div class="flex items-baseline tracking-tight font-black leading-none font-display">
+                <span class="text-xl sm:text-2xl font-black text-white">TRAIL</span><span class="text-xl sm:text-2xl font-black text-[#D77A3C]">HAVEN</span>
+              </div>
+              <div class="flex items-center gap-1.5 my-0.5">
+                <span class="h-[2px] w-5 sm:w-6 bg-[#D77A3C] rounded-full"></span>
+                <span class="h-1.5 w-1.5 rounded-full bg-[#C6AD83]"></span>
+                <span class="h-[1.5px] w-12 sm:w-16 bg-[#C6AD83]/70 rounded-full"></span>
+              </div>
+              <span class="text-[7.5px] sm:text-[8.5px] font-bold tracking-[0.2em] sm:tracking-[0.24em] uppercase text-[#F5F1E8] leading-none">
+                GEAR TODAY. GREATER TOMORROWS.
+              </span>
+            </div>
+          </a>
+          <p class="text-xs text-gray-400 leading-relaxed mb-6 max-w-sm">
+            A dedicated sanctuary for expedition-grade camping equipment, Leave No Trace conservation ethics, and field-tested outdoor survival gear engineered for Indian terrains and beyond.
+          </p>
+          <div class="flex items-center gap-2.5">
+            <a href="https://wa.me/919840123456?text=Hi%20TrailHaven,%20I%20would%20like%20to%20inquire%20about%20outdoor%20gear" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-[#222823] border border-[#333C34] hover:bg-[#25D366] hover:border-[#25D366] group flex items-center justify-center transition-all duration-200" aria-label="WhatsApp TrailHaven">
+              <svg class="w-4 h-4 fill-current text-[#25D366] group-hover:text-white transition-colors" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+            </a>
+            <a href="https://instagram.com/trailhaven.outdoor" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-[#222823] border border-[#333C34] hover:bg-[#E4405F] hover:border-[#E4405F] group flex items-center justify-center transition-all duration-200" aria-label="Instagram">
+              <svg class="w-4 h-4 fill-current text-[#E4405F] group-hover:text-white transition-colors" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+            </a>
+            <a href="https://twitter.com/trailhaven_gear" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-[#222823] border border-[#333C34] hover:bg-white hover:border-white group flex items-center justify-center transition-all duration-200" aria-label="Twitter X">
+              <svg class="w-3.5 h-3.5 fill-current text-white group-hover:text-black transition-colors" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+            </a>
+            <a href="https://facebook.com/trailhavenoutdoor" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-[#222823] border border-[#333C34] hover:bg-[#1877F2] hover:border-[#1877F2] group flex items-center justify-center transition-all duration-200" aria-label="Facebook">
+              <svg class="w-3.5 h-4 fill-current text-[#1877F2] group-hover:text-white transition-colors" viewBox="0 0 320 512"><path d="M80 299.3V512H196V299.3h86.5l18-97.8H196V166.9c0-51.7 20.3-71.5 72.7-71.5c16.3 0 29.4 .4 37 1.2V7.9C291.4 4 256.4 0 236.2 0C129.3 0 80 50.5 80 159.4v42.1H14v97.8H80z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2: Catalog & Store -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-white mb-4">CATALOG & STORE</h4>
+          <ul class="space-y-2.5 text-xs text-gray-400">
+            <li><a href="index.html" class="hover:text-[#D77A3C] transition">Home (Expedition)</a></li>
+            <li><a href="home2.html" class="hover:text-[#D77A3C] transition">Home 2 (Wilderness)</a></li>
+            <li><a href="products.html" class="hover:text-[#D77A3C] transition">Shop Gear Catalog</a></li>
+            <li><a href="products.html?cat=tents" class="hover:text-[#D77A3C] transition">Tents & Shelters</a></li>
+            <li><a href="gallery.html" class="hover:text-[#D77A3C] transition">Visual Gallery</a></li>
+            <li><a href="pricing.html" class="hover:text-[#D77A3C] transition">Pricing & Gear Bundles</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Customer Support -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-white mb-4">CUSTOMER SUPPORT</h4>
+          <ul class="space-y-2.5 text-xs text-gray-400">
+            <li><a href="order.html" class="hover:text-[#D77A3C] transition">Your Bag & Orders</a></li>
+            <li><a href="contact.html#faq-section" class="hover:text-[#D77A3C] transition">Shipping & Delivery Info</a></li>
+            <li><a href="about.html#quality" class="hover:text-[#D77A3C] transition">Return & Warranty Policy</a></li>
+            <li><a href="contact.html#faq-section" class="hover:text-[#D77A3C] transition">Frequently Asked Questions</a></li>
+            <li><a href="buying-guides.html" class="hover:text-[#D77A3C] transition">Outdoor Gear Guides</a></li>
+            <li><a href="contact.html" class="hover:text-[#D77A3C] transition">Help & Inquiries</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Chennai Lounge / Outpost -->
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-widest text-white mb-4">CHENNAI OUTPOST</h4>
+          <div class="text-xs text-gray-400 space-y-1 leading-relaxed">
+            <p class="text-white font-medium">TrailHaven Flagship Outpost</p>
+            <p>28 Khader Nawaz Khan Road, Nungambakkam</p>
+            <p>Chennai, Tamil Nadu, India - 600006</p>
+            <div class="pt-3 space-y-1.5">
+              <p><span class="text-white font-medium">Hours:</span> 10:00 AM – 9:00 PM</p>
+              <p><span class="text-white font-semibold">WhatsApp:</span> <a href="https://wa.me/919840123456?text=Hi%20TrailHaven,%20I%20would%20like%20to%20inquire%20about%20outdoor%20gear" target="_blank" rel="noopener" class="text-gray-300 hover:text-[#D77A3C] transition" dir="ltr">+91 98401 23456</a></p>
+              <p><span class="text-white font-semibold">Email:</span> <a href="mailto:support@trailhavenoutdoor.com" class="text-gray-300 hover:text-[#D77A3C] transition">support@trailhavenoutdoor.com</a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Divider & Copyright -->
+      <div class="border-t border-[#29302A] pt-8 text-center">
+        <p class="text-xs text-gray-500">© 2026 TrailHaven Outdoor Equipment. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/theme.js"></script>
+  <script src="assets/js/direction.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/wishlist.js"></script>
+  <script src="assets/js/search.js"></script>
+  <script src="assets/js/forms.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Interactive Blog Search Filter -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('blog-search-input');
+      const articles = document.querySelectorAll('#blog-grid article');
+      const countDisplay = document.getElementById('blog-count-display');
+
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          const q = e.target.value.trim().toLowerCase();
+          let visibleCount = 0;
+
+          articles.forEach(art => {
+            const text = art.textContent.toLowerCase();
+            if (text.includes(q)) {
+              art.style.display = 'flex';
+              visibleCount++;
+            } else {
+              art.style.display = 'none';
+            }
+          });
+
+          if (countDisplay) {
+            countDisplay.textContent = `Showing ${visibleCount} article${visibleCount !== 1 ? 's' : ''}`;
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
