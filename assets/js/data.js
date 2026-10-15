@@ -46,7 +46,7 @@ const TrailHavenData = {
       icon: "fa-bed",
       count: 2,
       description: "High-loft down sleeping bags rated to sub-zero alpine conditions and high-R-value thermal pads.",
-      image: "https://images.unsplash.com/photo-1542332213-9b5a5a3fad35?auto=format&fit=crop&w=800&q=80"
+      image: "https://images.unsplash.com/photo-1558477280-1bfed08ea5db?auto=format&fit=crop&w=800&q=80"
     },
     {
       id: "lighting",
@@ -55,7 +55,7 @@ const TrailHavenData = {
       icon: "fa-lightbulb",
       count: 2,
       description: "High-lumen waterproof headlamps and solar-rechargeable campsite ambient beacons.",
-      image: "https://images.unsplash.com/photo-1516939884455-1445c8652f83?auto=format&fit=crop&w=800&q=80"
+      image: "https://images.unsplash.com/photo-1774886302070-0553eb9b4215?auto=format&fit=crop&w=800&q=80"
     },
     {
       id: "cooking",
@@ -64,7 +64,7 @@ const TrailHavenData = {
       icon: "fa-fire-burner",
       count: 2,
       description: "Ultralight titanium fast-boil stoves, hard-anodized cookware, and heavy-duty camp skillets.",
-      image: "https://images.unsplash.com/photo-1527853787696-f7be74f2e39a?auto=format&fit=crop&w=800&q=80"
+      image: "https://images.unsplash.com/photo-1522041350204-22285237eeca?auto=format&fit=crop&w=800&q=80"
     },
     {
       id: "clothing",
@@ -73,7 +73,7 @@ const TrailHavenData = {
       icon: "fa-vest-patches",
       count: 1,
       description: "Three-layer breathable storm shells, thermal mid-layers, and trail-tough trekking pants.",
-      image: "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=800&q=80"
+      image: "https://images.unsplash.com/photo-1491555103944-7c647fd857e6?auto=format&fit=crop&w=800&q=80"
     },
     {
       id: "trekking-poles",
@@ -82,7 +82,7 @@ const TrailHavenData = {
       icon: "fa-person-hiking",
       count: 1,
       description: "Aircraft-grade aluminum and carbon trekking poles with quick-lock flick mechanisms.",
-      image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80"
+      image: "https://images.unsplash.com/photo-1785772534309-7503e6e92790?auto=format&fit=crop&w=800&q=80"
     },
     {
       id: "hydration",
@@ -91,7 +91,7 @@ const TrailHavenData = {
       icon: "fa-bottle-water",
       count: 1,
       description: "0.1-micron hollow-fiber gravity filtration systems and rugged insulated flasks.",
-      image: "https://images.unsplash.com/photo-1491555103944-7c647fd857e6?auto=format&fit=crop&w=800&q=80"
+      image: "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=800&q=80"
     },
     {
       id: "furniture",
@@ -100,7 +100,7 @@ const TrailHavenData = {
       icon: "fa-chair",
       count: 1,
       description: "Ultralight packable camp chairs, compact folding tables, and backcountry loungers.",
-      image: "https://images.unsplash.com/photo-1516214104703-d870798883c5?auto=format&fit=crop&w=800&q=80"
+      image: "https://images.unsplash.com/photo-1701835068926-171d92ceca97?auto=format&fit=crop&w=800&q=80"
     },
     {
       id: "navigation",
@@ -109,7 +109,7 @@ const TrailHavenData = {
       icon: "fa-compass",
       count: 1,
       description: "Precision mirror-sighting expedition compasses, GPS cases, and map cases.",
-      image: "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?auto=format&fit=crop&w=800&q=80"
+      image: "https://images.unsplash.com/photo-1566341013445-3d382cd2b406?auto=format&fit=crop&w=800&q=80"
     }
   ],
 
@@ -216,8 +216,8 @@ const TrailHavenData = {
       image: "https://i.pinimg.com/736x/cd/af/06/cdaf065f4019224c4cf526838a753e74.jpg",
       gallery: [
         "https://i.pinimg.com/736x/cd/af/06/cdaf065f4019224c4cf526838a753e74.jpg",
-        "https://images.unsplash.com/photo-1542332213-9b5a5a3fad35?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1520072959219-c595dc870360?auto=format&fit=crop&w=800&q=80"
+        "https://images.unsplash.com/photo-1558477280-1bfed08ea5db?auto=format&fit=crop&w=800&q=80",
+        "https://plus.unsplash.com/premium_photo-1753436452097-8bbd74d9b345?auto=format&fit=crop&w=800&q=80"
       ],
       shortDesc: "Ultralight sub-zero mummy sleeping bag with RDS-certified hydrophobic down, anti-snag draft tube, and contoured hood.",
       description: "When the temperature plunges below freezing in Ladakh or Spiti, the Boreal -15°C traps body heat with continuous horizontal baffles filled with 800-fill power water-resistant goose down. The Pertex Quantum 20D shell repels tent wall condensation while breathing efficiently to prevent moisture buildup within the down clusters.",
@@ -257,7 +257,7 @@ const TrailHavenData = {
       image: "https://i.pinimg.com/1200x/ed/c1/b8/edc1b81109e012b4447b9623811b3a55.jpg",
       gallery: [
         "https://i.pinimg.com/1200x/ed/c1/b8/edc1b81109e012b4447b9623811b3a55.jpg",
-        "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1571687949921-1306bfb24b72?auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=800&q=80"
       ],
       shortDesc: "Sub-1.7kg freestanding 3-season tent with generous headroom, dual doors, and micro-mesh inner for stargazing.",
@@ -299,7 +299,7 @@ const TrailHavenData = {
       gallery: [
         "https://i.pinimg.com/1200x/4f/29/51/4f2951071873c863a29f3191e44729e7.jpg",
         "https://images.unsplash.com/photo-1537905569824-f89f14cceb68?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1478860409698-8707f313ee8b?auto=format&fit=crop&w=800&q=80"
+        "https://images.unsplash.com/photo-1751703096330-445adf3e8123?auto=format&fit=crop&w=800&q=80"
       ],
       shortDesc: "Stand-up height luxury family cabin tent with removable room divider, huge mesh windows, and integrated front sun awning.",
       description: "Transform any campsite into a palatial basecamp. With an impressive 200cm peak height, adults can walk comfortably inside without crouching. The removable central partition creates two private rooms or one massive communal space that fits two queen-sized airbeds with room to spare.",
@@ -338,8 +338,8 @@ const TrailHavenData = {
       image: "https://i.pinimg.com/736x/c1/e4/e3/c1e4e38e49b397e209ab747b1cb39463.jpg",
       gallery: [
         "https://i.pinimg.com/736x/c1/e4/e3/c1e4e38e49b397e209ab747b1cb39463.jpg",
-        "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&w=800&q=80"
+        "https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1665724233211-02a7afbb8b36?auto=format&fit=crop&w=800&q=80"
       ],
       shortDesc: "The quintessential 38L summit and daypack with suspended trampoline mesh back ventilation to keep you cool on steep ascents.",
       description: "Engineered specifically for full-day ridge traverses and weekend cabin overnights. The AirFlow tensioned mesh suspension holds the pack body away from your back, allowing cool air to circulate freely. Quick-stow trekking pole bungee loops allow you to stow poles on the fly without breaking stride.",
@@ -377,8 +377,8 @@ const TrailHavenData = {
       image: "https://i.pinimg.com/1200x/99/e7/11/99e7118dc98905d9c8b91a7303fee472.jpg",
       gallery: [
         "https://i.pinimg.com/1200x/99/e7/11/99e7118dc98905d9c8b91a7303fee472.jpg",
-        "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1534187886935-1e1236e856c3?auto=format&fit=crop&w=800&q=80"
+        "https://images.unsplash.com/photo-1445307806294-bff7f67ff225?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1532339142463-fd0a8979791a?auto=format&fit=crop&w=800&q=80"
       ],
       shortDesc: "4-season insulated air mattress with reflective ThermaFoil layers. R-Value 4.8 at just 490 grams.",
       description: "Ground cold robs more heat than ambient air. The ThermalRest incorporates dual layers of radiant heat-reflecting film and internal chamber baffling to bounce body heat back toward you while barring ground chill. Inflates in 60 seconds using the included featherweight pump sack.",
@@ -416,8 +416,8 @@ const TrailHavenData = {
       image: "https://i.pinimg.com/1200x/b2/af/ef/b2afef673d1394ffef1712a1446f1230.jpg",
       gallery: [
         "https://i.pinimg.com/1200x/b2/af/ef/b2afef673d1394ffef1712a1446f1230.jpg",
-        "https://images.unsplash.com/photo-1516939884455-1445c8652f83?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1528722828814-77b9b83aafb2?auto=format&fit=crop&w=800&q=80"
+        "https://images.unsplash.com/photo-1774886302070-0553eb9b4215?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1567091238763-8414227537ca?auto=format&fit=crop&w=800&q=80"
       ],
       shortDesc: "1200-lumen waterproof campsite lantern with warm white, candle flicker, red SOS modes, and built-in 9600mAh power bank.",
       description: "Illuminate your entire cooking camp with 360-degree glare-free warm ambient light. Built from impact-resistant aerospace polycarbonate with a silicone shock bumper. Features an integrated monocrystalline solar lid panel for off-grid top-offs, plus USB-C fast charging that doubles as an emergency smartphone charger.",
@@ -456,8 +456,8 @@ const TrailHavenData = {
       image: "https://i.pinimg.com/736x/9c/36/36/9c3636f65c3726d3e33c3e1774f0b707.jpg",
       gallery: [
         "https://i.pinimg.com/736x/9c/36/36/9c3636f65c3726d3e33c3e1774f0b707.jpg",
-        "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=800&q=80"
+        "https://images.unsplash.com/photo-1515444744559-7be63e1600de?auto=format&fit=crop&w=800&q=80",
+        "https://plus.unsplash.com/premium_photo-1741858804139-e05f5c4cd9fd?auto=format&fit=crop&w=800&q=80"
       ],
       shortDesc: "Ultra-compact 78g rechargeable headlamp featuring spotlight, floodlight, and night-vision preserving red LED.",
       description: "Whether navigating pre-dawn alpine scree or reading your trail map inside the tent, the NightClimb 850 provides crystal-clear optics. Features an innovative gesture-sensing mode: simply wave your hand in front of the lens to toggle power without removing heavy winter mittens.",
@@ -495,8 +495,8 @@ const TrailHavenData = {
       image: "https://i.pinimg.com/1200x/54/db/d1/54dbd1697ce4776a3d56e1bb7293c64d.jpg",
       gallery: [
         "https://i.pinimg.com/1200x/54/db/d1/54dbd1697ce4776a3d56e1bb7293c64d.jpg",
-        "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1527853787696-f7be74f2e39a?auto=format&fit=crop&w=800&q=80"
+        "https://images.unsplash.com/photo-1522041350204-22285237eeca?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1780394045328-ca3af6a19f8e?auto=format&fit=crop&w=800&q=80"
       ],
       shortDesc: "Ultralight nesting titanium backpacking kitchen. Boils 500ml of mountain water in just 105 seconds with piezoelectric ignition.",
       description: "Made from Grade-1 aircraft titanium, this complete cooking kit is impervious to rust, metallic aftertaste, and high-heat deformation. The pot nests a 230g isobutane canister and the micro-burner seamlessly inside its insulated neoprene sleeve, packing down to the size of a coffee mug.",
@@ -534,8 +534,8 @@ const TrailHavenData = {
       image: "https://i.pinimg.com/736x/c9/81/ec/c981ec631cb2aca0e971bcc947d8aa5e.jpg",
       gallery: [
         "https://i.pinimg.com/736x/c9/81/ec/c981ec631cb2aca0e971bcc947d8aa5e.jpg",
-        "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80"
+        "https://images.unsplash.com/photo-1637739699971-7d4d5194e75c?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1692313532975-513a383c48f7?auto=format&fit=crop&w=800&q=80"
       ],
       shortDesc: "Heirloom-grade pre-seasoned cast iron pan for roaring campfires, embers, and gas camp stoves. Naturally non-stick.",
       description: "Nothing beats sizzling campfire steaks or campfire dosa over glowing hardwood coals. Pre-seasoned with 100% organic cold-pressed flaxseed oil for a natural, chemical-free non-stick patina that gets better with every adventure. Includes removable heat-resistant silicone handle grip.",
@@ -573,8 +573,8 @@ const TrailHavenData = {
       image: "https://i.pinimg.com/1200x/1a/dd/c3/1addc3b685ebeb339d3c9830425981d1.jpg",
       gallery: [
         "https://i.pinimg.com/1200x/1a/dd/c3/1addc3b685ebeb339d3c9830425981d1.jpg",
-        "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=800&q=80"
+        "https://images.unsplash.com/photo-1785772534309-7503e6e92790?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1778248842805-54e75d813b49?auto=format&fit=crop&w=800&q=80"
       ],
       shortDesc: "100% 3K carbon fiber three-section poles with ergonomic cork grips, aluminum speed locks, and interchangeable carbide tips.",
       description: "Absorb jarring downhill joint impact with lightweight 3K carbon fiber shafts that naturally dampen shock vibrations. Moisture-wicking natural cork grips mold to your hand contours over time, preventing blisters on gruelling 20-kilometer mountain pushes.",
@@ -612,8 +612,8 @@ const TrailHavenData = {
       image: "https://i.pinimg.com/736x/db/ed/52/dbed52acb758f0b1ac4688fd2cb5474b.jpg",
       gallery: [
         "https://i.pinimg.com/736x/db/ed/52/dbed52acb758f0b1ac4688fd2cb5474b.jpg",
-        "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=800&q=80"
+        "https://images.unsplash.com/photo-1491555103944-7c647fd857e6?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1594832512784-dbd688e0572e?auto=format&fit=crop&w=800&q=80"
       ],
       shortDesc: "Heavyweight weather protection engineered for Western Ghats cloudbursts and Himalayan storms. 28,000mm waterproof / 20,000g breathability.",
       description: "Constructed with a rugged 75D recycled ripstop face bonded to a microporous waterproof membrane, the MonsoonShield keeps deluge rains out while venting sweat vapor during grueling elevation pushes. Generous underarm pit zips provide rapid heat dump on humid climbs.",
@@ -651,8 +651,8 @@ const TrailHavenData = {
       image: "https://i.pinimg.com/736x/61/6b/07/616b07f4fb1148b3cd2fbb7164ded7b8.jpg",
       gallery: [
         "https://i.pinimg.com/736x/61/6b/07/616b07f4fb1148b3cd2fbb7164ded7b8.jpg",
-        "https://images.unsplash.com/photo-1491555103944-7c647fd857e6?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=800&q=80"
+        "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1558169550-45825435a09b?auto=format&fit=crop&w=800&q=80"
       ],
       shortDesc: "Hang-and-forget gravity water filtration reservoir. Purifies 4 liters of murky stream water in under 4 minutes without pumping.",
       description: "Say goodbye to exhausting hand-pumping after a 20km hike. Simply fill the wide-mouth 4L reservoir from any mountain stream, hang it from a sturdy branch, and let gravity push clean, pathogen-free water through the 0.1-micron hollow fiber membrane directly into your bottles.",
@@ -690,8 +690,8 @@ const TrailHavenData = {
       image: "https://i.pinimg.com/1200x/52/cb/d5/52cbd5ffd211a34f7f0ca4e05ad4674f.jpg",
       gallery: [
         "https://i.pinimg.com/1200x/52/cb/d5/52cbd5ffd211a34f7f0ca4e05ad4674f.jpg",
-        "https://images.unsplash.com/photo-1516214104703-d870798883c5?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=800&q=80"
+        "https://images.unsplash.com/photo-1701835068926-171d92ceca97?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1751570071178-11a7ab50bcdd?auto=format&fit=crop&w=800&q=80"
       ],
       shortDesc: "Aircraft-grade aluminum frame weighing only 890 grams with 145kg load rating. Folds into a water-bottle-sized carrying pouch.",
       description: "The AeroRest is TrailHaven's masterclass in backcountry ergonomics. Constructed with custom DAC TH72M aluminum alloy poles and 600D ripstop polyester mesh for superior airflow during tropical expeditions.",
@@ -729,8 +729,8 @@ const TrailHavenData = {
       image: "https://i.pinimg.com/736x/7a/37/7e/7a377e26b6dcccd270226e9ba73d0619.jpg",
       gallery: [
         "https://i.pinimg.com/736x/7a/37/7e/7a377e26b6dcccd270226e9ba73d0619.jpg",
-        "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?auto=format&fit=crop&w=800&q=80",
-        "https://images.unsplash.com/photo-1532339142463-fd0a8979791a?auto=format&fit=crop&w=800&q=80"
+        "https://images.unsplash.com/photo-1566341013445-3d382cd2b406?auto=format&fit=crop&w=800&q=80",
+        "https://images.unsplash.com/photo-1478860409698-8707f313ee8b?auto=format&fit=crop&w=800&q=80"
       ],
       shortDesc: "Liquid-damped global needle with clinometer, adjustable magnetic declination, and sighting mirror for precision route plotting.",
       description: "Engineered for whiteouts, dense rainforest traverses, and off-trail orienteering. Features a sapphire jewel bearing with liquid damping that prevents needle fluttering in freezing temperatures.",
@@ -1495,7 +1495,7 @@ const TrailHavenData = {
       category: "cooking",
       categoryName: "Outdoor Cooking",
       location: "Parvati Valley, Himachal Pradesh",
-      image: "https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8?auto=format&fit=crop&w=1200&q=85",
+      image: "https://images.unsplash.com/photo-1701835068926-171d92ceca97?auto=format&fit=crop&w=1200&q=85",
       caption: "Freshly brewed mountain pour-over coffee heated over glowing pine embers."
     },
     {
@@ -1504,7 +1504,7 @@ const TrailHavenData = {
       category: "mountain",
       categoryName: "Mountain Camping",
       location: "Roopkund Trail, Uttarakhand",
-      image: "https://images.unsplash.com/photo-1486218119243-13883505764c?auto=format&fit=crop&w=1200&q=85",
+      image: "https://images.unsplash.com/photo-1594832512784-dbd688e0572e?auto=format&fit=crop&w=1200&q=85",
       caption: "Trekker navigating rocky high-altitude ridges with Karakoram carbon poles."
     },
     {
@@ -1531,7 +1531,7 @@ const TrailHavenData = {
       category: "cooking",
       categoryName: "Outdoor Cooking",
       location: "Chopta, Uttarakhand",
-      image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=85",
+      image: "https://images.unsplash.com/photo-1692313532975-513a383c48f7?auto=format&fit=crop&w=1200&q=85",
       caption: "Cast iron skillet cooking on a quiet evening in the cedar forest."
     },
     {
@@ -1549,7 +1549,7 @@ const TrailHavenData = {
       category: "equipment",
       categoryName: "Camping Equipment",
       location: "Hampta Pass, Himachal Pradesh",
-      image: "https://images.unsplash.com/photo-1546938576-6e6a64f317cc?auto=format&fit=crop&w=1200&q=85",
+      image: "https://images.unsplash.com/photo-1665724233211-02a7afbb8b36?auto=format&fit=crop&w=1200&q=85",
       caption: "Vanguard 65L packs loaded and ready for steep boulder field crossing."
     },
     {
@@ -1594,7 +1594,7 @@ const TrailHavenData = {
       category: "equipment",
       categoryName: "Camping Equipment",
       location: "Sandakphu Ridge, West Bengal",
-      image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85",
+      image: "https://images.unsplash.com/photo-1785772534309-7503e6e92790?auto=format&fit=crop&w=1200&q=85",
       caption: "Carbon fiber trekking poles providing unyielding stability across scree."
     },
     {
@@ -1603,7 +1603,7 @@ const TrailHavenData = {
       category: "cooking",
       categoryName: "Outdoor Cooking",
       location: "Tirthan Riverbank, Himachal Pradesh",
-      image: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=1200&q=85",
+      image: "https://images.unsplash.com/photo-1522041350204-22285237eeca?auto=format&fit=crop&w=1200&q=85",
       caption: "Boiling mountain stream water in under 2 minutes with Nomad Titanium."
     },
     {
@@ -1612,7 +1612,7 @@ const TrailHavenData = {
       category: "cooking",
       categoryName: "Outdoor Cooking",
       location: "Har Ki Dun Valley, Uttarakhand",
-      image: "https://images.unsplash.com/photo-1527853787696-f7be74f2e39a?auto=format&fit=crop&w=1200&q=85",
+      image: "https://images.unsplash.com/photo-1780394045328-ca3af6a19f8e?auto=format&fit=crop&w=1200&q=85",
       caption: "Gathered around the simmer pot as evening alpine chill sets in."
     }
   ],
