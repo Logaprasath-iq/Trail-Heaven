@@ -107,28 +107,38 @@
         </nav>
 
         <!-- Utility Icons & Controls -->
-        <div class="flex items-center gap-2 sm:gap-3">
-          <button class="open-search-btn p-2 rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Search TrailHaven">
+                <div class="flex items-center gap-2 sm:gap-3">
+          <!-- Search Button -->
+          <button class="open-search-btn w-9 h-9 inline-flex items-center justify-center rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Search TrailHaven">
             <i class="fa-solid fa-magnifying-glass text-forest dark:text-sand text-base"></i>
           </button>
-          <button class="theme-toggle-btn p-2 rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Switch theme mode">
+
+          <!-- Theme Toggle Button -->
+          <button class="theme-toggle-btn w-9 h-9 inline-flex items-center justify-center rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Switch theme mode">
             <i class="fa-solid fa-sun text-amber-400 text-base theme-icon-sun hidden"></i>
             <i class="fa-solid fa-moon text-forest dark:text-sand text-base theme-icon-moon"></i>
           </button>
-          <!-- Direction (RTL / LTR) Toggle with Double Arrow Symbol -->
-          <button class="dir-toggle-btn px-2.5 py-1 rounded-lg text-xs font-bold border border-sand hover:bg-sand/20 dark:hover:bg-sand/10 transition inline-flex items-center gap-1.5" aria-label="Toggle text direction">
+
+          <!-- Direction (RTL / LTR) Toggle -->
+          <button class="dir-toggle-btn h-9 px-2.5 inline-flex items-center justify-center gap-1.5 rounded-lg border border-sand hover:bg-sand/20 dark:hover:bg-sand/10 text-xs font-bold transition" aria-label="Toggle text direction">
             <i class="fa-solid fa-right-left text-[11px] dir-arrow-icon text-forest dark:text-sand"></i>
-            <span class="dir-label text-forest dark:text-sand">RTL</span>
+            <span class="dir-label text-forest dark:text-sand leading-none">RTL</span>
           </button>
-          <a href="wishlist.html" class="relative p-2 rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Wishlist">
+
+          <!-- Wishlist Icon -->
+          <a href="wishlist.html" class="relative w-9 h-9 inline-flex items-center justify-center rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Wishlist">
             <i class="fa-regular fa-heart text-forest dark:text-sand text-base"></i>
             <span class="wishlist-count-badge hidden absolute -top-1 -right-1 bg-rose-500 text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">0</span>
           </a>
-          <a href="order.html" class="relative p-2 rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Cart and Order">
+
+          <!-- Cart / Order Icon -->
+          <a href="order.html" class="relative w-9 h-9 inline-flex items-center justify-center rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Cart and Order">
             <i class="fa-solid fa-cart-shopping text-forest dark:text-sand text-base"></i>
             <span class="cart-count-badge hidden absolute -top-1 -right-1 bg-orange text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">0</span>
           </a>
-          <button id="mobile-menu-toggle" class="lg:hidden p-2 rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Toggle Mobile Menu" aria-expanded="false">
+
+          <!-- Mobile Hamburger Menu Button -->
+          <button id="mobile-menu-toggle" class="lg:hidden w-9 h-9 inline-flex items-center justify-center rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Toggle Mobile Menu" aria-expanded="false">
             <i class="fa-solid fa-bars text-xl text-forest dark:text-cream"></i>
           </button>
         </div>
@@ -243,7 +253,7 @@
           <!-- Hero Image Column (Right) -->
           <div class="lg:col-span-6 relative">
             <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-[#2D372F] aspect-[4/3] sm:aspect-[16/11]">
-              <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=1200&q=85" 
+              <img src="https://i.pinimg.com/736x/38/02/e9/3802e9cc051bd6629ca5845730e70956.jpg" 
                    alt="Wilderness camp under the alpine sky" 
                    class="w-full h-full object-cover">
               
@@ -286,7 +296,7 @@
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
           
-          <a href="products.html?cat=tents" class="group relative rounded-2xl overflow-hidden aspect-[4/5] shadow card-theme" data-tilt>
+          <a href="products.html?cat=tents" class="group relative rounded-2xl overflow-hidden aspect-[4/5] shadow card-theme">
             <img src="https://images.unsplash.com/photo-1532339142463-fd0a8979791a?auto=format&fit=crop&w=600&q=80" alt="Tents & Shelters" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-5 text-white">
               <span class="text-[11px] font-bold text-orange uppercase tracking-wider">3 Models</span>
@@ -295,7 +305,7 @@
             </div>
           </a>
 
-          <a href="products.html?cat=backpacks" class="group relative rounded-2xl overflow-hidden aspect-[4/5] shadow card-theme" data-tilt>
+          <a href="products.html?cat=backpacks" class="group relative rounded-2xl overflow-hidden aspect-[4/5] shadow card-theme">
             <img src="https://images.unsplash.com/photo-1665724233211-02a7afbb8b36?auto=format&fit=crop&w=600&q=80" alt="Expedition Backpacks" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-5 text-white">
               <span class="text-[11px] font-bold text-orange uppercase tracking-wider">2 Models</span>
@@ -304,7 +314,7 @@
             </div>
           </a>
 
-          <a href="products.html?cat=cooking" class="group relative rounded-2xl overflow-hidden aspect-[4/5] shadow card-theme" data-tilt>
+          <a href="products.html?cat=cooking" class="group relative rounded-2xl overflow-hidden aspect-[4/5] shadow card-theme">
             <img src="https://images.unsplash.com/photo-1522041350204-22285237eeca?auto=format&fit=crop&w=600&q=80" alt="Camp Cooking Gear" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-5 text-white">
               <span class="text-[11px] font-bold text-orange uppercase tracking-wider">2 Models</span>
@@ -313,7 +323,7 @@
             </div>
           </a>
 
-          <a href="products.html?cat=sleeping" class="group relative rounded-2xl overflow-hidden aspect-[4/5] shadow card-theme" data-tilt>
+          <a href="products.html?cat=sleeping" class="group relative rounded-2xl overflow-hidden aspect-[4/5] shadow card-theme">
             <img src="https://images.unsplash.com/photo-1558477280-1bfed08ea5db?auto=format&fit=crop&w=600&q=80" alt="Sleeping Bags" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-5 text-white">
               <span class="text-[11px] font-bold text-orange uppercase tracking-wider">2 Models</span>
@@ -347,9 +357,9 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           
           <!-- Product: MonsoonShield Jacket -->
-          <div class="card-theme flex flex-col justify-between overflow-hidden group" data-tilt>
+          <div class="card-theme flex flex-col justify-between overflow-hidden group">
             <div class="relative img-zoom-container h-64 bg-gray-100 dark:bg-gray-800">
-              <img src="https://images.unsplash.com/photo-1491555103944-7c647fd857e6?auto=format&fit=crop&w=700&q=80" alt="MonsoonShield Mountain Jacket" class="w-full h-full object-cover">
+              <img src="https://i.pinimg.com/736x/db/ed/52/dbed52acb758f0b1ac4688fd2cb5474b.jpg" alt="MonsoonShield Mountain Jacket" class="w-full h-full object-cover">
               <span class="absolute top-3 left-3 badge-orange">28,000mm Waterproof</span>
               <button data-toggle-wishlist="wear-storm-shell" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/80 dark:bg-black/60 backdrop-blur-md flex items-center justify-center text-gray-600 dark:text-gray-200 hover:text-rose-500 transition shadow" aria-label="Save to Wishlist">
                 <i class="fa-regular fa-heart"></i>
@@ -361,10 +371,10 @@
                   <span>Weatherwear</span>
                   <span class="flex items-center gap-1 text-amber-500 font-bold"><i class="fa-solid fa-star text-xs"></i> 4.9</span>
                 </div>
-                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors">
+                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors min-h-[3.25rem] leading-snug flex items-center">
                   <a href="product-details.html?id=wear-storm-shell">MonsoonShield 3-Layer Mountain Jacket</a>
                 </h3>
-                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2">
+                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 min-h-[2.5rem]">
                   Heavyweight weather defense engineered for cloudbursts and torrential rains. Helmet-compatible storm hood.
                 </p>
               </div>
@@ -381,9 +391,9 @@
           </div>
 
           <!-- Product: Karakoram Carbon Poles -->
-          <div class="card-theme flex flex-col justify-between overflow-hidden group" data-tilt>
+          <div class="card-theme flex flex-col justify-between overflow-hidden group">
             <div class="relative img-zoom-container h-64 bg-gray-100 dark:bg-gray-800">
-              <img src="https://images.unsplash.com/photo-1785772534309-7503e6e92790?auto=format&fit=crop&w=700&q=80" alt="Karakoram Carbon Poles" class="w-full h-full object-cover">
+              <img src="https://i.pinimg.com/736x/4f/7f/37/4f7f37a3bffec41aabb42cfcfbe0ed27.jpg" alt="Karakoram Carbon Poles" class="w-full h-full object-cover">
               <span class="absolute top-3 left-3 badge-eco">Carbon 430g</span>
               <button data-toggle-wishlist="gear-carbon-poles" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/80 dark:bg-black/60 backdrop-blur-md flex items-center justify-center text-gray-600 dark:text-gray-200 hover:text-rose-500 transition shadow" aria-label="Save to Wishlist">
                 <i class="fa-regular fa-heart"></i>
@@ -395,10 +405,10 @@
                   <span>Trekking Poles</span>
                   <span class="flex items-center gap-1 text-amber-500 font-bold"><i class="fa-solid fa-star text-xs"></i> 4.8</span>
                 </div>
-                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors">
+                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors min-h-[3.25rem] leading-snug flex items-center">
                   <a href="product-details.html?id=gear-carbon-poles">Karakoram 3K Carbon Trekking Poles (Pair)</a>
                 </h3>
-                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2">
+                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 min-h-[2.5rem]">
                   100% 3K carbon fiber shafts with natural Portuguese cork grips and alloy quick-cams.
                 </p>
               </div>
@@ -415,9 +425,9 @@
           </div>
 
           <!-- Product: PureFlow Gravity Filter -->
-          <div class="card-theme flex flex-col justify-between overflow-hidden group" data-tilt>
+          <div class="card-theme flex flex-col justify-between overflow-hidden group">
             <div class="relative img-zoom-container h-64 bg-gray-100 dark:bg-gray-800">
-              <img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=700&q=80" alt="PureFlow Gravity Filter" class="w-full h-full object-cover">
+              <img src="https://i.pinimg.com/736x/61/6b/07/616b07f4fb1148b3cd2fbb7164ded7b8.jpg" alt="PureFlow Gravity Filter" class="w-full h-full object-cover">
               <span class="absolute top-3 left-3 badge-orange">0.1-Micron</span>
               <button data-toggle-wishlist="filter-pureflow-4l" class="absolute top-3 right-3 w-9 h-9 rounded-full bg-white/80 dark:bg-black/60 backdrop-blur-md flex items-center justify-center text-gray-600 dark:text-gray-200 hover:text-rose-500 transition shadow" aria-label="Save to Wishlist">
                 <i class="fa-regular fa-heart"></i>
@@ -429,10 +439,10 @@
                   <span>Hydration</span>
                   <span class="flex items-center gap-1 text-amber-500 font-bold"><i class="fa-solid fa-star text-xs"></i> 4.8</span>
                 </div>
-                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors">
+                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors min-h-[3.25rem] leading-snug flex items-center">
                   <a href="product-details.html?id=filter-pureflow-4l">PureFlow 4L Gravity Water Filtration Kit</a>
                 </h3>
-                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2">
+                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 min-h-[2.5rem]">
                   Purifies 4 liters of mountain stream water in under 4 minutes without pumping. 99.9999% bacteria removal.
                 </p>
               </div>
@@ -472,7 +482,7 @@
             <div>
               <span class="badge-eco inline-block mb-3">Beginners & Couples</span>
               <h3 class="text-2xl font-black text-white font-display">Starter Camper</h3>
-              <p class="text-xs text-sand mt-2 mb-6">
+              <p class="text-xs text-sand mt-2 mb-6 min-h-[2.5rem]">
                 Everything required for your first comfortable night under the stars.
               </p>
               <div class="mb-6">
@@ -484,6 +494,7 @@
                 <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange"></i> Cascade 2P Ultralight Shelter</li>
                 <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange"></i> Beacon 1200 Solar Lantern</li>
                 <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange"></i> Stainless Mess Kit & Spork</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange"></i> Weatherproof Dry-Sack Pack</li>
                 <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange"></i> Free Express Shipping Pan-India</li>
               </ul>
             </div>
@@ -500,7 +511,7 @@
             <div>
               <span class="badge-orange inline-block mb-3">Multi-Day Treks</span>
               <h3 class="text-2xl font-black text-white font-display">Adventure Explorer</h3>
-              <p class="text-xs text-sand mt-2 mb-6">
+              <p class="text-xs text-sand mt-2 mb-6 min-h-[2.5rem]">
                 Our definitive kit for 3-7 day backcountry traverses.
               </p>
               <div class="mb-6">
@@ -526,7 +537,7 @@
             <div>
               <span class="badge-eco inline-block mb-3">Alpine Pass Pushes</span>
               <h3 class="text-2xl font-black text-white font-display">Ultimate Expedition</h3>
-              <p class="text-xs text-sand mt-2 mb-6">
+              <p class="text-xs text-sand mt-2 mb-6 min-h-[2.5rem]">
                 Uncompromising hardware for Ladakh passes and freezing snow bivouacs.
               </p>
               <div class="mb-6">
@@ -624,7 +635,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
           
           <!-- Category 1: Weekend Solo (1-2 Days) -->
-          <div class="card-theme p-6 sm:p-8 rounded-3xl flex flex-col justify-between" data-tilt>
+          <div class="card-theme p-6 sm:p-8 rounded-3xl flex flex-col justify-between">
             <div>
               <div class="flex items-center justify-between mb-4">
                 <span class="text-[11px] font-bold text-orange uppercase tracking-wider">Weekend Overnight</span>
@@ -653,7 +664,7 @@
           </div>
 
           <!-- Category 2: 3-5 Day Alpine Traverse -->
-          <div class="card-theme p-6 sm:p-8 rounded-3xl border-2 border-orange relative flex flex-col justify-between shadow-xl" data-tilt>
+          <div class="card-theme p-6 sm:p-8 rounded-3xl border-2 border-orange relative flex flex-col justify-between shadow-xl">
             <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-orange text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
               Most Popular Setup
             </div>
@@ -685,7 +696,7 @@
           </div>
 
           <!-- Category 3: 7-14 Day High-Pass Expedition -->
-          <div class="card-theme p-6 sm:p-8 rounded-3xl flex flex-col justify-between" data-tilt>
+          <div class="card-theme p-6 sm:p-8 rounded-3xl flex flex-col justify-between">
             <div>
               <div class="flex items-center justify-between mb-4">
                 <span class="text-[11px] font-bold text-orange uppercase tracking-wider">Himalayan Col Crossing</span>
@@ -738,22 +749,22 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           
           <!-- Expedition 1 -->
-          <div class="bg-forest-dark/80 p-6 sm:p-7 rounded-3xl border border-sand/30 flex flex-col justify-between card-theme" data-tilt>
-            <div>
+          <div class="bg-forest-dark/80 p-6 sm:p-7 rounded-3xl border border-sand/30 flex flex-col justify-between card-theme h-full">
+            <div class="flex-1 flex flex-col">
               <div class="flex items-center justify-between mb-3">
                 <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-[11px] font-bold">Nov 14-16, 2026</span>
                 <span class="text-xs text-sand font-bold">18 km • Moderate</span>
               </div>
-              <h3 class="text-xl font-bold text-white mb-2">Kudremukh Mist Ridge Traverse</h3>
-              <p class="text-xs text-gray-300 leading-relaxed mb-4">
+              <h3 class="text-xl font-bold text-white mb-2 min-h-[3.5rem] leading-snug">Kudremukh Mist Ridge Traverse</h3>
+              <p class="text-xs text-gray-300 leading-relaxed mb-4 min-h-[3.75rem]">
                 Trek across Karnataka's rolling shola grasslands, test MonsoonShield rainwear, and camp beside crystal mountain streams.
               </p>
-              <div class="flex items-center gap-2 text-xs text-sand pt-3 border-t border-sand/20">
+              <div class="mt-auto flex items-center gap-2 text-xs text-sand pt-3 border-t border-sand/20">
                 <i class="fa-solid fa-location-dot text-orange"></i>
                 <span>Chikmagalur, Karnataka</span>
               </div>
             </div>
-            <div class="pt-6 mt-6 border-t border-sand/20 flex items-center justify-between">
+            <div class="pt-4 mt-4 border-t border-sand/20 flex items-center justify-between">
               <div>
                 <span class="text-xs text-gray-400 block">Spots Left:</span>
                 <strong class="text-orange text-sm">4 / 12 Open</strong>
@@ -765,22 +776,22 @@
           </div>
 
           <!-- Expedition 2 -->
-          <div class="bg-forest-dark/80 p-6 sm:p-7 rounded-3xl border border-sand/30 flex flex-col justify-between card-theme" data-tilt>
-            <div>
+          <div class="bg-forest-dark/80 p-6 sm:p-7 rounded-3xl border border-sand/30 flex flex-col justify-between card-theme h-full">
+            <div class="flex-1 flex flex-col">
               <div class="flex items-center justify-between mb-3">
                 <span class="px-2.5 py-0.5 rounded-full bg-orange/20 text-orange text-[11px] font-bold">Dec 05-09, 2026</span>
                 <span class="text-xs text-sand font-bold">22 km • Alpine Snow</span>
               </div>
-              <h3 class="text-xl font-bold text-white mb-2">Kedarkantha Summit Bivouac</h3>
-              <p class="text-xs text-gray-300 leading-relaxed mb-4">
+              <h3 class="text-xl font-bold text-white mb-2 min-h-[3.5rem] leading-snug">Kedarkantha Summit Bivouac</h3>
+              <p class="text-xs text-gray-300 leading-relaxed mb-4 min-h-[3.75rem]">
                 Sub-zero winter ascent up to 3,800m. Hands-on testing of Boreal down bags, geodesic snow anchors, and crampon use.
               </p>
-              <div class="flex items-center gap-2 text-xs text-sand pt-3 border-t border-sand/20">
+              <div class="mt-auto flex items-center gap-2 text-xs text-sand pt-3 border-t border-sand/20">
                 <i class="fa-solid fa-location-dot text-orange"></i>
                 <span>Sankri, Uttarakhand</span>
               </div>
             </div>
-            <div class="pt-6 mt-6 border-t border-sand/20 flex items-center justify-between">
+            <div class="pt-4 mt-4 border-t border-sand/20 flex items-center justify-between">
               <div>
                 <span class="text-xs text-gray-400 block">Spots Left:</span>
                 <strong class="text-orange text-sm">2 / 8 Open</strong>
@@ -792,22 +803,22 @@
           </div>
 
           <!-- Expedition 3 -->
-          <div class="bg-forest-dark/80 p-6 sm:p-7 rounded-3xl border border-sand/30 flex flex-col justify-between card-theme" data-tilt>
-            <div>
+          <div class="bg-forest-dark/80 p-6 sm:p-7 rounded-3xl border border-sand/30 flex flex-col justify-between card-theme h-full">
+            <div class="flex-1 flex flex-col">
               <div class="flex items-center justify-between mb-3">
                 <span class="px-2.5 py-0.5 rounded-full bg-sand/20 text-sand text-[11px] font-bold">Jan 16-18, 2027</span>
                 <span class="text-xs text-sand font-bold">14 km • Workshop</span>
               </div>
-              <h3 class="text-xl font-bold text-white mb-2">Nilgiris Field Maintenance Clinic</h3>
-              <p class="text-xs text-gray-300 leading-relaxed mb-4">
+              <h3 class="text-xl font-bold text-white mb-2 min-h-[3.5rem] leading-snug">Nilgiris Field Maintenance Clinic</h3>
+              <p class="text-xs text-gray-300 leading-relaxed mb-4 min-h-[3.75rem]">
                 Comprehensive outdoor skills masterclass: backcountry water filtration, stove repair, seam sealing, and emergency bivvies.
               </p>
-              <div class="flex items-center gap-2 text-xs text-sand pt-3 border-t border-sand/20">
+              <div class="mt-auto flex items-center gap-2 text-xs text-sand pt-3 border-t border-sand/20">
                 <i class="fa-solid fa-location-dot text-orange"></i>
                 <span>Ooty Outpost, Tamil Nadu</span>
               </div>
             </div>
-            <div class="pt-6 mt-6 border-t border-sand/20 flex items-center justify-between">
+            <div class="pt-4 mt-4 border-t border-sand/20 flex items-center justify-between">
               <div>
                 <span class="text-xs text-gray-400 block">Spots Left:</span>
                 <strong class="text-orange text-sm">6 / 15 Open</strong>
@@ -888,8 +899,8 @@
                 <i class="fa-solid fa-arrow-right text-gray-400 group-hover:text-orange group-hover:translate-x-1 transition flex-shrink-0"></i>
               </a>
 
-              <a href="guide-details.html?id=sleeping-system-science" class="card-theme p-4 sm:p-5 flex items-center gap-4 group" data-tilt>
-                <img src="https://images.unsplash.com/photo-1537905569824-f89f14cceb68?auto=format&fit=crop&w=300&q=80" alt="Sleep System Science" class="w-20 h-20 rounded-xl object-cover flex-shrink-0">
+              <a href="guide-details.html?id=sleeping-system-science" class="card-theme p-4 sm:p-5 flex items-center gap-4 group">
+                <img src="https://i.pinimg.com/1200x/fc/30/7a/fc307af9ad100c3cc6a45773e0de42af.jpg" alt="Sleep System Science" class="w-20 h-20 rounded-xl object-cover flex-shrink-0">
                 <div class="flex-1 min-w-0">
                   <span class="text-[10px] font-bold text-orange uppercase tracking-wider">Gear Science • 8 min read</span>
                   <h3 class="font-bold text-sm sm:text-base text-forest dark:text-cream group-hover:text-orange transition-colors truncate">
@@ -900,8 +911,8 @@
                 <i class="fa-solid fa-arrow-right text-gray-400 group-hover:text-orange group-hover:translate-x-1 transition flex-shrink-0"></i>
               </a>
 
-              <a href="guide-details.html?id=leave-no-trace-ethics" class="card-theme p-4 sm:p-5 flex items-center gap-4 group" data-tilt>
-                <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=300&q=80" alt="Leave No Trace" class="w-20 h-20 rounded-xl object-cover flex-shrink-0">
+              <a href="guide-details.html?id=leave-no-trace-ethics" class="card-theme p-4 sm:p-5 flex items-center gap-4 group">
+                <img src="https://i.pinimg.com/736x/46/49/5a/46495a6a9564e689af6515cc9a6ecd79.jpg" alt="Leave No Trace" class="w-20 h-20 rounded-xl object-cover flex-shrink-0">
                 <div class="flex-1 min-w-0">
                   <span class="text-[10px] font-bold text-orange uppercase tracking-wider">Ethics • 5 min read</span>
                   <h3 class="font-bold text-sm sm:text-base text-forest dark:text-cream group-hover:text-orange transition-colors truncate">
@@ -937,17 +948,17 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           
-          <article class="card-theme overflow-hidden flex flex-col justify-between group" data-tilt>
+          <article class="card-theme overflow-hidden flex flex-col justify-between group">
             <div>
               <div class="img-zoom-container h-48 bg-gray-200">
-                <img src="https://images.unsplash.com/photo-1581605405669-fcdf81165afa?auto=format&fit=crop&w=600&q=80" alt="Ultralight Packing" class="w-full h-full object-cover">
+                <img src="https://i.pinimg.com/1200x/c7/0f/72/c70f7219bc5e2930683e5255cc7f0e1c.jpg" alt="Ultralight Packing" class="w-full h-full object-cover">
               </div>
               <div class="p-6">
                 <span class="text-[10px] font-bold text-orange uppercase tracking-wider">Gear Tips • Sep 18</span>
-                <h3 class="font-bold text-base text-forest dark:text-cream group-hover:text-orange transition-colors mt-2">
+                <h3 class="font-bold text-base text-forest dark:text-cream group-hover:text-orange transition-colors mt-2 min-h-[2.75rem] leading-snug flex items-center">
                   <a href="blog-details.html?id=ultralight-packing-secrets">Drop 5 Kilos: The Art of Ultralight Wilderness Backpacking</a>
                 </h3>
-                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-2">
+                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-2 min-h-[2.5rem]">
                   Trimming base weight does not mean sacrificing comfort. How modern titanium and silnylon transform trekking.
                 </p>
               </div>
@@ -959,17 +970,17 @@
             </div>
           </article>
 
-          <article class="card-theme overflow-hidden flex flex-col justify-between group" data-tilt>
+          <article class="card-theme overflow-hidden flex flex-col justify-between group">
             <div>
               <div class="img-zoom-container h-48 bg-gray-200">
-                <img src="https://images.unsplash.com/photo-1692313532975-513a383c48f7?auto=format&fit=crop&w=600&q=80" alt="Camp Cooking" class="w-full h-full object-cover">
+                <img src="https://i.pinimg.com/736x/5f/77/bf/5f77bfa81550eb143020224c99244fa4.jpg" alt="Camp Cooking" class="w-full h-full object-cover">
               </div>
               <div class="p-6">
                 <span class="text-[10px] font-bold text-orange uppercase tracking-wider">Camp Life • Sep 8</span>
-                <h3 class="font-bold text-base text-forest dark:text-cream group-hover:text-orange transition-colors mt-2">
+                <h3 class="font-bold text-base text-forest dark:text-cream group-hover:text-orange transition-colors mt-2 min-h-[2.75rem] leading-snug flex items-center">
                   <a href="blog-details.html?id=camp-cooking-gourmet">Beyond Instant Noodles: Camp Chef Techniques for Forest Feasts</a>
                 </h3>
-                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-2">
+                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-2 min-h-[2.5rem]">
                   Elevate backcountry cuisine with pre-mixed spices, cast-iron campfire magic, and titanium boiling tips.
                 </p>
               </div>
@@ -981,17 +992,17 @@
             </div>
           </article>
 
-          <article class="card-theme overflow-hidden flex flex-col justify-between group" data-tilt>
+          <article class="card-theme overflow-hidden flex flex-col justify-between group">
             <div>
               <div class="img-zoom-container h-48 bg-gray-200">
                 <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=600&q=80" alt="Stargazing Camps" class="w-full h-full object-cover">
               </div>
               <div class="p-6">
                 <span class="text-[10px] font-bold text-orange uppercase tracking-wider">Destinations • Jul 19</span>
-                <h3 class="font-bold text-base text-forest dark:text-cream group-hover:text-orange transition-colors mt-2">
+                <h3 class="font-bold text-base text-forest dark:text-cream group-hover:text-orange transition-colors mt-2 min-h-[2.75rem] leading-snug flex items-center">
                   <a href="blog-details.html?id=stargazing-remote-camps">Dark Sky Sanctuaries: Best Campgrounds for Astronomy Across India</a>
                 </h3>
-                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-2">
+                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-2 min-h-[2.5rem]">
                   Witness the galactic core of the Milky Way from Ladakh's Hanle Dark Sky Reserve to Spiti and Nilgiris.
                 </p>
               </div>

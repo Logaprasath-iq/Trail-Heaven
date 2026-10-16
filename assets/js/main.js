@@ -498,47 +498,26 @@ function initScrollReveal() {
   brandImgs.forEach(img => img.classList.add('brand-emblem-img'));
 }
 
-// 10. Interactive 3D Card Tilt on Pointer Movement
+// 10. Interactive Card Tilt & Hover Stability Engine
 function initCardTilt() {
-  if (!window.matchMedia || !window.matchMedia('(pointer: fine)').matches) return;
-
-  const tiltCards = document.querySelectorAll('[data-tilt]:not(form):not(table):not(.no-tilt)');
+  // Stabilized to prevent high-frequency jitter and card vibration across all pages
+  const tiltCards = document.querySelectorAll('[data-tilt]');
   tiltCards.forEach(card => {
-    let bounds;
-    const onMouseEnter = () => {
-      bounds = card.getBoundingClientRect();
-      card.style.transition = 'transform 0.12s ease-out, box-shadow 0.25s ease';
-    };
-    const onMouseMove = (e) => {
-      if (!bounds) bounds = card.getBoundingClientRect();
-      const mouseX = e.clientX - bounds.left;
-      const mouseY = e.clientY - bounds.top;
-      const xPct = mouseX / bounds.width - 0.5;
-      const yPct = mouseY / bounds.height - 0.5;
-      const maxRot = 3.5;
-      card.style.transform = `perspective(900px) rotateX(${(-yPct * maxRot).toFixed(2)}deg) rotateY(${(xPct * maxRot).toFixed(2)}deg) translateY(-3px)`;
-    };
-    const onMouseLeave = () => {
-      card.style.transition = 'transform 0.35s ease-out, box-shadow 0.25s ease';
-      card.style.transform = '';
-      bounds = null;
-    };
-    card.addEventListener('mouseenter', onMouseEnter);
-    card.addEventListener('mousemove', onMouseMove);
-    card.addEventListener('mouseleave', onMouseLeave);
+    card.removeAttribute('data-tilt');
+    card.style.transform = '';
   });
 }
 
 // 11. Rolling Number Counters on Scroll Intersection
 function initCounters() {
-  const counterElements = document.querySelectorAll('[data-counter]');
+  const counterElements = document.querySelectorAll('[data-counter], [data-target]');
   if (!counterElements.length) return;
 
   const animateCounter = (el) => {
     if (el.dataset.counterAnimated === 'true') return;
     el.dataset.counterAnimated = 'true';
 
-    const target = parseFloat(el.getAttribute('data-counter')) || 0;
+    const target = parseFloat(el.getAttribute('data-counter') || el.getAttribute('data-target')) || 0;
     const duration = parseInt(el.getAttribute('data-duration') || '1800', 10);
     const prefix = el.getAttribute('data-counter-prefix') || '';
     const suffix = el.getAttribute('data-counter-suffix') || '';

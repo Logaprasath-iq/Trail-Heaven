@@ -136,6 +136,10 @@ const TrailHavenData = {
         "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1496545672447-f699b503d270?auto=format&fit=crop&w=800&q=80"
       ],
+      pairedWith: [
+        "sleeping-bag-boreal",
+        "light-beacon-1200"
+      ],
       shortDesc: "Engineered for harsh Himalayan winds and torrential monsoon downpours. Geodesic pole architecture with 5000mm hydrostatic head flysheet.",
       description: "The Summit 3P is TrailHaven's pinnacle alpine refuge. Built with five DAC Featherlite NSL aircraft aluminum poles that cross in multiple points to withstand 90 km/h wind shear. The 70D ripstop nylon fly features a dual-silicone and polyurethane coating providing an unyielding 5000mm waterproof rating. Features dual vestibules for gear storage, storm flaps over heavy-duty YKK zippers, and interior gear lofts.",
       features: [
@@ -178,6 +182,10 @@ const TrailHavenData = {
         "https://i.pinimg.com/736x/a3/0f/31/a30f31850288824a682819544585b8ea.jpg",
         "https://i.pinimg.com/736x/ed/d5/33/edd53314d6e751719c81b6fd4c97500c.jpg"
       ],
+      pairedWith: [
+        "gear-carbon-poles",
+        "filter-pureflow-4l"
+      ],
       shortDesc: "65-liter load hauler featuring an adjustable aluminum stay harness, floating lid, and integrated waterproof monsoon raincover.",
       description: "Designed for multi-day expeditions through rugged topography, the Vanguard 65 transfers 80% of pack weight directly to the lumbar through its custom-molded EVA hipbelt. Made from high-tenacity 420D Cordura with 840D ballistic nylon reinforcements at critical abrasion zones. Includes a dedicated bottom sleeping bag compartment with internal divider.",
       features: [
@@ -218,6 +226,10 @@ const TrailHavenData = {
         "https://i.pinimg.com/736x/cd/af/06/cdaf065f4019224c4cf526838a753e74.jpg",
         "https://images.unsplash.com/photo-1558477280-1bfed08ea5db?auto=format&fit=crop&w=800&q=80",
         "https://plus.unsplash.com/premium_photo-1753436452097-8bbd74d9b345?auto=format&fit=crop&w=800&q=80"
+      ],
+      pairedWith: [
+        "sleep-pad-thermalrest",
+        "camping-tent-01"
       ],
       shortDesc: "Ultralight sub-zero mummy sleeping bag with RDS-certified hydrophobic down, anti-snag draft tube, and contoured hood.",
       description: "When the temperature plunges below freezing in Ladakh or Spiti, the Boreal -15°C traps body heat with continuous horizontal baffles filled with 800-fill power water-resistant goose down. The Pertex Quantum 20D shell repels tent wall condensation while breathing efficiently to prevent moisture buildup within the down clusters.",
@@ -260,6 +272,10 @@ const TrailHavenData = {
         "https://images.unsplash.com/photo-1571687949921-1306bfb24b72?auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=800&q=80"
       ],
+      pairedWith: [
+        "sleep-pad-thermalrest",
+        "pack-ridgeline-38"
+      ],
       shortDesc: "Sub-1.7kg freestanding 3-season tent with generous headroom, dual doors, and micro-mesh inner for stargazing.",
       description: "Engineered for speed and agility, the Cascade 2P balances light pack weight with liveable interior volume. The single-hub pole system sets up in under 3 minutes even in pitch-black conditions. Fine no-see-um mesh blocks the tiniest insects while providing 360-degree night sky views when the rainfly is rolled back.",
       features: [
@@ -301,6 +317,10 @@ const TrailHavenData = {
         "https://images.unsplash.com/photo-1537905569824-f89f14cceb68?auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1751703096330-445adf3e8123?auto=format&fit=crop&w=800&q=80"
       ],
+      pairedWith: [
+        "light-beacon-1200",
+        "cook-castiron-skillet"
+      ],
       shortDesc: "Stand-up height luxury family cabin tent with removable room divider, huge mesh windows, and integrated front sun awning.",
       description: "Transform any campsite into a palatial basecamp. With an impressive 200cm peak height, adults can walk comfortably inside without crouching. The removable central partition creates two private rooms or one massive communal space that fits two queen-sized airbeds with room to spare.",
       features: [
@@ -341,6 +361,10 @@ const TrailHavenData = {
         "https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1665724233211-02a7afbb8b36?auto=format&fit=crop&w=800&q=80"
       ],
+      pairedWith: [
+        "gear-carbon-poles",
+        "wear-storm-shell"
+      ],
       shortDesc: "The quintessential 38L summit and daypack with suspended trampoline mesh back ventilation to keep you cool on steep ascents.",
       description: "Engineered specifically for full-day ridge traverses and weekend cabin overnights. The AirFlow tensioned mesh suspension holds the pack body away from your back, allowing cool air to circulate freely. Quick-stow trekking pole bungee loops allow you to stow poles on the fly without breaking stride.",
       features: [
@@ -380,6 +404,10 @@ const TrailHavenData = {
         "https://images.unsplash.com/photo-1445307806294-bff7f67ff225?auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1532339142463-fd0a8979791a?auto=format&fit=crop&w=800&q=80"
       ],
+      pairedWith: [
+        "sleeping-bag-boreal",
+        "tent-cascade-2p"
+      ],
       shortDesc: "4-season insulated air mattress with reflective ThermaFoil layers. R-Value 4.8 at just 490 grams.",
       description: "Ground cold robs more heat than ambient air. The ThermalRest incorporates dual layers of radiant heat-reflecting film and internal chamber baffling to bounce body heat back toward you while barring ground chill. Inflates in 60 seconds using the included featherweight pump sack.",
       features: [
@@ -418,6 +446,10 @@ const TrailHavenData = {
         "https://i.pinimg.com/1200x/b2/af/ef/b2afef673d1394ffef1712a1446f1230.jpg",
         "https://images.unsplash.com/photo-1774886302070-0553eb9b4215?auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1567091238763-8414227537ca?auto=format&fit=crop&w=800&q=80"
+      ],
+      pairedWith: [
+        "camping-tent-01",
+        "furniture-chair-aero"
       ],
       shortDesc: "1200-lumen waterproof campsite lantern with warm white, candle flicker, red SOS modes, and built-in 9600mAh power bank.",
       description: "Illuminate your entire cooking camp with 360-degree glare-free warm ambient light. Built from impact-resistant aerospace polycarbonate with a silicone shock bumper. Features an integrated monocrystalline solar lid panel for off-grid top-offs, plus USB-C fast charging that doubles as an emergency smartphone charger.",
@@ -459,6 +491,10 @@ const TrailHavenData = {
         "https://images.unsplash.com/photo-1515444744559-7be63e1600de?auto=format&fit=crop&w=800&q=80",
         "https://plus.unsplash.com/premium_photo-1741858804139-e05f5c4cd9fd?auto=format&fit=crop&w=800&q=80"
       ],
+      pairedWith: [
+        "nav-sighting-compass",
+        "pack-ridgeline-38"
+      ],
       shortDesc: "Ultra-compact 78g rechargeable headlamp featuring spotlight, floodlight, and night-vision preserving red LED.",
       description: "Whether navigating pre-dawn alpine scree or reading your trail map inside the tent, the NightClimb 850 provides crystal-clear optics. Features an innovative gesture-sensing mode: simply wave your hand in front of the lens to toggle power without removing heavy winter mittens.",
       features: [
@@ -497,6 +533,10 @@ const TrailHavenData = {
         "https://i.pinimg.com/1200x/54/db/d1/54dbd1697ce4776a3d56e1bb7293c64d.jpg",
         "https://images.unsplash.com/photo-1522041350204-22285237eeca?auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1780394045328-ca3af6a19f8e?auto=format&fit=crop&w=800&q=80"
+      ],
+      pairedWith: [
+        "filter-pureflow-4l",
+        "backpack-apex-65"
       ],
       shortDesc: "Ultralight nesting titanium backpacking kitchen. Boils 500ml of mountain water in just 105 seconds with piezoelectric ignition.",
       description: "Made from Grade-1 aircraft titanium, this complete cooking kit is impervious to rust, metallic aftertaste, and high-heat deformation. The pot nests a 230g isobutane canister and the micro-burner seamlessly inside its insulated neoprene sleeve, packing down to the size of a coffee mug.",
@@ -537,6 +577,10 @@ const TrailHavenData = {
         "https://images.unsplash.com/photo-1637739699971-7d4d5194e75c?auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1692313532975-513a383c48f7?auto=format&fit=crop&w=800&q=80"
       ],
+      pairedWith: [
+        "tent-havenwood-6p",
+        "furniture-chair-aero"
+      ],
       shortDesc: "Heirloom-grade pre-seasoned cast iron pan for roaring campfires, embers, and gas camp stoves. Naturally non-stick.",
       description: "Nothing beats sizzling campfire steaks or campfire dosa over glowing hardwood coals. Pre-seasoned with 100% organic cold-pressed flaxseed oil for a natural, chemical-free non-stick patina that gets better with every adventure. Includes removable heat-resistant silicone handle grip.",
       features: [
@@ -575,6 +619,10 @@ const TrailHavenData = {
         "https://i.pinimg.com/1200x/1a/dd/c3/1addc3b685ebeb339d3c9830425981d1.jpg",
         "https://images.unsplash.com/photo-1785772534309-7503e6e92790?auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1778248842805-54e75d813b49?auto=format&fit=crop&w=800&q=80"
+      ],
+      pairedWith: [
+        "backpack-apex-65",
+        "wear-storm-shell"
       ],
       shortDesc: "100% 3K carbon fiber three-section poles with ergonomic cork grips, aluminum speed locks, and interchangeable carbide tips.",
       description: "Absorb jarring downhill joint impact with lightweight 3K carbon fiber shafts that naturally dampen shock vibrations. Moisture-wicking natural cork grips mold to your hand contours over time, preventing blisters on gruelling 20-kilometer mountain pushes.",
@@ -615,6 +663,10 @@ const TrailHavenData = {
         "https://images.unsplash.com/photo-1491555103944-7c647fd857e6?auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1594832512784-dbd688e0572e?auto=format&fit=crop&w=800&q=80"
       ],
+      pairedWith: [
+        "gear-carbon-poles",
+        "pack-ridgeline-38"
+      ],
       shortDesc: "Heavyweight weather protection engineered for Western Ghats cloudbursts and Himalayan storms. 28,000mm waterproof / 20,000g breathability.",
       description: "Constructed with a rugged 75D recycled ripstop face bonded to a microporous waterproof membrane, the MonsoonShield keeps deluge rains out while venting sweat vapor during grueling elevation pushes. Generous underarm pit zips provide rapid heat dump on humid climbs.",
       features: [
@@ -653,6 +705,10 @@ const TrailHavenData = {
         "https://i.pinimg.com/736x/61/6b/07/616b07f4fb1148b3cd2fbb7164ded7b8.jpg",
         "https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1558169550-45825435a09b?auto=format&fit=crop&w=800&q=80"
+      ],
+      pairedWith: [
+        "cook-titanium-nomad",
+        "backpack-apex-65"
       ],
       shortDesc: "Hang-and-forget gravity water filtration reservoir. Purifies 4 liters of murky stream water in under 4 minutes without pumping.",
       description: "Say goodbye to exhausting hand-pumping after a 20km hike. Simply fill the wide-mouth 4L reservoir from any mountain stream, hang it from a sturdy branch, and let gravity push clean, pathogen-free water through the 0.1-micron hollow fiber membrane directly into your bottles.",
@@ -693,6 +749,10 @@ const TrailHavenData = {
         "https://images.unsplash.com/photo-1701835068926-171d92ceca97?auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1751570071178-11a7ab50bcdd?auto=format&fit=crop&w=800&q=80"
       ],
+      pairedWith: [
+        "tent-havenwood-6p",
+        "light-beacon-1200"
+      ],
       shortDesc: "Aircraft-grade aluminum frame weighing only 890 grams with 145kg load rating. Folds into a water-bottle-sized carrying pouch.",
       description: "The AeroRest is TrailHaven's masterclass in backcountry ergonomics. Constructed with custom DAC TH72M aluminum alloy poles and 600D ripstop polyester mesh for superior airflow during tropical expeditions.",
       features: [
@@ -731,6 +791,10 @@ const TrailHavenData = {
         "https://i.pinimg.com/736x/7a/37/7e/7a377e26b6dcccd270226e9ba73d0619.jpg",
         "https://images.unsplash.com/photo-1566341013445-3d382cd2b406?auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1478860409698-8707f313ee8b?auto=format&fit=crop&w=800&q=80"
+      ],
+      pairedWith: [
+        "gear-carbon-poles",
+        "light-headlamp-neo"
       ],
       shortDesc: "Liquid-damped global needle with clinometer, adjustable magnetic declination, and sighting mirror for precision route plotting.",
       description: "Engineered for whiteouts, dense rainforest traverses, and off-trail orienteering. Features a sapphire jewel bearing with liquid damping that prevents needle fluttering in freezing temperatures.",
@@ -863,7 +927,7 @@ const TrailHavenData = {
       readTime: "7 min read",
       author: "Arjun Verma (TrailHaven Gear Lead)",
       publishDate: "October 8, 2026",
-      image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80",
+      image: "https://i.pinimg.com/1200x/03/8b/61/038b611163973a847dcc8bbe20305e4c.jpg",
       excerpt: "Step out of your comfort zone and into the wild. Here is everything you need to know about picking your first campsite, setting up camp, and staying safe.",
       intro: "Camping in the wilderness for the very first time can feel both thrilling and daunting. The scent of pine needles, the crackle of a campfire, and a sky dusted with millions of stars are unmatched rewards. But staying warm, dry, and well-fed requires thoughtful preparation.",
       sections: [
@@ -901,7 +965,7 @@ const TrailHavenData = {
       readTime: "9 min read",
       author: "Pooja Sundaram (Senior Field Tester)",
       publishDate: "September 24, 2026",
-      image: "https://images.unsplash.com/photo-1571687949921-1306bfb24b72?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1571687949921-1306bfb24b72?auto=format&fit=crop&w=700&q=80",
       excerpt: "3-season vs 4-season, geodesic frames, and decoding waterproof ratings. Find the exact shelter built for your adventures.",
       intro: "A tent is your portable fortress against howling mountain winds and drenching rainstorms. Choosing the right one requires balancing interior space, packed trail weight, and weather resistance.",
       sections: [
@@ -936,7 +1000,7 @@ const TrailHavenData = {
       readTime: "6 min read",
       author: "Vikram Rathore (Mountaineering Instructor)",
       publishDate: "September 12, 2026",
-      image: "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&w=800&q=80",
+      image: "https://i.pinimg.com/1200x/ed/d5/33/edd53314d6e751719c81b6fd4c97500c.jpg",
       excerpt: "Torso length matters infinitely more than your height. Learn how to dial in lumbar support and prevent sore shoulders.",
       intro: "A properly fitted backpack feels like an organic extension of your spine; a poorly fitted one turns every uphill switchback into an agonizing trial.",
       sections: [
@@ -966,7 +1030,7 @@ const TrailHavenData = {
       readTime: "8 min read",
       author: "Arjun Verma (TrailHaven Gear Lead)",
       publishDate: "August 28, 2026",
-      image: "https://images.unsplash.com/photo-1537905569824-f89f14cceb68?auto=format&fit=crop&w=800&q=80",
+      image: "https://i.pinimg.com/1200x/fc/30/7a/fc307af9ad100c3cc6a45773e0de42af.jpg",
       excerpt: "Why a -10°C bag won't keep you warm without the right pad. Demystifying EN/ISO ratings and R-values.",
       intro: "Many trekkers blame their sleeping bag when they shiver all night, unaware that conductive heat loss straight into the cold ground accounts for over 60% of lost body heat.",
       sections: [
@@ -996,7 +1060,7 @@ const TrailHavenData = {
       readTime: "7 min read",
       author: "Kavitha Natarajan (Field Guide)",
       publishDate: "August 15, 2026",
-      image: "https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=700&q=80",
       excerpt: "Navigating flash floods, leeches, slippery moss scree, and relentless downpours with safety and panache.",
       intro: "Monsoon transforms the Western Ghats and Himalayan foothills into lush emerald paradises veiled in dramatic mist. But continuous rainfall demands specialized gear and rigorous safety protocols.",
       sections: [
@@ -1027,7 +1091,7 @@ const TrailHavenData = {
       readTime: "5 min read",
       author: "TrailHaven Sustainability Team",
       publishDate: "July 30, 2026",
-      image: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80",
+      image: "https://i.pinimg.com/736x/46/49/5a/46495a6a9564e689af6515cc9a6ecd79.jpg",
       excerpt: "Protecting our fragile wild habitats. The 7 universal Leave No Trace principles every Indian outdoor enthusiast must uphold.",
       intro: "As outdoor recreation grows across India, so does our collective responsibility to preserve pristine wilderness areas for future generations. TrailHaven builds gear to last, but nature requires our mindfulness.",
       sections: [
@@ -1057,7 +1121,7 @@ const TrailHavenData = {
       readTime: "8 min read",
       author: "Arjun Verma (TrailHaven Gear Lead)",
       publishDate: "October 11, 2026",
-      image: "https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=700&q=80",
       excerpt: "How gram counters achieve 30km alpine days without chronic fatigue. Selecting silnylon, carbon fiber, and multi-functional gear.",
       intro: "Transitioning to ultralight backpacking is liberating. By removing non-essential gear and choosing aerospace-grade materials, you reduce strain on your knees and back, allowing for farther, faster exploration.",
       sections: [
@@ -1087,7 +1151,7 @@ const TrailHavenData = {
       readTime: "6 min read",
       author: "Kavitha Natarajan (Field Guide)",
       publishDate: "October 14, 2026",
-      image: "https://images.unsplash.com/photo-1491555103944-7c647fd857e6?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1491555103944-7c647fd857e6?auto=format&fit=crop&w=700&q=80",
       excerpt: "Preventing giardia, cryptosporidium, and heavy sediment in glacial runoff. Choosing between 0.1-micron hollow-fiber and UV.",
       intro: "Even crystalline mountain streams tumbling from Himalayan glaciers can carry microscopic cysts from upstream grazing wildlife. Drinking untreated water can abruptly end your expedition.",
       sections: [
@@ -1117,7 +1181,7 @@ const TrailHavenData = {
       readTime: "7 min read",
       author: "Chef Rohan Sen (Backcountry Culinary Specialist)",
       publishDate: "October 15, 2026",
-      image: "https://images.unsplash.com/photo-1508873696983-2df5293cb325?auto=format&fit=crop&w=800&q=80",
+      image: "https://i.pinimg.com/1200x/5c/92/0c/5c920c25a7485b00953e8d5528481c8c.jpg",
       excerpt: "Canister vs liquid multi-fuel burners, wind efficiency, and hard-anodized aluminum vs titanium cooksets for trail cooking.",
       intro: "A hot meal after a grueling mountain pass ascent restores morale like nothing else. But choosing between integrated canister burners, remote liquid fuel stoves, and ultralight titanium pots requires understanding altitude thermodynamics and wind resistance.",
       sections: [
@@ -1157,7 +1221,7 @@ const TrailHavenData = {
       authorImage: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80",
       publishDate: "October 5, 2026",
       readTime: "6 min read",
-      image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=85",
       excerpt: "From the misty ridges of Kudremukh to the cascading roaring waterfalls of Dudhsagar, explore the most awe-inspiring monsoon trails.",
       intro: "When the southwest monsoon rolls in over peninsular India, the Western Ghats (Sahyadris) erupt into a vibrant canvas of roaring cascades, sea of clouds, and moss-blanketed cliffs.",
       content: [
@@ -1192,7 +1256,7 @@ const TrailHavenData = {
       authorImage: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80",
       publishDate: "September 18, 2026",
       readTime: "8 min read",
-      image: "https://images.unsplash.com/photo-1581605405669-fcdf81165afa?auto=format&fit=crop&w=800&q=80",
+      image: "https://i.pinimg.com/1200x/c7/0f/72/c70f7219bc5e2930683e5255cc7f0e1c.jpg",
       excerpt: "Trimming base weight does not mean sacrificing comfort. How modern titanium, silnylon, and smart multi-use gear revolutionize trekking.",
       intro: "Every gram on your shoulders multiplies across thousands of paces. Learn the core principles used by seasoned long-distance hikers to shed unnecessary pounds without sacrificing safety.",
       content: [
@@ -1223,7 +1287,7 @@ const TrailHavenData = {
       authorImage: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=300&q=80",
       publishDate: "September 8, 2026",
       readTime: "5 min read",
-      image: "https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8?auto=format&fit=crop&w=800&q=80",
+      image: "https://i.pinimg.com/736x/5f/77/bf/5f77bfa81550eb143020224c99244fa4.jpg",
       excerpt: "Elevate your backcountry cuisine with pre-mixed spice blends, dehydrated gourmet meals, and cast-iron campfire magic.",
       intro: "After an exhausting 15-kilometer alpine ascent, eating chalky instant noodles gets old fast. With a little culinary strategy, you can enjoy mouth-watering dal makhani, wood-fired skillet flatbreads, and aromatic campfire stews.",
       content: [
@@ -1254,7 +1318,7 @@ const TrailHavenData = {
       authorImage: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80",
       publishDate: "August 20, 2026",
       readTime: "7 min read",
-      image: "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=800&q=80",
+      image: "https://i.pinimg.com/1200x/32/d5/ed/32d5ed04af4bb984d3095862a07a2b83.jpg",
       excerpt: "Hard-won wisdom from high-altitude Himalayan winter bivouacs. Keep your toes toasty and your water bottle unfrozen.",
       intro: "Winter camping in snowy heights offers unmatched solitude and crystalline starry skies. But freezing temperatures require strict adherence to thermodynamic principles.",
       content: [
@@ -1285,7 +1349,7 @@ const TrailHavenData = {
       authorImage: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=300&q=80",
       publishDate: "August 2, 2026",
       readTime: "6 min read",
-      image: "https://images.unsplash.com/photo-1520639888713-7851133b1ed0?auto=format&fit=crop&w=800&q=80",
+      image: "https://i.pinimg.com/1200x/6e/16/e2/6e16e24fee15633cfc6fea929d0e46b8.jpg",
       excerpt: "Which is superior for Indian trails? We compare ankle support, breathability, drying time, and weight penalty.",
       intro: "The debate between traditional leather ankle boots and modern lightweight trail running shoes has raged for a decade. Here is an objective breakdown based on terrain and pack weight.",
       content: [
@@ -1347,7 +1411,7 @@ const TrailHavenData = {
       authorImage: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80",
       publishDate: "October 12, 2026",
       readTime: "7 min read",
-      image: "https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=800&q=80",
+      image: "https://i.pinimg.com/1200x/39/88/6f/39886f7c3799c527f1cd57fc651b8c41.jpg",
       excerpt: "Crossing 5,000m cols demands acute terrain analysis, GPS waypoint caching, and recognizing altitude sickness onset before it's too late.",
       intro: "Steep col crossings above 5,000 meters are among the most exhilarating challenges in mountaineering. Understanding snow bridge stability, scree traversing, and mountain weather patterns is vital.",
       content: [

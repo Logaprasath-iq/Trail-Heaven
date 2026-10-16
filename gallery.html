@@ -87,28 +87,38 @@
           <a href="contact.html" class="nav-link text-forest dark:text-cream">Contact</a>
         </nav>
 
-        <div class="flex items-center gap-2 sm:gap-3">
-          <button class="open-search-btn p-2 rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Search">
+                <div class="flex items-center gap-2 sm:gap-3">
+          <!-- Search Button -->
+          <button class="open-search-btn w-9 h-9 inline-flex items-center justify-center rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Search TrailHaven">
             <i class="fa-solid fa-magnifying-glass text-forest dark:text-sand text-base"></i>
           </button>
-          <button class="theme-toggle-btn p-2 rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Switch theme">
+
+          <!-- Theme Toggle Button -->
+          <button class="theme-toggle-btn w-9 h-9 inline-flex items-center justify-center rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Switch theme mode">
             <i class="fa-solid fa-sun text-amber-400 text-base theme-icon-sun hidden"></i>
             <i class="fa-solid fa-moon text-forest dark:text-sand text-base theme-icon-moon"></i>
           </button>
-          <!-- Direction (RTL / LTR) Toggle with Double Arrow Symbol -->
-          <button class="dir-toggle-btn px-2.5 py-1 rounded-lg text-xs font-bold border border-sand hover:bg-sand/20 dark:hover:bg-sand/10 transition inline-flex items-center gap-1.5" aria-label="Toggle text direction">
+
+          <!-- Direction (RTL / LTR) Toggle -->
+          <button class="dir-toggle-btn h-9 px-2.5 inline-flex items-center justify-center gap-1.5 rounded-lg border border-sand hover:bg-sand/20 dark:hover:bg-sand/10 text-xs font-bold transition" aria-label="Toggle text direction">
             <i class="fa-solid fa-right-left text-[11px] dir-arrow-icon text-forest dark:text-sand"></i>
-            <span class="dir-label text-forest dark:text-sand">RTL</span>
+            <span class="dir-label text-forest dark:text-sand leading-none">RTL</span>
           </button>
-          <a href="wishlist.html" class="relative p-2 rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Wishlist">
+
+          <!-- Wishlist Icon -->
+          <a href="wishlist.html" class="relative w-9 h-9 inline-flex items-center justify-center rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Wishlist">
             <i class="fa-regular fa-heart text-forest dark:text-sand text-base"></i>
             <span class="wishlist-count-badge hidden absolute -top-1 -right-1 bg-rose-500 text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">0</span>
           </a>
-          <a href="order.html" class="relative p-2 rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Cart">
+
+          <!-- Cart / Order Icon -->
+          <a href="order.html" class="relative w-9 h-9 inline-flex items-center justify-center rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Cart and Order">
             <i class="fa-solid fa-cart-shopping text-forest dark:text-sand text-base"></i>
             <span class="cart-count-badge hidden absolute -top-1 -right-1 bg-orange text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">0</span>
           </a>
-          <button id="mobile-menu-toggle" class="lg:hidden p-2 rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Mobile menu">
+
+          <!-- Mobile Hamburger Menu Button -->
+          <button id="mobile-menu-toggle" class="lg:hidden w-9 h-9 inline-flex items-center justify-center rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Toggle Mobile Menu" aria-expanded="false">
             <i class="fa-solid fa-bars text-xl text-forest dark:text-cream"></i>
           </button>
         </div>
@@ -220,7 +230,7 @@
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Gal 1 (index 0) -->
-            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(0)" data-tilt>
+            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(0)">
               <div class="img-zoom-container h-64 bg-gray-200">
                 <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=85" alt="Alpine Camp Milky Way" class="w-full h-full object-cover">
               </div>
@@ -234,7 +244,7 @@
             </div>
 
             <!-- Gal 4 (index 3) -->
-            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(3)" data-tilt>
+            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(3)">
               <div class="img-zoom-container h-64 bg-gray-200">
                 <img src="https://images.unsplash.com/photo-1594832512784-dbd688e0572e?auto=format&fit=crop&w=1200&q=85" alt="Summit Push" class="w-full h-full object-cover">
               </div>
@@ -248,7 +258,7 @@
             </div>
 
             <!-- Gal 8 (index 7) -->
-            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(7)" data-tilt>
+            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(7)">
               <div class="img-zoom-container h-64 bg-gray-200">
                 <img src="https://images.unsplash.com/photo-1503614472-8c93d56e92ce?auto=format&fit=crop&w=1200&q=85" alt="Alpine Lake" class="w-full h-full object-cover">
               </div>
@@ -262,7 +272,7 @@
             </div>
 
             <!-- Gal 12 (index 11) -->
-            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(11)" data-tilt>
+            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(11)">
               <div class="img-zoom-container h-64 bg-gray-200">
                 <img src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=1200&q=85" alt="Glacial Basin Winter Traverse" class="w-full h-full object-cover">
               </div>
@@ -288,7 +298,7 @@
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Gal 2 (index 1) -->
-            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(1)" data-tilt>
+            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(1)">
               <div class="img-zoom-container h-64 bg-gray-200">
                 <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=85" alt="Morning Mist" class="w-full h-full object-cover">
               </div>
@@ -302,7 +312,7 @@
             </div>
 
             <!-- Gal 6 (index 5) -->
-            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(5)" data-tilt>
+            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(5)">
               <div class="img-zoom-container h-64 bg-gray-200">
                 <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=85" alt="Deep Forest Canopies" class="w-full h-full object-cover">
               </div>
@@ -316,7 +326,7 @@
             </div>
 
             <!-- Gal 11 (index 10) -->
-            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(10)" data-tilt>
+            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(10)">
               <div class="img-zoom-container h-64 bg-gray-200">
                 <img src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=85" alt="Autumn Foliage Ridge Trek" class="w-full h-full object-cover">
               </div>
@@ -330,7 +340,7 @@
             </div>
 
             <!-- Gal 13 (index 12) -->
-            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(12)" data-tilt>
+            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(12)">
               <div class="img-zoom-container h-64 bg-gray-200">
                 <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?auto=format&fit=crop&w=1200&q=85" alt="Ancient Pine Forest Trail Walk" class="w-full h-full object-cover">
               </div>
@@ -356,7 +366,7 @@
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Gal 5 (index 4) -->
-            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(4)" data-tilt>
+            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(4)">
               <div class="img-zoom-container h-64 bg-gray-200">
                 <img src="https://images.unsplash.com/photo-1532339142463-fd0a8979791a?auto=format&fit=crop&w=1200&q=85" alt="Golden Hour Basecamp" class="w-full h-full object-cover">
               </div>
@@ -370,7 +380,7 @@
             </div>
 
             <!-- Gal 9 (index 8) -->
-            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(8)" data-tilt>
+            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(8)">
               <div class="img-zoom-container h-64 bg-gray-200">
                 <img src="https://i.pinimg.com/736x/db/a7/37/dba737327d4adb27b9258988c3ab0133.jpg" alt="High Altitude Pack Lineup" class="w-full h-full object-cover">
               </div>
@@ -384,7 +394,7 @@
             </div>
 
             <!-- Gal 10 (index 9) -->
-            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(9)" data-tilt>
+            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(9)">
               <div class="img-zoom-container h-64 bg-gray-200">
                 <img src="https://i.pinimg.com/1200x/a9/e7/c2/a9e7c2ef52a7a900efc256e8ecaec1fd.jpg" alt="High-Altitude Bivouac Snow Shelter" class="w-full h-full object-cover">
               </div>
@@ -398,7 +408,7 @@
             </div>
 
             <!-- Gal 14 (index 13) -->
-            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(13)" data-tilt>
+            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(13)">
               <div class="img-zoom-container h-64 bg-gray-200">
                 <img src="https://i.pinimg.com/736x/a3/0f/31/a30f31850288824a682819544585b8ea.jpg" alt="Trail-Tested Trekking Hardware" class="w-full h-full object-cover">
               </div>
@@ -424,7 +434,7 @@
           </div>
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Gal 3 (index 2) -->
-            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(2)" data-tilt>
+            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(2)">
               <div class="img-zoom-container h-64 bg-gray-200">
                 <img src="https://i.pinimg.com/1200x/0b/1a/77/0b1a773bede756c5c8f930546967912b.jpg" alt="Campfire Brew" class="w-full h-full object-cover">
               </div>
@@ -438,7 +448,7 @@
             </div>
 
             <!-- Gal 7 (index 6) -->
-            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(6)" data-tilt>
+            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(6)">
               <div class="img-zoom-container h-64 bg-gray-200">
                 <img src="https://i.pinimg.com/1200x/e7/9a/38/e79a38e03b6ef923a229438faef2884c.jpg" alt="Cast Iron Skillet" class="w-full h-full object-cover">
               </div>
@@ -452,7 +462,7 @@
             </div>
 
             <!-- Gal 15 (index 14) -->
-            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(14)" data-tilt>
+            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(14)">
               <div class="img-zoom-container h-64 bg-gray-200">
                 <img src="https://i.pinimg.com/1200x/02/81/85/02818536e0d9c797a65f4d76888b45e7.jpg" alt="Fast-Boil Backcountry Titanium Stove" class="w-full h-full object-cover">
               </div>
@@ -466,7 +476,7 @@
             </div>
 
             <!-- Gal 16 (index 15) -->
-            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(15)" data-tilt>
+            <div class="gallery-card card-theme overflow-hidden rounded-2xl group cursor-pointer relative" onclick="window.openGalleryLightbox(15)">
               <div class="img-zoom-container h-64 bg-gray-200">
                 <img src="https://i.pinimg.com/736x/df/a5/15/dfa515b491d8c4e161ef939b937e6330.jpg" alt="Alpine Kettle Stew & Warm Chai" class="w-full h-full object-cover">
               </div>
@@ -498,7 +508,7 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="card-theme p-6 rounded-2xl flex flex-col justify-between" data-tilt>
+          <div class="card-theme p-6 rounded-2xl flex flex-col justify-between">
             <div>
               <div class="w-12 h-12 rounded-xl bg-forest/10 dark:bg-sand/10 text-forest dark:text-sand flex items-center justify-center text-xl mb-4">
                 <i class="fa-solid fa-battery-quarter text-orange"></i>
@@ -513,7 +523,7 @@
             </div>
           </div>
 
-          <div class="card-theme p-6 rounded-2xl flex flex-col justify-between" data-tilt>
+          <div class="card-theme p-6 rounded-2xl flex flex-col justify-between">
             <div>
               <div class="w-12 h-12 rounded-xl bg-forest/10 dark:bg-sand/10 text-forest dark:text-sand flex items-center justify-center text-xl mb-4">
                 <i class="fa-solid fa-droplet text-blue-500"></i>
@@ -528,7 +538,7 @@
             </div>
           </div>
 
-          <div class="card-theme p-6 rounded-2xl flex flex-col justify-between" data-tilt>
+          <div class="card-theme p-6 rounded-2xl flex flex-col justify-between">
             <div>
               <div class="w-12 h-12 rounded-xl bg-forest/10 dark:bg-sand/10 text-forest dark:text-sand flex items-center justify-center text-xl mb-4">
                 <i class="fa-solid fa-dove text-emerald-500"></i>
@@ -566,7 +576,7 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <!-- Community Card 1 -->
-          <div class="card-theme overflow-hidden rounded-2xl group" data-tilt>
+          <div class="card-theme overflow-hidden rounded-2xl group">
             <div class="relative h-60 bg-gray-200">
               <img src="https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=800&q=80" alt="Stok Kangri Camp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
               <span class="absolute top-3 right-3 text-[10px] font-bold px-2 py-0.5 rounded-full bg-black/60 text-white backdrop-blur-sm">5,000m Col</span>
@@ -584,7 +594,7 @@
           </div>
 
           <!-- Community Card 2 -->
-          <div class="card-theme overflow-hidden rounded-2xl group" data-tilt>
+          <div class="card-theme overflow-hidden rounded-2xl group">
             <div class="relative h-60 bg-gray-200">
               <img src="https://images.unsplash.com/photo-1522878129833-838a904a0e9e?auto=format&fit=crop&w=800&q=80" alt="Hampta Pass Moraine" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
               <span class="absolute top-3 right-3 text-[10px] font-bold px-2 py-0.5 rounded-full bg-black/60 text-white backdrop-blur-sm">4,280m Pass</span>
@@ -602,7 +612,7 @@
           </div>
 
           <!-- Community Card 3 -->
-          <div class="card-theme overflow-hidden rounded-2xl group" data-tilt>
+          <div class="card-theme overflow-hidden rounded-2xl group">
             <div class="relative h-60 bg-gray-200">
               <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=80" alt="Dayara Bugyal Camp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
               <span class="absolute top-3 right-3 text-[10px] font-bold px-2 py-0.5 rounded-full bg-black/60 text-white backdrop-blur-sm">3,400m Meadow</span>
@@ -620,7 +630,7 @@
           </div>
 
           <!-- Community Card 4 -->
-          <div class="card-theme overflow-hidden rounded-2xl group" data-tilt>
+          <div class="card-theme overflow-hidden rounded-2xl group">
             <div class="relative h-60 bg-gray-200">
               <img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=800&q=80" alt="Tarsar Marsar Lake" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
               <span class="absolute top-3 right-3 text-[10px] font-bold px-2 py-0.5 rounded-full bg-black/60 text-white backdrop-blur-sm">3,960m Tarn</span>

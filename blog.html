@@ -87,28 +87,38 @@
           <a href="contact.html" class="nav-link text-forest dark:text-cream">Contact</a>
         </nav>
 
-        <div class="flex items-center gap-2 sm:gap-3">
-          <button class="open-search-btn p-2 rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Search">
+                <div class="flex items-center gap-2 sm:gap-3">
+          <!-- Search Button -->
+          <button class="open-search-btn w-9 h-9 inline-flex items-center justify-center rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Search TrailHaven">
             <i class="fa-solid fa-magnifying-glass text-forest dark:text-sand text-base"></i>
           </button>
-          <button class="theme-toggle-btn p-2 rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Switch theme">
+
+          <!-- Theme Toggle Button -->
+          <button class="theme-toggle-btn w-9 h-9 inline-flex items-center justify-center rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Switch theme mode">
             <i class="fa-solid fa-sun text-amber-400 text-base theme-icon-sun hidden"></i>
             <i class="fa-solid fa-moon text-forest dark:text-sand text-base theme-icon-moon"></i>
           </button>
-          <!-- Direction (RTL / LTR) Toggle with Double Arrow Symbol -->
-          <button class="dir-toggle-btn px-2.5 py-1 rounded-lg text-xs font-bold border border-sand hover:bg-sand/20 dark:hover:bg-sand/10 transition inline-flex items-center gap-1.5" aria-label="Toggle text direction">
+
+          <!-- Direction (RTL / LTR) Toggle -->
+          <button class="dir-toggle-btn h-9 px-2.5 inline-flex items-center justify-center gap-1.5 rounded-lg border border-sand hover:bg-sand/20 dark:hover:bg-sand/10 text-xs font-bold transition" aria-label="Toggle text direction">
             <i class="fa-solid fa-right-left text-[11px] dir-arrow-icon text-forest dark:text-sand"></i>
-            <span class="dir-label text-forest dark:text-sand">RTL</span>
+            <span class="dir-label text-forest dark:text-sand leading-none">RTL</span>
           </button>
-          <a href="wishlist.html" class="relative p-2 rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Wishlist">
+
+          <!-- Wishlist Icon -->
+          <a href="wishlist.html" class="relative w-9 h-9 inline-flex items-center justify-center rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Wishlist">
             <i class="fa-regular fa-heart text-forest dark:text-sand text-base"></i>
             <span class="wishlist-count-badge hidden absolute -top-1 -right-1 bg-rose-500 text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">0</span>
           </a>
-          <a href="order.html" class="relative p-2 rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Cart">
+
+          <!-- Cart / Order Icon -->
+          <a href="order.html" class="relative w-9 h-9 inline-flex items-center justify-center rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Cart and Order">
             <i class="fa-solid fa-cart-shopping text-forest dark:text-sand text-base"></i>
             <span class="cart-count-badge hidden absolute -top-1 -right-1 bg-orange text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">0</span>
           </a>
-          <button id="mobile-menu-toggle" class="lg:hidden p-2 rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Mobile menu">
+
+          <!-- Mobile Hamburger Menu Button -->
+          <button id="mobile-menu-toggle" class="lg:hidden w-9 h-9 inline-flex items-center justify-center rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Toggle Mobile Menu" aria-expanded="false">
             <i class="fa-solid fa-bars text-xl text-forest dark:text-cream"></i>
           </button>
         </div>
@@ -192,7 +202,7 @@
     <!-- SECTION 2: FEATURED ARTICLE SPOTLIGHT BANNER -->
     <section class="py-12 bg-white dark:bg-[#202621] border-b border-[#E2DACB] dark:border-[#2D372F]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="card-theme p-6 sm:p-10 rounded-3xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#F5F1E8]/50 dark:bg-black/20" data-tilt>
+        <div class="card-theme p-6 sm:p-10 rounded-3xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#F5F1E8]/50 dark:bg-black/20">
           <div class="lg:col-span-7 rounded-2xl overflow-hidden shadow-xl aspect-[16/10] bg-gray-200">
             <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=85" alt="Western Ghats Monsoon" class="w-full h-full object-cover">
           </div>
@@ -234,239 +244,238 @@
         <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
           
           <!-- Article 1: Ultralight Packing -->
-          <article class="card-theme overflow-hidden flex flex-col justify-between group" data-tilt>
-            <div>
-              <div class="img-zoom-container h-52 bg-gray-200">
-                <img src="https://i.pinimg.com/1200x/c7/0f/72/c70f7219bc5e2930683e5255cc7f0e1c.jpg" alt="Ultralight Packing" class="w-full h-full object-cover">
-              </div>
-              <div class="p-6">
+          <article class="card-theme overflow-hidden flex flex-col justify-between group h-full">
+            <div class="img-zoom-container h-52 bg-gray-200 overflow-hidden flex-shrink-0">
+              <img src="https://i.pinimg.com/1200x/c7/0f/72/c70f7219bc5e2930683e5255cc7f0e1c.jpg" alt="Ultralight Packing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
                 <div class="flex items-center gap-2 mb-2">
                   <span class="text-[10px] font-bold text-orange uppercase tracking-wider">Gear Tips</span>
                   <span class="text-xs text-gray-500">• 8 min read</span>
                 </div>
-                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors">
+                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors min-h-[3.5rem] line-clamp-2 leading-snug">
                   <a href="blog-details.html?id=ultralight-packing-secrets">Drop 5 Kilos: The Art of Ultralight Wilderness Backpacking</a>
                 </h3>
-                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-2">
+                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-3 min-h-[3rem] leading-normal">
                   Trimming base weight does not mean sacrificing comfort. How modern titanium, silnylon, and smart multi-use gear revolutionize trekking.
                 </p>
               </div>
-            </div>
-            <div class="p-6 pt-0">
-              <a href="blog-details.html?id=ultralight-packing-secrets" class="text-xs font-bold text-orange flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                Read More <i class="fa-solid fa-arrow-right text-[10px]"></i>
-              </a>
+              <div class="pt-4 mt-4 border-t border-[#E2DACB] dark:border-[#2D372F]">
+                <a href="blog-details.html?id=ultralight-packing-secrets" class="text-xs font-bold text-orange flex items-center gap-1">
+                  Read More <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                </a>
+              </div>
             </div>
           </article>
 
           <!-- Article 2: Camp Cooking -->
-          <article class="card-theme overflow-hidden flex flex-col justify-between group" data-tilt>
-            <div>
-              <div class="img-zoom-container h-52 bg-gray-200">
-                <img src="https://i.pinimg.com/736x/5f/77/bf/5f77bfa81550eb143020224c99244fa4.jpg" alt="Camp Cooking" class="w-full h-full object-cover">
-              </div>
-              <div class="p-6">
+          <article class="card-theme overflow-hidden flex flex-col justify-between group h-full">
+            <div class="img-zoom-container h-52 bg-gray-200 overflow-hidden flex-shrink-0">
+              <img src="https://i.pinimg.com/736x/5f/77/bf/5f77bfa81550eb143020224c99244fa4.jpg" alt="Camp Cooking" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
                 <div class="flex items-center gap-2 mb-2">
                   <span class="text-[10px] font-bold text-orange uppercase tracking-wider">Camp Life</span>
                   <span class="text-xs text-gray-500">• 5 min read</span>
                 </div>
-                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors">
+                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors min-h-[3.5rem] line-clamp-2 leading-snug">
                   <a href="blog-details.html?id=camp-cooking-gourmet">Beyond Instant Noodles: Camp Chef Techniques for Forest Feasts</a>
                 </h3>
-                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-2">
+                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-3 min-h-[3rem] leading-normal">
                   Elevate your backcountry cuisine with pre-mixed spice blends, cast-iron campfire magic, and titanium boiling methods.
                 </p>
               </div>
-            </div>
-            <div class="p-6 pt-0">
-              <a href="blog-details.html?id=camp-cooking-gourmet" class="text-xs font-bold text-orange flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                Read More <i class="fa-solid fa-arrow-right text-[10px]"></i>
-              </a>
+              <div class="pt-4 mt-4 border-t border-[#E2DACB] dark:border-[#2D372F]">
+                <a href="blog-details.html?id=camp-cooking-gourmet" class="text-xs font-bold text-orange flex items-center gap-1">
+                  Read More <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                </a>
+              </div>
             </div>
           </article>
 
           <!-- Article 3: Cold Weather Camping -->
-          <article class="card-theme overflow-hidden flex flex-col justify-between group" data-tilt>
-            <div>
-              <div class="img-zoom-container h-52 bg-gray-200">
-                <img src="https://i.pinimg.com/1200x/32/d5/ed/32d5ed04af4bb984d3095862a07a2b83.jpg" alt="Winter Camping" class="w-full h-full object-cover">
-              </div>
-              <div class="p-6">
+          <article class="card-theme overflow-hidden flex flex-col justify-between group h-full">
+            <div class="img-zoom-container h-52 bg-gray-200 overflow-hidden flex-shrink-0">
+              <img src="https://i.pinimg.com/1200x/32/d5/ed/32d5ed04af4bb984d3095862a07a2b83.jpg" alt="Winter Camping" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
                 <div class="flex items-center gap-2 mb-2">
                   <span class="text-[10px] font-bold text-orange uppercase tracking-wider">Alpine Trekking</span>
                   <span class="text-xs text-gray-500">• 7 min read</span>
                 </div>
-                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors">
+                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors min-h-[3.5rem] line-clamp-2 leading-snug">
                   <a href="blog-details.html?id=cold-weather-camping-tricks">10 Winter Camping Tricks to Stay Warm in Sub-Zero Alpine Winds</a>
                 </h3>
-                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-2">
+                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-3 min-h-[3rem] leading-normal">
                   Hard-won wisdom from high-altitude Himalayan winter bivouacs. Keep your toes toasty and your water bottle unfrozen.
                 </p>
               </div>
-            </div>
-            <div class="p-6 pt-0">
-              <a href="blog-details.html?id=cold-weather-camping-tricks" class="text-xs font-bold text-orange flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                Read More <i class="fa-solid fa-arrow-right text-[10px]"></i>
-              </a>
+              <div class="pt-4 mt-4 border-t border-[#E2DACB] dark:border-[#2D372F]">
+                <a href="blog-details.html?id=cold-weather-camping-tricks" class="text-xs font-bold text-orange flex items-center gap-1">
+                  Read More <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                </a>
+              </div>
             </div>
           </article>
 
           <!-- Article 4: Hiking Footwear -->
-          <article class="card-theme overflow-hidden flex flex-col justify-between group" data-tilt>
-            <div>
-              <div class="img-zoom-container h-52 bg-gray-200">
-                <img src="https://i.pinimg.com/1200x/6e/16/e2/6e16e24fee15633cfc6fea929d0e46b8.jpg" alt="Footwear Guide" class="w-full h-full object-cover">
-              </div>
-              <div class="p-6">
+          <article class="card-theme overflow-hidden flex flex-col justify-between group h-full">
+            <div class="img-zoom-container h-52 bg-gray-200 overflow-hidden flex-shrink-0">
+              <img src="https://i.pinimg.com/1200x/6e/16/e2/6e16e24fee15633cfc6fea929d0e46b8.jpg" alt="Footwear Guide" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
                 <div class="flex items-center gap-2 mb-2">
                   <span class="text-[10px] font-bold text-orange uppercase tracking-wider">Gear Reviews</span>
                   <span class="text-xs text-gray-500">• 6 min read</span>
                 </div>
-                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors">
+                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors min-h-[3.5rem] line-clamp-2 leading-snug">
                   <a href="blog-details.html?id=hiking-boots-vs-trail-runners">Trail Runners vs. Stiff Hiking Boots: The Modern Trekker's Dilemma</a>
                 </h3>
-                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-2">
+                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-3 min-h-[3rem] leading-normal">
                   Which is superior for Indian trails? We compare ankle support, breathability, drying time, and weight penalty.
                 </p>
               </div>
-            </div>
-            <div class="p-6 pt-0">
-              <a href="blog-details.html?id=hiking-boots-vs-trail-runners" class="text-xs font-bold text-orange flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                Read More <i class="fa-solid fa-arrow-right text-[10px]"></i>
-              </a>
+              <div class="pt-4 mt-4 border-t border-[#E2DACB] dark:border-[#2D372F]">
+                <a href="blog-details.html?id=hiking-boots-vs-trail-runners" class="text-xs font-bold text-orange flex items-center gap-1">
+                  Read More <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                </a>
+              </div>
             </div>
           </article>
 
           <!-- Article 5: Dark Sky Camps -->
-          <article class="card-theme overflow-hidden flex flex-col justify-between group" data-tilt>
-            <div>
-              <div class="img-zoom-container h-52 bg-gray-200">
-                <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80" alt="Stargazing Camps" class="w-full h-full object-cover">
-              </div>
-              <div class="p-6">
+          <article class="card-theme overflow-hidden flex flex-col justify-between group h-full">
+            <div class="img-zoom-container h-52 bg-gray-200 overflow-hidden flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80" alt="Stargazing Camps" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
                 <div class="flex items-center gap-2 mb-2">
                   <span class="text-[10px] font-bold text-orange uppercase tracking-wider">Destinations</span>
                   <span class="text-xs text-gray-500">• 5 min read</span>
                 </div>
-                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors">
+                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors min-h-[3.5rem] line-clamp-2 leading-snug">
                   <a href="blog-details.html?id=stargazing-remote-camps">Dark Sky Sanctuaries: Best Campgrounds for Astronomy Across India</a>
                 </h3>
-                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-2">
+                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-3 min-h-[3rem] leading-normal">
                   Witness the galactic core of the Milky Way in full brilliance from Ladakh's Hanle Dark Sky Reserve to Spiti and Nilgiris.
                 </p>
               </div>
-            </div>
-            <div class="p-6 pt-0">
-              <a href="blog-details.html?id=stargazing-remote-camps" class="text-xs font-bold text-orange flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                Read More <i class="fa-solid fa-arrow-right text-[10px]"></i>
-              </a>
+              <div class="pt-4 mt-4 border-t border-[#E2DACB] dark:border-[#2D372F]">
+                <a href="blog-details.html?id=stargazing-remote-camps" class="text-xs font-bold text-orange flex items-center gap-1">
+                  Read More <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                </a>
+              </div>
             </div>
           </article>
 
           <!-- Article 6: High Altitude Passes (Article 7 in data.js) -->
-          <article class="card-theme overflow-hidden flex flex-col justify-between group" data-tilt>
-            <div>
-              <div class="img-zoom-container h-52 bg-gray-200">
-                <img src="https://i.pinimg.com/1200x/39/88/6f/39886f7c3799c527f1cd57fc651b8c41.jpg" alt="High Altitude Passes Navigation" class="w-full h-full object-cover">
-              </div>
-              <div class="p-6">
+          <article class="card-theme overflow-hidden flex flex-col justify-between group h-full">
+            <div class="img-zoom-container h-52 bg-gray-200 overflow-hidden flex-shrink-0">
+              <img src="https://i.pinimg.com/1200x/39/88/6f/39886f7c3799c527f1cd57fc651b8c41.jpg" alt="High Altitude Passes Navigation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
                 <div class="flex items-center gap-2 mb-2">
                   <span class="text-[10px] font-bold text-orange uppercase tracking-wider">Alpine Trekking</span>
                   <span class="text-xs text-gray-500">• 7 min read</span>
                 </div>
-                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors">
+                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors min-h-[3.5rem] line-clamp-2 leading-snug">
                   <a href="blog-details.html?id=high-altitude-passes-navigation">Navigating High-Altitude Himalayan Passes: Crevasses, Scree & Fog</a>
                 </h3>
-                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-2">
+                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-3 min-h-[3rem] leading-normal">
                   Crossing 5,000m cols demands acute terrain analysis, GPS waypoint caching, and recognizing altitude sickness onset before it's too late.
                 </p>
               </div>
-            </div>
-            <div class="p-6 pt-0">
-              <a href="blog-details.html?id=high-altitude-passes-navigation" class="text-xs font-bold text-orange flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                Read More <i class="fa-solid fa-arrow-right text-[10px]"></i>
-              </a>
+              <div class="pt-4 mt-4 border-t border-[#E2DACB] dark:border-[#2D372F]">
+                <a href="blog-details.html?id=high-altitude-passes-navigation" class="text-xs font-bold text-orange flex items-center gap-1">
+                  Read More <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                </a>
+              </div>
             </div>
           </article>
 
           <!-- Article 7: Solo Backpacking (Article 8 in data.js) -->
-          <article class="card-theme overflow-hidden flex flex-col justify-between group" data-tilt>
-            <div>
-              <div class="img-zoom-container h-52 bg-gray-200">
-                <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80" alt="Solo Backpacking Mindset" class="w-full h-full object-cover">
-              </div>
-              <div class="p-6">
+          <article class="card-theme overflow-hidden flex flex-col justify-between group h-full">
+            <div class="img-zoom-container h-52 bg-gray-200 overflow-hidden flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80" alt="Solo Backpacking Mindset" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
                 <div class="flex items-center gap-2 mb-2">
                   <span class="text-[10px] font-bold text-orange uppercase tracking-wider">Camp Life</span>
                   <span class="text-xs text-gray-500">• 6 min read</span>
                 </div>
-                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors">
+                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors min-h-[3.5rem] line-clamp-2 leading-snug">
                   <a href="blog-details.html?id=solo-backpacking-first-timers">The Mindset of Solo Backpacking: Finding Solitude Without Loneliness</a>
                 </h3>
-                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-2">
+                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-3 min-h-[3rem] leading-normal">
                   Facing wilderness silence alone is transformative. Practical guidance on trail psychology, nocturnal sounds, and building self-reliance.
                 </p>
               </div>
-            </div>
-            <div class="p-6 pt-0">
-              <a href="blog-details.html?id=solo-backpacking-first-timers" class="text-xs font-bold text-orange flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                Read More <i class="fa-solid fa-arrow-right text-[10px]"></i>
-              </a>
+              <div class="pt-4 mt-4 border-t border-[#E2DACB] dark:border-[#2D372F]">
+                <a href="blog-details.html?id=solo-backpacking-first-timers" class="text-xs font-bold text-orange flex items-center gap-1">
+                  Read More <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                </a>
+              </div>
             </div>
           </article>
 
           <!-- Article 8: Water Filtration Protocols -->
-          <article class="card-theme overflow-hidden flex flex-col justify-between group" data-tilt>
-            <div>
-              <div class="img-zoom-container h-52 bg-gray-200">
-                <img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=800&q=80" alt="Backcountry Water Filtration" class="w-full h-full object-cover">
-              </div>
-              <div class="p-6">
+          <article class="card-theme overflow-hidden flex flex-col justify-between group h-full">
+            <div class="img-zoom-container h-52 bg-gray-200 overflow-hidden flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=800&q=80" alt="Backcountry Water Filtration" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
                 <div class="flex items-center gap-2 mb-2">
                   <span class="text-[10px] font-bold text-orange uppercase tracking-wider">Trail Survival</span>
                   <span class="text-xs text-gray-500">• 6 min read</span>
                 </div>
-                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors">
+                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors min-h-[3.5rem] line-clamp-2 leading-snug">
                   <a href="blog-details.html?id=water-filtration-protocols">Leave No Trace Water Filtration: Backcountry River & Glacial Silt Protocols</a>
                 </h3>
-                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-2">
+                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-3 min-h-[3rem] leading-normal">
                   Turbid monsoon runoff and glacial silt quickly clog standard hollow-fiber filters. Learn settling methods, pre-filtering, and chemical disinfection.
                 </p>
               </div>
-            </div>
-            <div class="p-6 pt-0">
-              <a href="blog-details.html?id=water-filtration-protocols" class="text-xs font-bold text-orange flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                Read More <i class="fa-solid fa-arrow-right text-[10px]"></i>
-              </a>
+              <div class="pt-4 mt-4 border-t border-[#E2DACB] dark:border-[#2D372F]">
+                <a href="blog-details.html?id=water-filtration-protocols" class="text-xs font-bold text-orange flex items-center gap-1">
+                  Read More <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                </a>
+              </div>
             </div>
           </article>
 
           <!-- Article 9: Geodesic vs Tunnel Tents -->
-          <article class="card-theme overflow-hidden flex flex-col justify-between group" data-tilt>
-            <div>
-              <div class="img-zoom-container h-52 bg-gray-200">
-                <img src="https://images.unsplash.com/photo-1445307806294-bff7f67ff225?auto=format&fit=crop&w=800&q=80" alt="Geodesic vs Tunnel Tents in Winds" class="w-full h-full object-cover">
-              </div>
-              <div class="p-6">
+          <article class="card-theme overflow-hidden flex flex-col justify-between group h-full">
+            <div class="img-zoom-container h-52 bg-gray-200 overflow-hidden flex-shrink-0">
+              <img src="https://images.unsplash.com/photo-1445307806294-bff7f67ff225?auto=format&fit=crop&w=800&q=80" alt="Geodesic vs Tunnel Tents in Winds" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
                 <div class="flex items-center gap-2 mb-2">
                   <span class="text-[10px] font-bold text-orange uppercase tracking-wider">Shelter Tech</span>
                   <span class="text-xs text-gray-500">• 8 min read</span>
                 </div>
-                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors">
+                <h3 class="font-bold text-lg text-forest dark:text-cream group-hover:text-orange transition-colors min-h-[3.5rem] line-clamp-2 leading-snug">
                   <a href="blog-details.html?id=geodesic-vs-tunnel-tents">Geodesic vs. Tunnel Tents: Surviving 90 km/h Himalayan Ridge Gale Winds</a>
                 </h3>
-                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-2">
+                <p class="text-xs text-gray-600 dark:text-gray-400 mt-2 line-clamp-3 min-h-[3rem] leading-normal">
                   High-altitude mountain ridges subject camping shelters to brutal multi-directional gusts. We evaluate structural hoop geometry, guyline vectors, and snow loads.
                 </p>
               </div>
-            </div>
-            <div class="p-6 pt-0">
-              <a href="blog-details.html?id=geodesic-vs-tunnel-tents" class="text-xs font-bold text-orange flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                Read More <i class="fa-solid fa-arrow-right text-[10px]"></i>
-              </a>
+              <div class="pt-4 mt-4 border-t border-[#E2DACB] dark:border-[#2D372F]">
+                <a href="blog-details.html?id=geodesic-vs-tunnel-tents" class="text-xs font-bold text-orange flex items-center gap-1">
+                  Read More <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
+                </a>
+              </div>
             </div>
           </article>
-
         </div>
       </div>
     </section>
@@ -484,7 +493,7 @@
           </p>
         </div>
 
-        <div class="card-theme p-6 sm:p-10 rounded-3xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#F5F1E8]/40 dark:bg-black/20" data-tilt>
+        <div class="card-theme p-6 sm:p-10 rounded-3xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#F5F1E8]/40 dark:bg-black/20">
           <div class="lg:col-span-6 rounded-2xl overflow-hidden aspect-[4/3] bg-gray-200">
             <img src="https://i.pinimg.com/736x/8b/d5/54/8bd554b3876c616fad8be7bb2aa8393b.jpg" alt="Pin Parvati Col Traverse" class="w-full h-full object-cover">
           </div>
@@ -503,19 +512,19 @@
             <!-- Rolling stats counters -->
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2">
               <div class="p-3 rounded-xl bg-white dark:bg-[#181C19] border border-[#E2DACB] dark:border-[#2D372F] text-center">
-                <div class="text-lg font-black text-orange stat-counter-number" data-target="5319">0</div>
+                <div class="text-lg font-black text-orange stat-counter-number" data-counter="5319" data-counter-suffix="m">5,319m</div>
                 <div class="text-[10px] text-gray-500 font-bold uppercase mt-0.5">Meters Summit</div>
               </div>
               <div class="p-3 rounded-xl bg-white dark:bg-[#181C19] border border-[#E2DACB] dark:border-[#2D372F] text-center">
-                <div class="text-lg font-black text-forest dark:text-sand stat-counter-number" data-target="110">0</div>
+                <div class="text-lg font-black text-forest dark:text-sand stat-counter-number" data-counter="110" data-counter-suffix=" km">110 km</div>
                 <div class="text-[10px] text-gray-500 font-bold uppercase mt-0.5">Kilometers</div>
               </div>
               <div class="p-3 rounded-xl bg-white dark:bg-[#181C19] border border-[#E2DACB] dark:border-[#2D372F] text-center">
-                <div class="text-lg font-black text-forest dark:text-sand stat-counter-number" data-target="11">0</div>
+                <div class="text-lg font-black text-forest dark:text-sand stat-counter-number" data-counter="11" data-counter-suffix=" Days">11 Days</div>
                 <div class="text-[10px] text-gray-500 font-bold uppercase mt-0.5">Days Remote</div>
               </div>
               <div class="p-3 rounded-xl bg-white dark:bg-[#181C19] border border-[#E2DACB] dark:border-[#2D372F] text-center">
-                <div class="text-lg font-black text-rose-500 stat-counter-number" data-target="15">0</div>
+                <div class="text-lg font-black text-rose-500 stat-counter-number" data-counter="15" data-counter-prefix="-" data-counter-suffix="°C">-15°C</div>
                 <div class="text-[10px] text-gray-500 font-bold uppercase mt-0.5">°C Sub-Zero</div>
               </div>
             </div>
@@ -549,7 +558,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Guide 1 -->
-          <div class="card-theme p-6 rounded-2xl flex flex-col justify-between" data-tilt>
+          <div class="card-theme p-6 rounded-2xl flex flex-col justify-between">
             <div>
               <div class="w-16 h-16 rounded-full overflow-hidden mb-4 shadow-md ring-2 ring-forest dark:ring-sand flex-shrink-0">
                 <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" alt="Kavitha Natarajan" class="w-full h-full object-cover">
@@ -567,7 +576,7 @@
           </div>
 
           <!-- Guide 2 -->
-          <div class="card-theme p-6 rounded-2xl flex flex-col justify-between" data-tilt>
+          <div class="card-theme p-6 rounded-2xl flex flex-col justify-between">
             <div>
               <div class="w-16 h-16 rounded-full overflow-hidden mb-4 shadow-md ring-2 ring-orange flex-shrink-0">
                 <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80" alt="Vikram Rathore" class="w-full h-full object-cover">
@@ -585,7 +594,7 @@
           </div>
 
           <!-- Guide 3 -->
-          <div class="card-theme p-6 rounded-2xl flex flex-col justify-between" data-tilt>
+          <div class="card-theme p-6 rounded-2xl flex flex-col justify-between">
             <div>
               <div class="w-16 h-16 rounded-full overflow-hidden mb-4 shadow-md ring-2 ring-forest dark:ring-sand flex-shrink-0">
                 <img src="https://images.unsplash.com/photo-1548142813-c348350df52b?auto=format&fit=crop&w=300&q=80" alt="Sneha Ramachandran" class="w-full h-full object-cover">

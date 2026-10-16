@@ -107,39 +107,38 @@
         </nav>
 
         <!-- Utility Icons & Controls -->
-        <div class="flex items-center gap-2 sm:gap-3">
+                <div class="flex items-center gap-2 sm:gap-3">
           <!-- Search Button -->
-          <button class="open-search-btn p-2 rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Search TrailHaven">
+          <button class="open-search-btn w-9 h-9 inline-flex items-center justify-center rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Search TrailHaven">
             <i class="fa-solid fa-magnifying-glass text-forest dark:text-sand text-base"></i>
           </button>
 
           <!-- Theme Toggle Button -->
-          <button class="theme-toggle-btn p-2 rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Switch theme mode">
+          <button class="theme-toggle-btn w-9 h-9 inline-flex items-center justify-center rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Switch theme mode">
             <i class="fa-solid fa-sun text-amber-400 text-base theme-icon-sun hidden"></i>
             <i class="fa-solid fa-moon text-forest dark:text-sand text-base theme-icon-moon"></i>
           </button>
 
           <!-- Direction (RTL / LTR) Toggle -->
-          <!-- Direction (RTL / LTR) Toggle with Double Arrow Symbol -->
-          <button class="dir-toggle-btn px-2.5 py-1 rounded-lg text-xs font-bold border border-sand hover:bg-sand/20 dark:hover:bg-sand/10 transition inline-flex items-center gap-1.5" aria-label="Toggle text direction">
+          <button class="dir-toggle-btn h-9 px-2.5 inline-flex items-center justify-center gap-1.5 rounded-lg border border-sand hover:bg-sand/20 dark:hover:bg-sand/10 text-xs font-bold transition" aria-label="Toggle text direction">
             <i class="fa-solid fa-right-left text-[11px] dir-arrow-icon text-forest dark:text-sand"></i>
-            <span class="dir-label text-forest dark:text-sand">RTL</span>
+            <span class="dir-label text-forest dark:text-sand leading-none">RTL</span>
           </button>
 
           <!-- Wishlist Icon -->
-          <a href="wishlist.html" class="relative p-2 rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Wishlist">
+          <a href="wishlist.html" class="relative w-9 h-9 inline-flex items-center justify-center rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Wishlist">
             <i class="fa-regular fa-heart text-forest dark:text-sand text-base"></i>
             <span class="wishlist-count-badge hidden absolute -top-1 -right-1 bg-rose-500 text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">0</span>
           </a>
 
           <!-- Cart / Order Icon -->
-          <a href="order.html" class="relative p-2 rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Cart and Order">
+          <a href="order.html" class="relative w-9 h-9 inline-flex items-center justify-center rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Cart and Order">
             <i class="fa-solid fa-cart-shopping text-forest dark:text-sand text-base"></i>
             <span class="cart-count-badge hidden absolute -top-1 -right-1 bg-orange text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">0</span>
           </a>
 
           <!-- Mobile Hamburger Menu Button -->
-          <button id="mobile-menu-toggle" class="lg:hidden p-2 rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Toggle Mobile Menu" aria-expanded="false">
+          <button id="mobile-menu-toggle" class="lg:hidden w-9 h-9 inline-flex items-center justify-center rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Toggle Mobile Menu" aria-expanded="false">
             <i class="fa-solid fa-bars text-xl text-forest dark:text-cream"></i>
           </button>
         </div>
@@ -558,7 +557,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           
           <!-- Season 1: Monsoon -->
-          <div class="relative rounded-2xl overflow-hidden shadow-lg h-96 group" data-tilt>
+          <div class="relative rounded-2xl overflow-hidden shadow-lg h-96 group">
             <img src="https://i.pinimg.com/736x/ac/6b/64/ac6b6480b1230cc76325735d5b778c70.jpg" alt="Monsoon Trekking Gear" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-6 text-white">
               <span class="text-xs font-bold text-orange uppercase tracking-wider mb-1">Western Ghats Edition</span>
@@ -574,7 +573,7 @@
           </div>
 
           <!-- Season 2: High Alpine Winter -->
-          <div class="relative rounded-2xl overflow-hidden shadow-lg h-96 group" data-tilt>
+          <div class="relative rounded-2xl overflow-hidden shadow-lg h-96 group">
             <img src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=800&q=80" alt="Alpine Winter Gear" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-6 text-white">
               <span class="text-xs font-bold text-orange uppercase tracking-wider mb-1">Himalayan Edition</span>
@@ -590,7 +589,7 @@
           </div>
 
           <!-- Season 3: Forest Summer -->
-          <div class="relative rounded-2xl overflow-hidden shadow-lg h-96 group" data-tilt>
+          <div class="relative rounded-2xl overflow-hidden shadow-lg h-96 group">
             <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=800&q=80" alt="Summer Wilderness Camp" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-6 text-white">
               <span class="text-xs font-bold text-orange uppercase tracking-wider mb-1">Forest Traverses</span>
@@ -606,7 +605,7 @@
           </div>
 
           <!-- Season 4: Stargazing Desert -->
-          <div class="relative rounded-2xl overflow-hidden shadow-lg h-96 group" data-tilt>
+          <div class="relative rounded-2xl overflow-hidden shadow-lg h-96 group">
             <img src="https://i.pinimg.com/1200x/ac/2a/45/ac2a452301a70f2167591dd8ccca23d9.jpg" alt="Stargazing Campsite" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
             <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-6 text-white">
               <span class="text-xs font-bold text-orange uppercase tracking-wider mb-1">Dark Sky Edition</span>
@@ -720,7 +719,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
           
           <!-- Terrain 1: High Himalayan Alpine -->
-          <div class="card-theme rounded-3xl overflow-hidden flex flex-col justify-between group hover:border-orange transition-all duration-300 shadow-sm border border-[#E2DACB] dark:border-[#2D372F]" data-tilt>
+          <div class="card-theme rounded-3xl overflow-hidden flex flex-col justify-between group hover:border-orange transition-all duration-300 shadow-sm border border-[#E2DACB] dark:border-[#2D372F]">
             <!-- Card Image Container -->
             <div class="relative img-zoom-container h-48 w-full bg-gray-100 dark:bg-black/30">
               <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" 
@@ -777,7 +776,7 @@
           </div>
 
           <!-- Terrain 2: Western Ghats Monsoon -->
-          <div class="card-theme rounded-3xl overflow-hidden flex flex-col justify-between group hover:border-emerald-600 transition-all duration-300 shadow-sm border border-[#E2DACB] dark:border-[#2D372F]" data-tilt>
+          <div class="card-theme rounded-3xl overflow-hidden flex flex-col justify-between group hover:border-emerald-600 transition-all duration-300 shadow-sm border border-[#E2DACB] dark:border-[#2D372F]">
             <!-- Card Image Container -->
             <div class="relative img-zoom-container h-48 w-full bg-gray-100 dark:bg-black/30">
               <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=800&q=80" 
@@ -834,7 +833,7 @@
           </div>
 
           <!-- Terrain 3: Deep Forest & Valley -->
-          <div class="card-theme rounded-3xl overflow-hidden flex flex-col justify-between group hover:border-sand transition-all duration-300 shadow-sm border border-[#E2DACB] dark:border-[#2D372F]" data-tilt>
+          <div class="card-theme rounded-3xl overflow-hidden flex flex-col justify-between group hover:border-sand transition-all duration-300 shadow-sm border border-[#E2DACB] dark:border-[#2D372F]">
             <!-- Card Image Container -->
             <div class="relative img-zoom-container h-48 w-full bg-gray-100 dark:bg-black/30">
               <img src="https://images.unsplash.com/photo-1425913397330-cf8af2ff40a1?auto=format&fit=crop&w=800&q=80" 
@@ -891,7 +890,7 @@
           </div>
 
           <!-- Terrain 4: Desert Stargazing -->
-          <div class="card-theme rounded-3xl overflow-hidden flex flex-col justify-between group hover:border-indigo-400 transition-all duration-300 shadow-sm border border-[#E2DACB] dark:border-[#2D372F]" data-tilt>
+          <div class="card-theme rounded-3xl overflow-hidden flex flex-col justify-between group hover:border-indigo-400 transition-all duration-300 shadow-sm border border-[#E2DACB] dark:border-[#2D372F]">
             <!-- Card Image Container -->
             <div class="relative img-zoom-container h-48 w-full bg-gray-100 dark:bg-black/30">
               <img src="https://i.pinimg.com/1200x/00/7a/a7/007aa71216e071284a128ab26d07d6cb.jpg" 
@@ -965,26 +964,26 @@
 
         <!-- 4 Animated Telemetry Counters -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 text-center">
-          <div class="bg-forest-dark/80 p-6 rounded-2xl border border-sand/30 backdrop-blur-sm card-theme" data-tilt>
-            <div class="text-3xl sm:text-4xl font-black text-orange font-display stat-counter-number" data-counter="85" data-counter-suffix=" km/h">0 km/h</div>
+          <div class="bg-forest-dark/80 p-6 rounded-2xl border border-sand/30 backdrop-blur-sm card-theme">
+            <div class="text-3xl sm:text-4xl font-black text-orange font-display stat-counter-number" data-counter="85" data-counter-suffix=" km/h">85 km/h</div>
             <div class="text-xs font-bold text-white mt-2">Gale Wind Resistance</div>
             <div class="text-[11px] text-gray-300 mt-1">Simulated aero wind tunnel tests</div>
           </div>
 
-          <div class="bg-forest-dark/80 p-6 rounded-2xl border border-sand/30 backdrop-blur-sm card-theme" data-tilt>
-            <div class="text-3xl sm:text-4xl font-black text-orange font-display stat-counter-number" data-counter="25" data-counter-prefix="-" data-counter-suffix="°C">0°C</div>
+          <div class="bg-forest-dark/80 p-6 rounded-2xl border border-sand/30 backdrop-blur-sm card-theme">
+            <div class="text-3xl sm:text-4xl font-black text-orange font-display stat-counter-number" data-counter="25" data-counter-prefix="-" data-counter-suffix="°C">-25°C</div>
             <div class="text-xs font-bold text-white mt-2">Sub-Zero Thermal Chamber</div>
             <div class="text-[11px] text-gray-300 mt-1">ASTM down loft verification</div>
           </div>
 
-          <div class="bg-forest-dark/80 p-6 rounded-2xl border border-sand/30 backdrop-blur-sm card-theme" data-tilt>
-            <div class="text-3xl sm:text-4xl font-black text-orange font-display stat-counter-number" data-counter="28000" data-counter-suffix=" mm">0 mm</div>
+          <div class="bg-forest-dark/80 p-6 rounded-2xl border border-sand/30 backdrop-blur-sm card-theme">
+            <div class="text-3xl sm:text-4xl font-black text-orange font-display stat-counter-number" data-counter="28000" data-counter-suffix=" mm">28,000 mm</div>
             <div class="text-xs font-bold text-white mt-2">Hydrostatic Water Head</div>
             <div class="text-[11px] text-gray-300 mt-1">High-pressure monsoon column</div>
           </div>
 
-          <div class="bg-forest-dark/80 p-6 rounded-2xl border border-sand/30 backdrop-blur-sm card-theme" data-tilt>
-            <div class="text-3xl sm:text-4xl font-black text-orange font-display stat-counter-number" data-counter="100000" data-counter-suffix="+">0+</div>
+          <div class="bg-forest-dark/80 p-6 rounded-2xl border border-sand/30 backdrop-blur-sm card-theme">
+            <div class="text-3xl sm:text-4xl font-black text-orange font-display stat-counter-number" data-counter="100000" data-counter-suffix="+">100,000+</div>
             <div class="text-xs font-bold text-white mt-2">Flex Fatigue Stress Cycles</div>
             <div class="text-[11px] text-gray-300 mt-1">DAC aircraft pole flex robotics</div>
           </div>
@@ -1051,7 +1050,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           
           <!-- Guide 1 -->
-          <article class="card-theme overflow-hidden flex flex-col justify-between group" data-tilt>
+          <article class="card-theme overflow-hidden flex flex-col justify-between group">
             <div>
               <div class="img-zoom-container h-52 bg-gray-200">
                 <img src="https://images.unsplash.com/photo-1571687949921-1306bfb24b72?auto=format&fit=crop&w=700&q=80" alt="Tent Selection Guide" class="w-full h-full object-cover">
@@ -1072,14 +1071,14 @@
               </div>
             </div>
             <div class="px-6 pb-6 pt-2">
-              <a href="guide-details.html?id=tent-selection-masterclass" class="text-xs font-bold text-orange hover:text-orange-dark inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                Read Guide <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              <a href="guide-details.html?id=tent-selection-masterclass" class="text-xs font-bold text-orange hover:text-orange-dark inline-flex items-center gap-1">
+                Read Guide <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
               </a>
             </div>
           </article>
 
           <!-- Guide 2 -->
-          <article class="card-theme overflow-hidden flex flex-col justify-between group" data-tilt>
+          <article class="card-theme overflow-hidden flex flex-col justify-between group">
             <div>
               <div class="img-zoom-container h-52 bg-gray-200">
                 <img src="https://i.pinimg.com/1200x/ed/d5/33/edd53314d6e751719c81b6fd4c97500c.jpg" alt="Backpack Fitting Guide" class="w-full h-full object-cover">
@@ -1100,17 +1099,17 @@
               </div>
             </div>
             <div class="px-6 pb-6 pt-2">
-              <a href="guide-details.html?id=backpack-fitting-guide" class="text-xs font-bold text-orange hover:text-orange-dark inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                Read Guide <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              <a href="guide-details.html?id=backpack-fitting-guide" class="text-xs font-bold text-orange hover:text-orange-dark inline-flex items-center gap-1">
+                Read Guide <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
               </a>
             </div>
           </article>
 
           <!-- Blog 1 -->
-          <article class="card-theme overflow-hidden flex flex-col justify-between group" data-tilt>
+          <article class="card-theme overflow-hidden flex flex-col justify-between group">
             <div>
               <div class="img-zoom-container h-52 bg-gray-200">
-                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=700&q=80" alt="Western Ghats Treks" class="w-full h-full object-cover">
+                <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1200&q=85" alt="Western Ghats Treks" class="w-full h-full object-cover">
               </div>
               <div class="p-6">
                 <div class="flex items-center gap-2 mb-3">
@@ -1128,8 +1127,8 @@
               </div>
             </div>
             <div class="px-6 pb-6 pt-2">
-              <a href="blog-details.html?id=top-western-ghats-treks" class="text-xs font-bold text-orange hover:text-orange-dark inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
-                Read Article <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              <a href="blog-details.html?id=top-western-ghats-treks" class="text-xs font-bold text-orange hover:text-orange-dark inline-flex items-center gap-1">
+                Read Article <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition-transform"></i>
               </a>
             </div>
           </article>
