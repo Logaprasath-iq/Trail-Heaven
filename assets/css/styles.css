@@ -216,6 +216,29 @@ summary {
   list-style: none;
 }
 
+/* FAQ Accordion Separation Line */
+details.group > summary + p,
+details.group > summary + div,
+details.group .faq-answer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #E2DACB;
+}
+
+.dark details.group > summary + p,
+.dark details.group > summary + div,
+.dark details.group .faq-answer {
+  border-top-color: #2D372F;
+}
+
+/* Featured & Spotlight Card Equal-Height Alignment */
+@media (min-width: 1024px) {
+  .items-stretch > [class*="col-span-"] > div.lg\:aspect-auto,
+  .items-stretch > div.lg\:aspect-auto {
+    height: 100% !important;
+  }
+}
+
 /* Sticky Navbar Transitions */
 #main-navbar {
   transition: background-color 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
@@ -411,6 +434,43 @@ html.dark .theme-icon-sun {
 #search-modal.active {
   opacity: 1;
   pointer-events: auto;
+}
+
+/* Mobile Navigation Drawer Scrolling & Responsiveness */
+#mobile-nav-drawer {
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  max-height: 100vh !important;
+  max-height: 100dvh !important;
+  overscroll-behavior-y: contain;
+}
+
+#mobile-nav-drawer::-webkit-scrollbar {
+  width: 5px;
+}
+
+#mobile-nav-drawer::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#mobile-nav-drawer::-webkit-scrollbar-thumb {
+  background: rgba(198, 173, 131, 0.4);
+  border-radius: 9999px;
+}
+
+.dark #mobile-nav-drawer::-webkit-scrollbar-thumb {
+  background: rgba(45, 55, 47, 0.8);
+}
+
+[dir="rtl"] #mobile-nav-drawer {
+  right: auto !important;
+  left: 0 !important;
+  border-left: none !important;
+  border-right: 1px solid #E2DACB !important;
+}
+
+.dark [dir="rtl"] #mobile-nav-drawer {
+  border-right-color: #2D372F !important;
 }
 
 /* Toast Notifications */
@@ -1157,42 +1217,50 @@ select:focus {
     font-size: 1.125rem !important;
   }
 
-  /* Slogan on tiny mobile viewports <= 380px */
-  @media (max-width: 380px) {
-    #main-navbar a[aria-label="TrailHaven Home"] span.tracking-\[0\.2em\],
-    #main-navbar a[aria-label="TrailHaven Home"] span.tracking-\[0\.24em\] {
-      display: none !important;
-    }
+  /* Slogan & decorative divider hidden on mobile <= 480px / 360px */
+  #main-navbar a[aria-label="TrailHaven Home"] span.tracking-\[0\.2em\],
+  #main-navbar a[aria-label="TrailHaven Home"] span.tracking-\[0\.24em\],
+  #main-navbar a[aria-label="TrailHaven Home"] .brand-slogan,
+  #main-navbar a[aria-label="TrailHaven Home"] div.my-0\.5,
+  #main-navbar a[aria-label="TrailHaven Home"] .brand-divider {
+    display: none !important;
   }
 
-  /* Utility controls: tight gaps & touch-friendly tap targets */
+  /* On mobile <= 480px / 360px: Hide bulky theme toggle and RTL direction button from top navbar
+     (Both are fully accessible inside the mobile drawer) */
+  #main-navbar .theme-toggle-btn,
+  #main-navbar .dir-toggle-btn {
+    display: none !important;
+  }
+
+  /* Utility controls: neatly aligned 4 buttons (Search, Wishlist, Cart, Hamburger) */
   #main-navbar .flex.items-center.gap-2.sm\:gap-3 {
-    gap: 0.25rem !important;
+    gap: 0.35rem !important;
   }
 
   #main-navbar .open-search-btn,
-  #main-navbar .theme-toggle-btn,
-  #main-navbar .dir-toggle-btn,
   #main-navbar a[aria-label="Wishlist"],
   #main-navbar a[aria-label="Cart"],
   #main-navbar a[aria-label="Cart and Order"],
   #main-navbar #mobile-menu-toggle {
-    height: 2rem !important;
-    min-height: 2rem !important;
-    max-height: 2rem !important;
-    width: 2rem !important;
-    min-width: 2rem !important;
-    max-width: 2rem !important;
+    height: 2.125rem !important;
+    min-height: 2.125rem !important;
+    max-height: 2.125rem !important;
+    width: 2.125rem !important;
+    min-width: 2.125rem !important;
+    max-width: 2.125rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     padding: 0 !important;
   }
 
   #main-navbar .open-search-btn i,
-  #main-navbar .theme-toggle-btn i,
   #main-navbar a[aria-label="Wishlist"] i,
   #main-navbar a[aria-label="Cart"] i,
   #main-navbar a[aria-label="Cart and Order"] i,
   #main-navbar #mobile-menu-toggle i {
-    font-size: 0.875rem !important;
+    font-size: 0.95rem !important;
   }
 
   /* RTL button on mobile: show icon only to preserve header width */
@@ -1238,6 +1306,24 @@ select:focus {
   #main-navbar .max-w-7xl {
     padding-left: 1rem !important;
     padding-right: 1rem !important;
+  }
+
+  /* 768px Tablet Brand Name Typography */
+  #main-navbar a[aria-label="TrailHaven Home"] {
+    gap: 0.65rem !important;
+  }
+
+  #main-navbar a[aria-label="TrailHaven Home"] span.text-xl,
+  #main-navbar a[aria-label="TrailHaven Home"] span.text-2xl {
+    font-size: 1.35rem !important;
+    line-height: 1 !important;
+  }
+
+  #main-navbar a[aria-label="TrailHaven Home"] span.tracking-\[0\.2em\],
+  #main-navbar a[aria-label="TrailHaven Home"] span.tracking-\[0\.24em\] {
+    font-size: 8px !important;
+    letter-spacing: 0.22em !important;
+    white-space: nowrap !important;
   }
 
   .overflow-x-auto {
@@ -1363,9 +1449,188 @@ select:focus {
   overflow: hidden;
 }
 
+.card-theme h3.line-clamp-2 {
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 2 !important;
+  line-clamp: 2 !important;
+  overflow: hidden !important;
+  /* Prevent excess box height from revealing 3rd line letter slivers */
+  max-height: 3.1rem !important;
+  min-height: 0 !important;
+  line-height: 1.35 !important;
+}
+
+p.line-clamp-3,
 .card-theme p.line-clamp-3 {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
+}
+
+p.line-clamp-4,
+.card-theme p.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+
+/* Brand Logo Slogan Single-Line Integrity Across Header & Footer */
+a[aria-label="TrailHaven Home"] span.tracking-\[0\.2em\],
+a[aria-label="TrailHaven Home"] span.tracking-\[0\.24em\],
+footer a[aria-label="TrailHaven Home"] span.tracking-\[0\.2em\],
+footer a[aria-label="TrailHaven Home"] span.tracking-\[0\.24em\],
+footer span.tracking-\[0\.2em\],
+footer span.tracking-\[0\.24em\] {
+  white-space: nowrap !important;
+  word-break: keep-all !important;
+  overflow-wrap: normal !important;
+  display: block !important;
+}
+
+footer a[aria-label="TrailHaven Home"] {
+  display: inline-flex !important;
+  flex-shrink: 0 !important;
+  max-width: 100% !important;
+}
+
+footer a[aria-label="TrailHaven Home"] > div.flex-col {
+  flex-shrink: 0 !important;
+}
+
+/* ==========================================================================
+   Gallery Category Filter Buttons & Filter Pills Contrast & Hover Fix
+   ========================================================================== */
+.gallery-filter-btn {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: pointer;
+}
+
+/* Inactive filter button - light mode */
+.gallery-filter-btn:not(.active) {
+  background-color: #F5F1E8 !important;
+  color: #263C2D !important;
+}
+
+/* Inactive filter button hover - light mode: clear contrast highlight with dark forest text */
+.gallery-filter-btn:not(.active):hover {
+  background-color: #E8DECF !important;
+  color: #263C2D !important;
+}
+
+/* Inactive filter button - dark mode */
+.dark .gallery-filter-btn:not(.active) {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  color: #F5F1E8 !important;
+}
+
+/* Inactive filter button hover - dark mode */
+.dark .gallery-filter-btn:not(.active):hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #F5F1E8 !important;
+}
+
+/* Active filter button - light mode: deep forest background with crisp white text */
+.gallery-filter-btn.active {
+  background-color: #263C2D !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 2px 8px rgba(38, 60, 45, 0.25);
+}
+
+/* Active filter button hover - light mode: stays dark forest with pure white text, NEVER pale sand */
+.gallery-filter-btn.active:hover {
+  background-color: #1F3124 !important;
+  color: #FFFFFF !important;
+}
+
+/* Active filter button - dark mode: warm sand background with dark forest text */
+.dark .gallery-filter-btn.active {
+  background-color: #C6AD83 !important;
+  color: #1A2B20 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+/* Active filter button hover - dark mode: stays sand with dark forest text */
+.dark .gallery-filter-btn.active:hover {
+  background-color: #B59B6F !important;
+  color: #1A2B20 !important;
+}
+
+/* Search filter pill active hover protection */
+.search-filter-pill.active {
+  background-color: #263C2D !important;
+  color: #FFFFFF !important;
+}
+
+.search-filter-pill.active:hover {
+  background-color: #1F3124 !important;
+  color: #FFFFFF !important;
+}
+
+/* ==========================================================================
+   Buying Guide Category Navigation Pills ("Header Box") & ScrollSpy
+   ========================================================================== */
+.guide-nav-pill {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: pointer;
+  display: inline-block;
+}
+
+/* Inactive guide pill - light mode */
+.guide-nav-pill:not(.active) {
+  background-color: #F5F1E8 !important;
+  color: #263C2D !important;
+}
+
+/* Inactive guide pill hover - light mode: gentle contrast highlight with dark forest text */
+.guide-nav-pill:not(.active):hover {
+  background-color: #E8DECF !important;
+  color: #263C2D !important;
+}
+
+/* Inactive guide pill - dark mode */
+.dark .guide-nav-pill:not(.active) {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  color: #F5F1E8 !important;
+}
+
+/* Inactive guide pill hover - dark mode */
+.dark .guide-nav-pill:not(.active):hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #F5F1E8 !important;
+}
+
+/* Active guide pill - light mode: deep forest background with crisp white text ("the header box") */
+.guide-nav-pill.active {
+  background-color: #263C2D !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 2px 8px rgba(38, 60, 45, 0.25);
+}
+
+/* Active guide pill hover - light mode: stays dark forest with pure white text */
+.guide-nav-pill.active:hover {
+  background-color: #1F3124 !important;
+  color: #FFFFFF !important;
+}
+
+/* Active guide pill - dark mode: warm sand background with dark forest text */
+.dark .guide-nav-pill.active {
+  background-color: #C6AD83 !important;
+  color: #1A2B20 !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+/* Active guide pill hover - dark mode: stays sand with dark forest text */
+.dark .guide-nav-pill.active:hover {
+  background-color: #B59B6F !important;
+  color: #1A2B20 !important;
+}
+
+/* Buying Guide Sections Scroll Margin */
+#beginner-guides,
+#selection-guides,
+#safety-guides {
+  scroll-margin-top: 155px;
 }

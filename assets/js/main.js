@@ -515,9 +515,14 @@ function initCounters() {
 
   const animateCounter = (el) => {
     if (el.dataset.counterAnimated === 'true') return;
+
+    const rawVal = el.getAttribute('data-counter') || el.getAttribute('data-target');
+    const parsed = parseFloat(rawVal);
+    if (isNaN(parsed)) return;
+
     el.dataset.counterAnimated = 'true';
 
-    const target = parseFloat(el.getAttribute('data-counter') || el.getAttribute('data-target')) || 0;
+    const target = parsed;
     const duration = parseInt(el.getAttribute('data-duration') || '1800', 10);
     const prefix = el.getAttribute('data-counter-prefix') || '';
     const suffix = el.getAttribute('data-counter-suffix') || '';

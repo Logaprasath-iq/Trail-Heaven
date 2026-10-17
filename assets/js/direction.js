@@ -21,6 +21,18 @@ const DirectionManager = {
     }
     
     this.updateToggleButtons(dir);
+
+    // Update mobile nav drawer off-screen translate class for RTL / LTR
+    const drawer = document.getElementById('mobile-nav-drawer');
+    if (drawer && (drawer.classList.contains('translate-x-full') || drawer.classList.contains('-translate-x-full'))) {
+      if (dir === 'rtl') {
+        drawer.classList.remove('translate-x-full');
+        drawer.classList.add('-translate-x-full');
+      } else {
+        drawer.classList.remove('-translate-x-full');
+        drawer.classList.add('translate-x-full');
+      }
+    }
     
     // Dispatch direction event
     window.dispatchEvent(new CustomEvent('trailhaven:direction-changed', { detail: { dir } }));

@@ -24,7 +24,7 @@ const SearchManager = {
 
     const modal = document.createElement('div');
     modal.id = 'search-modal';
-    modal.className = 'fixed inset-0 z-50 flex items-start justify-center pt-16 sm:pt-24 px-4 bg-black/60 backdrop-blur-sm transition-opacity';
+    modal.className = 'fixed inset-0 z-[60] flex items-start justify-center pt-16 sm:pt-24 px-4 bg-black/60 backdrop-blur-sm transition-opacity';
     modal.setAttribute('role', 'dialog');
     modal.setAttribute('aria-modal', 'true');
     modal.setAttribute('aria-label', 'Search TrailHaven');
@@ -151,6 +151,10 @@ const SearchManager = {
   },
 
   open() {
+    const drawerCloseBtn = document.getElementById('mobile-drawer-close');
+    if (drawerCloseBtn) {
+      drawerCloseBtn.click();
+    }
     this.modalEl.classList.add('active');
     document.body.classList.add('overflow-hidden');
     setTimeout(() => {

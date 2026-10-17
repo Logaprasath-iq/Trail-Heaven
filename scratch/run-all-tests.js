@@ -194,7 +194,7 @@ data.guides.forEach(guide => {
 // 13. BLOG CARD WORD ALIGNMENT & CONSISTENT ROW HEIGHTS
 console.log('\n--- 13. BLOG CARD WORD & CONTENT ALIGNMENT ---');
 assert(blogHtml.includes('min-h-[3.5rem] line-clamp-2'), 'blog.html enforces min-h-[3.5rem] title constraints for row alignment');
-assert(blogHtml.includes('min-h-[3rem] leading-normal'), 'blog.html enforces min-h-[3rem] description paragraph constraints');
+assert(blogHtml.includes('min-h-[3.5rem] leading-relaxed'), 'blog.html enforces min-h-[3.5rem] description paragraph constraints');
 assert(!blogHtml.includes('min-h-[2.5rem]'), 'blog.html must not use broken min-h-[2.5rem] that slices text in half');
 assert(!blogHtml.includes('flex items-center line-clamp-2'), 'blog.html must not combine flex items-center with line-clamp');
 assert(blogHtml.includes('p-6 flex-1 flex flex-col justify-between'), 'blog.html flex-1 flex-col distributes card body height evenly');
@@ -278,6 +278,272 @@ assert(freshHome2.includes('min-h-[3.25rem] leading-snug flex items-center">\n  
 
 // Gear Bundles Cards
 assert(freshHome2.includes('Add Starter Bundle') && freshHome2.includes('Weatherproof Dry-Sack Pack</li>\n                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-orange"></i> Free Express Shipping Pan-India'), 'home2.html Starter bundle has 5 items matching other bundles');
+
+// 19. BRAND SLOGAN SINGLE-LINE INTEGRITY (HEADER & FOOTER)
+console.log('\n--- 19. BRAND SLOGAN SINGLE-LINE INTEGRITY ---');
+const stylesCssSlogan = fs.readFileSync(path.join(root, 'assets/css/styles.css'), 'utf8');
+assert(stylesCssSlogan.includes('Brand Logo Slogan Single-Line Integrity'), 'styles.css includes brand slogan single-line integrity section');
+assert(stylesCssSlogan.includes('white-space: nowrap !important;'), 'styles.css enforces white-space: nowrap on slogans');
+
+expectedPages.forEach(file => {
+  const content = fs.readFileSync(path.join(root, file), 'utf8');
+  assert(content.includes('text-[#F5F1E8] leading-none whitespace-nowrap'), `${file} footer slogan enforces whitespace-nowrap single-line`);
+  assert(content.includes('leading-none whitespace-nowrap'), `${file} header slogan enforces whitespace-nowrap single-line`);
+});
+
+// 20. FAQ ACCORDION SEPARATION LINE
+console.log('\n--- 20. FAQ ACCORDION SEPARATION LINE ---');
+const stylesCssFaq = fs.readFileSync(path.join(root, 'assets/css/styles.css'), 'utf8');
+assert(stylesCssFaq.includes('/* FAQ Accordion Separation Line */'), 'styles.css includes FAQ Accordion Separation Line section');
+assert(stylesCssFaq.includes('border-top: 1px solid #E2DACB;'), 'styles.css enforces border-top on FAQ answer');
+assert(stylesCssFaq.includes('border-top-color: #2D372F;'), 'styles.css enforces dark mode border-top-color on FAQ answer');
+
+const faqPages = ['contact.html', 'pricing.html', 'products.html'];
+faqPages.forEach(file => {
+  const content = fs.readFileSync(path.join(root, file), 'utf8');
+  const detailsBlocks = content.match(/<details[\s\S]*?<\/details>/g) || [];
+  assert(detailsBlocks.length > 0, `${file} contains FAQ details blocks`);
+  detailsBlocks.forEach((block, idx) => {
+    assert(
+      block.includes('border-t border-[#E2DACB] dark:border-[#2D372F]'),
+      `${file} FAQ item #${idx + 1} contains separation line with border-t border-[#E2DACB] dark:border-[#2D372F]`
+    );
+  });
+});
+
+// 21. SPOTLIGHT & FEATURED CARDS EQUAL-HEIGHT ALIGNMENT
+console.log('\n--- 21. SPOTLIGHT & FEATURED CARDS EQUAL-HEIGHT ALIGNMENT ---');
+{
+  const stylesCssEqual = fs.readFileSync(path.join(root, 'assets/css/styles.css'), 'utf8');
+  assert(stylesCssEqual.includes('/* Featured & Spotlight Card Equal-Height Alignment */'), 'styles.css includes Featured & Spotlight Card Equal-Height Alignment section');
+
+  // blog.html Section 2 & 4
+  const blogHtmlContent = fs.readFileSync(path.join(root, 'blog.html'), 'utf8');
+  assert(blogHtmlContent.includes('grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch bg-[#F5F1E8]/50'), 'blog.html Section 2 featured card uses items-stretch');
+  assert(blogHtmlContent.includes('lg:aspect-auto lg:h-full min-h-[260px]'), 'blog.html Section 2 image container uses lg:aspect-auto lg:h-full');
+  assert(blogHtmlContent.includes('lg:col-span-6 flex flex-col justify-between py-1 space-y-4'), 'blog.html Section 2 content container uses flex-col justify-between');
+  assert(blogHtmlContent.includes('grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch bg-[#F5F1E8]/40'), 'blog.html Section 4 card uses items-stretch');
+  assert(blogHtmlContent.includes('lg:col-span-5') && blogHtmlContent.includes('lg:aspect-auto lg:h-full'), 'blog.html Section 4 image container uses lg:col-span-5 and lg:aspect-auto lg:h-full');
+  assert(blogHtmlContent.includes('lg:absolute lg:inset-0'), 'blog.html Section 4 image uses lg:absolute lg:inset-0 for exact height alignment to content');
+  assert(blogHtmlContent.includes('lg:col-span-7 flex flex-col justify-between py-1 space-y-4'), 'blog.html Section 4 content uses lg:col-span-7 flex-col justify-between');
+  assert(blogHtmlContent.includes('Technical Expedition Specs') && blogHtmlContent.includes('Geodesic 4-Season'), 'blog.html Section 4 includes technical specs pills');
+  assert(blogHtmlContent.includes('Mantalai Lake glacial moraine crossing'), 'blog.html Section 4 includes route challenges checklist for perfect height alignment');
+
+  // buying-guides.html Section 5
+  const buyingGuidesHtmlContent = fs.readFileSync(path.join(root, 'buying-guides.html'), 'utf8');
+  assert(buyingGuidesHtmlContent.includes('grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch'), 'buying-guides.html Section 5 card uses items-stretch');
+  assert(buyingGuidesHtmlContent.includes('lg:aspect-auto lg:h-full min-h-[260px]'), 'buying-guides.html Section 5 image container uses lg:aspect-auto lg:h-full');
+  assert(buyingGuidesHtmlContent.includes('Waterproofing') && buyingGuidesHtmlContent.includes('Vibram Megagrip'), 'buying-guides.html Section 5 includes rich checklist highlights');
+
+  // products.html Section 5
+  const productsHtmlContent = fs.readFileSync(path.join(root, 'products.html'), 'utf8');
+  assert(productsHtmlContent.includes('grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch'), 'products.html Section 5 banner uses items-stretch');
+  assert(productsHtmlContent.includes('lg:aspect-auto lg:h-full min-h-[260px]'), 'products.html Section 5 image container uses lg:aspect-auto lg:h-full');
+  assert(productsHtmlContent.includes('Trail Weight') && productsHtmlContent.includes('Hydrostatic'), 'products.html Section 5 includes rich technical specs pills');
+
+  // home2.html Section 1, 4 & 5
+  const home2HtmlContent = fs.readFileSync(path.join(root, 'home2.html'), 'utf8');
+  assert(home2HtmlContent.includes('<span class="block">Engineered For</span>') && home2HtmlContent.includes('<span class="block">The <span class="text-orange">Untamed.</span></span>') && home2HtmlContent.includes('<span class="block">Built To Endure.</span>'), 'home2.html Hero heading formatted into 3 balanced blocks eliminating orphan words');
+  assert(home2HtmlContent.includes('grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch'), 'home2.html Hero grid uses items-stretch');
+  assert(home2HtmlContent.includes('lg:absolute lg:inset-0 rounded-3xl overflow-hidden shadow-2xl border-4'), 'home2.html Hero image uses lg:absolute lg:inset-0 for equal-height alignment');
+  assert(home2HtmlContent.includes('left-1/2 -translate-x-1/2') && home2HtmlContent.includes('Most Popular'), 'home2.html Section 4 Most Popular badge is centered');
+  assert(home2HtmlContent.includes('Our definitive expedition kit for 3-7 day rugged backcountry traverses.'), 'home2.html Section 4 Adventure Explorer description calibrated to 2 lines');
+  assert(home2HtmlContent.includes('grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch'), 'home2.html Section 5 card uses items-stretch');
+  assert(home2HtmlContent.includes('lg:aspect-auto lg:h-full min-h-[320px]'), 'home2.html Section 5 image container uses lg:aspect-auto lg:h-full');
+  assert(home2HtmlContent.includes('<span class="block">Crafted in Chennai.</span>') && home2HtmlContent.includes('<span class="block">Built to Safeguard Wilderness.</span>'), 'home2.html Section 5 heading formatted in 2 balanced lines');
+
+  // about.html Section 2, 4D, 4E
+  const aboutHtmlContent = fs.readFileSync(path.join(root, 'about.html'), 'utf8');
+  assert(aboutHtmlContent.includes('grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch'), 'about.html Section 2 card uses items-stretch');
+  assert(aboutHtmlContent.includes('lg:absolute lg:inset-0') && aboutHtmlContent.includes('TrailHaven expedition shelter in monsoon conditions'), 'about.html Section 2 uses a single image with lg:absolute lg:inset-0 for exact equal-height alignment');
+  assert(aboutHtmlContent.includes('grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch mb-16'), 'about.html Section 4D card uses items-stretch');
+  assert(aboutHtmlContent.includes('TrailHaven Stress Testing Laboratory') && aboutHtmlContent.includes('lg:absolute lg:inset-0'), 'about.html Section 4D image uses lg:absolute lg:inset-0 for exact equal-height alignment to content');
+  assert(aboutHtmlContent.includes('Safety Multiplier') && aboutHtmlContent.includes('Stress Simulation') && aboutHtmlContent.includes('Moisture Seepage'), 'about.html Section 4D includes laboratory diagnostics specs pills');
+  assert(aboutHtmlContent.includes('Our Mission') && aboutHtmlContent.includes('Bulletproof Gear') && aboutHtmlContent.includes('Wilderness Access'), 'about.html Section 3 Our Mission card formatted as 4-point list');
+  assert(aboutHtmlContent.includes('Our Vision') && aboutHtmlContent.includes('Global Epicenter') && aboutHtmlContent.includes('Trail Stewardship'), 'about.html Section 3 Our Vision card formatted as 4-point list');
+  assert(aboutHtmlContent.includes('Core Values') && aboutHtmlContent.includes('Integrity') && aboutHtmlContent.includes('Zero planned obsolescence with lifetime repair guarantees'), 'about.html Section 3 Core Values card calibrated for equal height');
+  assert(aboutHtmlContent.includes('min-h-[2.75rem] flex items-start'), 'about.html Section 3 uses min-h-[2.75rem] for lockstep horizontal alignment across Mission, Vision & Core Values');
+
+  // blog.html Section 2 rich content
+  assert(blogHtmlContent.includes('Peak Altitude') && blogHtmlContent.includes('1,894m'), 'blog.html Section 2 includes route altitude metric');
+  assert(blogHtmlContent.includes('Permit requirements and daily foot-traffic caps'), 'blog.html Section 2 includes key takeaways preview');
+}
+
+// SUITE 22: CARD DESCRIPTION 3-LINE UNIFORMITY & HEIGHT ALIGNMENT
+console.log('\n--- SUITE 22: CARD DESCRIPTION 3-LINE UNIFORMITY & HEIGHT ALIGNMENT ---');
+{
+  const blogHtmlContent = fs.readFileSync(path.join(root, 'blog.html'), 'utf8');
+  const buyingGuidesHtmlContent = fs.readFileSync(path.join(root, 'buying-guides.html'), 'utf8');
+  const home2HtmlContent = fs.readFileSync(path.join(root, 'home2.html'), 'utf8');
+  const indexHtmlContent = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  const wishlistHtmlContent = fs.readFileSync(path.join(root, 'wishlist.html'), 'utf8');
+
+  // blog.html Section 3 articles: all 9 must have min-h-[3.5rem] leading-relaxed line-clamp-3
+  const blogSec3Matches = [...blogHtmlContent.matchAll(/<p[^>]*class="([^"]*line-clamp-3 min-h-\[3\.5rem\] leading-relaxed[^"]*)"[^>]*>([\s\S]*?)<\/p>/g)];
+  assert(blogSec3Matches.length === 9, `blog.html has 9 uniform 3-line articles in Section 3 (found ${blogSec3Matches.length})`);
+  blogSec3Matches.forEach((m, idx) => {
+    const textLen = m[2].trim().length;
+    assert(textLen >= 130 && textLen <= 170, `blog.html article ${idx + 1} description length calibrated for 3 lines (len=${textLen})`);
+  });
+
+  // blog.html Section 4 Camping tips: 3 cards with min-h-[3.75rem] leading-relaxed
+  assert(blogHtmlContent.includes('Monsoon Pack Liners') && blogHtmlContent.includes('min-h-[3.75rem] leading-relaxed'), 'blog.html Camping Tips has min-h-[3.75rem] on pack liners');
+  assert(blogHtmlContent.includes('Winter Water Bottle Trick') && blogHtmlContent.includes('min-h-[3.75rem] leading-relaxed'), 'blog.html Camping Tips has min-h-[3.75rem] on water bottle');
+  assert(blogHtmlContent.includes('LNT Campfire Rules') && blogHtmlContent.includes('delicate meadows completely pristine for local wildlife'), 'blog.html Camping Tips card 3 calibrated for 3 lines');
+
+  // blog.html Section 5 Destinations: 2 cards with min-h-[3.75rem]
+  assert(blogHtmlContent.includes('Kudremukh & The Shola Grasslands') && blogHtmlContent.includes('min-h-[3.75rem]'), 'blog.html Kudremukh has min-h-[3.75rem]');
+  assert(blogHtmlContent.includes('Spiti Valley & Chandratal Lake') && blogHtmlContent.includes('Pristine dark skies offer jaw-dropping astrophotography opportunities on frozen shores'), 'blog.html Spiti card calibrated for 3 lines');
+
+  // buying-guides.html Section 4: 6 cards with min-h-[3.5rem] leading-relaxed line-clamp-3
+  const bgSec4Matches = [...buyingGuidesHtmlContent.matchAll(/<p[^>]*class="([^"]*line-clamp-3 min-h-\[3\.5rem\] leading-relaxed[^"]*)"[^>]*>([\s\S]*?)<\/p>/g)];
+  assert(bgSec4Matches.length === 6, `buying-guides.html has 6 uniform 3-line cards in Section 4 (found ${bgSec4Matches.length})`);
+  bgSec4Matches.forEach((m, idx) => {
+    const textLen = m[2].trim().length;
+    assert(textLen >= 135 && textLen <= 160, `buying-guides.html card ${idx + 1} description length calibrated for 3 lines (len=${textLen})`);
+  });
+
+  // home2.html Section 6: 3 dispatches with min-h-[3.5rem] leading-relaxed line-clamp-3
+  const home2Matches = [...home2HtmlContent.matchAll(/<p[^>]*class="([^"]*line-clamp-3 min-h-\[3\.5rem\] leading-relaxed[^"]*)"[^>]*>([\s\S]*?)<\/p>/g)];
+  assert(home2Matches.length === 3, `home2.html has 3 uniform 3-line cards in Section 6 (found ${home2Matches.length})`);
+  home2Matches.forEach((m, idx) => {
+    const textLen = m[2].trim().length;
+    assert(textLen >= 130 && textLen <= 165, `home2.html card ${idx + 1} description length calibrated for 3 lines (len=${textLen})`);
+  });
+
+  // index.html Section 8: 3 cards with min-h-[3.5rem] leading-relaxed line-clamp-3
+  const indexSec8Matches = [...indexHtmlContent.matchAll(/<p[^>]*class="([^"]*line-clamp-3 min-h-\[3\.5rem\] leading-relaxed[^"]*)"[^>]*>([\s\S]*?)<\/p>/g)];
+  assert(indexSec8Matches.length === 3, `index.html has 3 uniform 3-line cards in Section 8 (found ${indexSec8Matches.length})`);
+  indexSec8Matches.forEach((m, idx) => {
+    const textLen = m[2].trim().length;
+    assert(textLen >= 130 && textLen <= 160, `index.html card ${idx + 1} description length calibrated for 3 lines (len=${textLen})`);
+  });
+
+  // index.html Section 5: 4 uniform 4-line value proposition cards
+  const indexSec5Matches = [...indexHtmlContent.matchAll(/<p[^>]*class="[^"]*min-h-\[4\.75rem\] line-clamp-4[^"]*"[^>]*>([\s\S]*?)<\/p>/g)];
+  assert(indexSec5Matches.length === 4, `index.html has 4 uniform 4-line cards in Section 5 (found ${indexSec5Matches.length})`);
+  assert(indexHtmlContent.includes('min-h-[3.25rem] flex items-center leading-snug'), 'index.html Section 5 uses min-h-[3.25rem] for lockstep title alignment');
+  indexSec5Matches.forEach((m, idx) => {
+    const textLen = m[1].trim().length;
+    assert(textLen >= 125 && textLen <= 145, `index.html Section 5 card ${idx + 1} text calibrated for 4 lines (len=${textLen})`);
+  });
+
+  // index.html Section 5B: 4 uniform 3-line terrain cards
+  const indexSec5BMatches = [...indexHtmlContent.matchAll(/<p[^>]*class="[^"]*min-h-\[64px\] line-clamp-3[^"]*"[^>]*>([\s\S]*?)<\/p>/g)];
+  assert(indexSec5BMatches.length === 4, `index.html has 4 uniform 3-line terrain cards in Section 5B (found ${indexSec5BMatches.length})`);
+  assert(indexHtmlContent.includes('Emphasis on compact packability and titanium camp cooking.'), 'index.html Section 5B Card 3 calibrated to eliminate orphan 4th line');
+
+  // wishlist.html Section 4: 3 feature cards with min-h-[3.5rem]
+  assert(wishlistHtmlContent.includes('Seasonal Stock Alerts') && wishlistHtmlContent.includes('min-h-[3.5rem]'), 'wishlist.html card 1 has min-h-[3.5rem]');
+  assert(wishlistHtmlContent.includes('Free Torso Sizing Review') && wishlistHtmlContent.includes('min-h-[3.5rem]'), 'wishlist.html card 2 has min-h-[3.5rem]');
+  assert(wishlistHtmlContent.includes('1-Click Fast Checkout') && wishlistHtmlContent.includes('min-h-[3.5rem]'), 'wishlist.html card 3 has min-h-[3.5rem]');
+
+  // Elimination of stray 3rd-line letter slivers on clamped card titles
+  const stylesCssContent = fs.readFileSync(path.join(root, 'assets', 'css', 'styles.css'), 'utf8');
+  assert(stylesCssContent.includes('.card-theme h3.line-clamp-2') && stylesCssContent.includes('max-height: 3.1rem !important'), 'styles.css caps clamped card titles at max-height: 3.1rem to eliminate 3rd-line slivers');
+  assert(stylesCssContent.includes('min-height: 0 !important;'), 'styles.css overrides min-height on clamped card titles to prevent overflow gap');
+  assert(blogHtmlContent.includes('Dark Sky Sanctuaries: Best Campgrounds for Astronomy in India'), 'blog.html Article 5 title fits in 2 lines with zero stray letter slivers');
+  assert(blogHtmlContent.includes('Leave No Trace Water Filtration: Backcountry River Protocols'), 'blog.html Article 8 title fits in 2 lines with zero stray letter slivers');
+  assert(blogHtmlContent.includes('Geodesic vs. Tunnel Tents: Surviving 90 km/h Himalayan Winds'), 'blog.html Article 9 title fits in 2 lines with zero stray letter slivers');
+  assert(home2HtmlContent.includes('Dark Sky Sanctuaries: Best Campgrounds for Astronomy in India'), 'home2.html Article 3 title fits in 2 lines with zero stray letter slivers');
+
+  // about.html Section 4B: 4 uniform 4-line timeline cards with min-h-[4.75rem] line-clamp-4
+  const aboutHtmlContent2 = fs.readFileSync(path.join(root, 'about.html'), 'utf8');
+  const timelineSectionMatch = aboutHtmlContent2.match(/<!-- SECTION 4B: EXPEDITION MILESTONES & TIMELINE -->([\s\S]*?)<!-- SECTION 4C:/);
+  const aboutTimelineMatches = timelineSectionMatch ? [...timelineSectionMatch[1].matchAll(/<p[^>]*class="([^"]*min-h-\[4\.75rem\] line-clamp-4[^"]*)"[^>]*>([\s\S]*?)<\/p>/g)] : [];
+  assert(aboutTimelineMatches.length === 4, `about.html has 4 uniform 4-line timeline cards in Section 4B (found ${aboutTimelineMatches.length})`);
+  aboutTimelineMatches.forEach((m, idx) => {
+    const textLen = m[2].trim().length;
+    assert(textLen >= 145 && textLen <= 160, `about.html timeline card ${idx + 1} description length calibrated for 4 lines (len=${textLen})`);
+  });
+
+  // about.html Section 4C: Materials cards inside alignment, equal height & uniform 4-line descriptions
+  const materialsSectionMatch = aboutHtmlContent2.match(/<!-- SECTION 4C: MATERIALS TRANSPARENCY & SOURCING -->([\s\S]*?)<!-- SECTION 4D:/);
+  const aboutMaterialsMatches = materialsSectionMatch ? [...materialsSectionMatch[1].matchAll(/<p[^>]*class="([^"]*min-h-\[4\.75rem\] line-clamp-4[^"]*)"[^>]*>([\s\S]*?)<\/p>/g)] : [];
+  assert(aboutMaterialsMatches.length === 4, `about.html has 4 uniform 4-line materials cards in Section 4C (found ${aboutMaterialsMatches.length})`);
+  assert(materialsSectionMatch && materialsSectionMatch[1].includes('items-stretch'), 'about.html Section 4C grid uses items-stretch');
+  assert(materialsSectionMatch && materialsSectionMatch[1].includes('pt-4 mt-4 border-t border-[#E2DACB] dark:border-[#2D372F]'), 'about.html Section 4C uses balanced pt-4 mt-4 border-t footers');
+  aboutMaterialsMatches.forEach((m, idx) => {
+    const textLen = m[2].trim().length;
+    assert(textLen >= 140 && textLen <= 160, `about.html materials card ${idx + 1} description length calibrated for 4 lines (len=${textLen})`);
+  });
+
+  // about.html Section 6: 4 uniform 2-line stat cards with min-h-[2.5rem]
+  const statsMatches = [...aboutHtmlContent2.matchAll(/<p[^>]*class="[^"]*min-h-\[2\.5rem\][^"]*"[^>]*>([\s\S]*?)<\/p>/g)];
+  assert(statsMatches.length === 4, `about.html has 4 uniform 2-line stat cards in Section 6 (found ${statsMatches.length})`);
+  statsMatches.forEach((m, idx) => {
+    const text = m[1].replace(/&amp;/g, '&').trim();
+    assert(text.length >= 45 && text.length <= 65, `about.html stat card ${idx + 1} text calibrated for 2 lines (len=${text.length})`);
+  });
+
+  assert(stylesCssContent.includes('.card-theme p.line-clamp-4'), 'styles.css includes .card-theme p.line-clamp-4');
+}
+
+console.log('\n--- SUITE 23: GALLERY FILTER BUTTONS CONTRAST & HOVER INTEGRITY ---');
+{
+  const stylesCssContent = fs.readFileSync(path.join(root, 'assets', 'css', 'styles.css'), 'utf8');
+  assert(stylesCssContent.includes('Gallery Category Filter Buttons & Filter Pills Contrast & Hover Fix'), 'styles.css includes gallery category filter buttons fix header');
+  assert(stylesCssContent.includes('.gallery-filter-btn:not(.active):hover') && stylesCssContent.includes('color: #263C2D !important'), 'styles.css enforces dark forest text on inactive gallery filter hover in light mode');
+  assert(stylesCssContent.includes('.gallery-filter-btn.active:hover') && stylesCssContent.includes('color: #FFFFFF !important'), 'styles.css enforces white text on active gallery filter hover in light mode');
+  assert(stylesCssContent.includes('.gallery-filter-btn.active:hover') && stylesCssContent.includes('background-color: #1F3124 !important'), 'styles.css prevents background from turning light cream on active gallery filter hover');
+  assert(stylesCssContent.includes('.dark .gallery-filter-btn.active') && stylesCssContent.includes('background-color: #C6AD83 !important'), 'styles.css enforces sand background on active gallery filter in dark mode');
+  assert(stylesCssContent.includes('.search-filter-pill.active:hover') && stylesCssContent.includes('background-color: #1F3124 !important'), 'styles.css protects search filter pill active hover contrast');
+
+  const galleryHtml = fs.readFileSync(path.join(root, 'gallery.html'), 'utf8');
+  assert(!galleryHtml.includes('gallery-filter-btn px-4 py-2 rounded-xl bg-[#F5F1E8] dark:bg-black/30 text-forest dark:text-cream hover:bg-sand/20'), 'gallery.html eliminates conflicting hover:bg-sand/20 from filter buttons');
+  assert(galleryHtml.includes('data-cat="all"') && galleryHtml.includes('data-cat="mountain"') && galleryHtml.includes('data-cat="forest"') && galleryHtml.includes('data-cat="equipment"') && galleryHtml.includes('data-cat="cooking"'), 'gallery.html contains all 5 category filter buttons');
+  assert(galleryHtml.includes("filterBtns.forEach(b => b.classList.remove('active'))") && galleryHtml.includes("btn.classList.add('active')"), 'gallery.html script toggles active state cleanly');
+}
+
+console.log('\n--- SUITE 24: GUIDE NAVIGATION PILLS (HEADER BOX) & SCROLLSPY ---');
+{
+  const stylesCssContent = fs.readFileSync(path.join(root, 'assets', 'css', 'styles.css'), 'utf8');
+  assert(stylesCssContent.includes('Buying Guide Category Navigation Pills ("Header Box") & ScrollSpy'), 'styles.css includes guide navigation pills header');
+  assert(stylesCssContent.includes('.guide-nav-pill.active') && stylesCssContent.includes('background-color: #263C2D !important'), 'styles.css enforces deep forest active header box in light mode');
+  assert(stylesCssContent.includes('.guide-nav-pill.active') && stylesCssContent.includes('color: #FFFFFF !important'), 'styles.css enforces crisp white text inside active header box');
+  assert(stylesCssContent.includes('.guide-nav-pill:not(.active):hover') && stylesCssContent.includes('color: #263C2D !important'), 'styles.css enforces dark text on inactive guide pill hover');
+  assert(stylesCssContent.includes('.dark .guide-nav-pill.active') && stylesCssContent.includes('background-color: #C6AD83 !important'), 'styles.css enforces sand active header box in dark mode');
+  assert(stylesCssContent.includes('scroll-margin-top: 155px'), 'styles.css enforces 155px scroll margin top for guide sections');
+
+  const bgHtml = fs.readFileSync(path.join(root, 'buying-guides.html'), 'utf8');
+  assert(bgHtml.includes('data-guide-target="beginner-guides"') && bgHtml.includes('data-guide-target="selection-guides"') && bgHtml.includes('data-guide-target="safety-guides"'), 'buying-guides.html contains all 3 guide navigation pills with data-guide-target attributes');
+  assert(bgHtml.includes('id="selection-guides"') && bgHtml.includes('scroll-mt-[155px]'), 'buying-guides.html shelter & gear selection section includes scroll-mt-[155px]');
+  assert(bgHtml.includes('Interactive Guide Category Navigation & ScrollSpy'), 'buying-guides.html includes interactive category navigation script');
+  assert(bgHtml.includes('setActivePill(targetId)'), 'buying-guides.html script updates active header box on pill click');
+  assert(bgHtml.includes('window.addEventListener(\'scroll\', onScroll'), 'buying-guides.html script activates ScrollSpy to track active section dynamically');
+}
+
+// 25. HAMBURGER DRAWER SCROLLING, BRAND NAME CONTRAST & 360PX MOBILE HEADER
+{
+  console.log('\n--- SUITE 25: HAMBURGER DRAWER SCROLLING, BRAND NAME & 360PX HEADER ---');
+  const stylesCssContent = fs.readFileSync(path.join(root, 'assets', 'css', 'styles.css'), 'utf8');
+
+  assert(stylesCssContent.includes('/* Mobile Navigation Drawer Scrolling & Responsiveness */'), 'styles.css includes dedicated mobile drawer scrolling section');
+  assert(stylesCssContent.includes('#mobile-nav-drawer') && stylesCssContent.includes('overflow-y: auto !important;'), 'styles.css enforces overflow-y: auto on #mobile-nav-drawer');
+  assert(stylesCssContent.includes('max-height: 100vh !important;') || stylesCssContent.includes('max-height: 100dvh !important;'), 'styles.css sets max-height on #mobile-nav-drawer');
+  assert(stylesCssContent.includes('#main-navbar .theme-toggle-btn') && stylesCssContent.includes('display: none !important;'), 'styles.css hides theme toggle on mobile <= 480px / 360px in navbar');
+  assert(stylesCssContent.includes('#main-navbar .dir-toggle-btn') && stylesCssContent.includes('display: none !important;'), 'styles.css hides RTL toggle on mobile <= 480px / 360px in navbar');
+  assert(stylesCssContent.includes('/* 768px Tablet Brand Name Typography */'), 'styles.css includes 768px tablet brand name typography optimization');
+
+  expectedPages.forEach(file => {
+    const pageHtml = fs.readFileSync(path.join(root, file), 'utf8');
+    assert(pageHtml.includes('id="mobile-nav-drawer"') && pageHtml.includes('overflow-y-auto'), `${file} mobile drawer includes overflow-y-auto class`);
+    assert(!pageHtml.includes('src="assets/images/trailhaven-logo.svg"'), `${file} replaces hardcoded dark SVG logo with theme-adaptive typography in drawer`);
+    assert(pageHtml.includes('alt="TrailHaven Compass Logo"'), `${file} mobile drawer includes crisp emblem logo`);
+    assert(pageHtml.includes('TRAIL</span><span class="text-lg font-black text-[#D77A3C]">HAVEN</span>'), `${file} mobile drawer includes theme-adaptive TRAILHAVEN brand heading`);
+    assert(pageHtml.includes('GEAR TODAY. GREATER TOMORROWS.'), `${file} mobile drawer includes slogan text`);
+    assert(pageHtml.includes('class="theme-toggle-btn h-9 px-3 inline-flex items-center justify-center'), `${file} mobile drawer includes dedicated theme toggle button`);
+    assert(pageHtml.includes('class="dir-toggle-btn h-9 px-3 inline-flex items-center justify-center'), `${file} mobile drawer includes dedicated direction toggle button`);
+    assert(pageHtml.includes('class="open-search-btn w-full h-9 px-3 flex items-center justify-between'), `${file} mobile drawer includes quick search trigger button`);
+  });
+
+  const searchJs = fs.readFileSync(path.join(root, 'assets', 'js', 'search.js'), 'utf8');
+  assert(searchJs.includes('z-[60]'), 'search.js elevates modal to z-[60] to cleanly sit above mobile drawer');
+  assert(searchJs.includes('drawerCloseBtn.click()'), 'search.js closes mobile drawer when search modal opens');
+
+  const dirJs = fs.readFileSync(path.join(root, 'assets', 'js', 'direction.js'), 'utf8');
+  assert(dirJs.includes('-translate-x-full') && dirJs.includes('translate-x-full'), 'direction.js aligns drawer translate classes with RTL / LTR text direction');
+}
 
 console.log('\n====================================================');
 console.log(`🏁 TEST RESULTS: ${passed} PASSED, ${failed} FAILED`);
