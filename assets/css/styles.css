@@ -332,6 +332,22 @@ details.group .faq-answer {
   padding-right: 0.625rem !important;
 }
 
+#main-navbar .shop-gear-nav-btn {
+  height: 2.25rem !important;
+  min-height: 2.25rem !important;
+  max-height: 2.25rem !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 0.875rem !important;
+  padding-right: 0.875rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+  border-radius: 0.5rem !important;
+  line-height: normal !important;
+}
+
 /* Hamburger Menu Toggle: Strictly HIDDEN on desktop display mode (>= 1024px) */
 @media (min-width: 1024px) {
   #main-navbar #mobile-menu-toggle,
@@ -389,6 +405,55 @@ html.dark .theme-icon-moon {
 html.dark .theme-toggle-btn .theme-icon-sun,
 html.dark .theme-icon-sun {
   display: inline-block !important;
+}
+
+/* Brand Logo LTR Protection in RTL View */
+[dir="rtl"] #main-navbar a[aria-label="TrailHaven Home"],
+[dir="rtl"] #mobile-nav-drawer a[aria-label="TrailHaven Home"],
+[dir="rtl"] footer a[aria-label="TrailHaven Home"],
+[dir="rtl"] .brand-logo-container {
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+}
+
+/* Home Dropdown Menu Contrast in Dark Theme */
+.dark #home-dropdown-nav .absolute {
+  background-color: #1A221C !important;
+  border-color: #38463B !important;
+}
+.dark #home-dropdown-nav a div:first-child {
+  color: #FFFFFF !important;
+}
+.dark #home-dropdown-nav a div:last-child {
+  color: #D4C3A3 !important;
+}
+.dark #home-dropdown-nav a:hover div:first-child {
+  color: #D77A3C !important;
+}
+
+/* Sticky Navbar Enforcement */
+#main-navbar {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 40 !important;
+}
+
+/* Shop Gear Action Button in Navbar */
+.shop-gear-nav-btn {
+  background-color: #D77A3C !important;
+  color: #FFFFFF !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.shop-gear-nav-btn:hover {
+  background-color: #C26A2E !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(215, 122, 60, 0.28) !important;
+}
+
+[dir="rtl"] .shop-gear-nav-btn i {
+  transform: rotate(180deg);
 }
 
 /* RTL Specific Rules */
@@ -1180,10 +1245,18 @@ select:focus {
 
 /* 1. MOBILE SMARTPHONES (<= 480px & 360px VIEWPORTS) */
 @media (max-width: 480px) {
-  /* Prevent horizontal viewport spill */
+  /* Prevent horizontal viewport spill without breaking sticky navbar */
   html, body {
-    overflow-x: hidden;
+    overflow-x: clip !important;
     max-width: 100vw;
+  }
+
+  /* Sticky Navbar on 360px & Mobile */
+  #main-navbar {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 40 !important;
   }
 
   /* Compact Navbar Padding & Gaps */
@@ -1229,19 +1302,16 @@ select:focus {
   /* On mobile <= 480px / 360px: Hide bulky theme toggle and RTL direction button from top navbar
      (Both are fully accessible inside the mobile drawer) */
   #main-navbar .theme-toggle-btn,
-  #main-navbar .dir-toggle-btn {
+  #main-navbar .dir-toggle-btn,
+  #main-navbar .shop-gear-nav-btn {
     display: none !important;
   }
 
-  /* Utility controls: neatly aligned 4 buttons (Search, Wishlist, Cart, Hamburger) */
+  /* Utility controls: neatly aligned button (Hamburger on mobile) */
   #main-navbar .flex.items-center.gap-2.sm\:gap-3 {
     gap: 0.35rem !important;
   }
 
-  #main-navbar .open-search-btn,
-  #main-navbar a[aria-label="Wishlist"],
-  #main-navbar a[aria-label="Cart"],
-  #main-navbar a[aria-label="Cart and Order"],
   #main-navbar #mobile-menu-toggle {
     height: 2.125rem !important;
     min-height: 2.125rem !important;
@@ -1255,10 +1325,6 @@ select:focus {
     padding: 0 !important;
   }
 
-  #main-navbar .open-search-btn i,
-  #main-navbar a[aria-label="Wishlist"] i,
-  #main-navbar a[aria-label="Cart"] i,
-  #main-navbar a[aria-label="Cart and Order"] i,
   #main-navbar #mobile-menu-toggle i {
     font-size: 0.95rem !important;
   }
@@ -1299,7 +1365,7 @@ select:focus {
 /* 2. TABLET PORTRAIT (around 768px VIEWPORTS) */
 @media (min-width: 481px) and (max-width: 768px) {
   html, body {
-    overflow-x: hidden;
+    overflow-x: clip !important;
     max-width: 100vw;
   }
 
@@ -1358,12 +1424,8 @@ select:focus {
     gap: 0.35rem !important;
   }
 
-  #main-navbar .open-search-btn,
   #main-navbar .theme-toggle-btn,
-  #main-navbar .dir-toggle-btn,
-  #main-navbar a[aria-label="Wishlist"],
-  #main-navbar a[aria-label="Cart"],
-  #main-navbar a[aria-label="Cart and Order"] {
+  #main-navbar .dir-toggle-btn {
     height: 2.25rem !important;
     min-height: 2.25rem !important;
     max-height: 2.25rem !important;
@@ -1374,11 +1436,7 @@ select:focus {
     display: none !important;
   }
 
-  #main-navbar .open-search-btn,
-  #main-navbar .theme-toggle-btn,
-  #main-navbar a[aria-label="Wishlist"],
-  #main-navbar a[aria-label="Cart"],
-  #main-navbar a[aria-label="Cart and Order"] {
+  #main-navbar .theme-toggle-btn {
     width: 2.25rem !important;
     padding: 0 !important;
   }
@@ -1634,3 +1692,88 @@ footer a[aria-label="TrailHaven Home"] > div.flex-col {
 #safety-guides {
   scroll-margin-top: 155px;
 }
+
+/* ==========================================================================
+   HERO SECTIONS: IMAGE CLARITY, CONTRAST & WCAG AAA TEXT LEGIBILITY
+   ========================================================================== */
+
+/* 1. Hero Background Images: Sharp, vivid contrast & crystal clarity */
+.hero-bg-parallax,
+section.relative.overflow-hidden > .absolute.inset-0 img,
+section.relative.min-h-\[90vh\] img.hero-bg-parallax {
+  object-fit: cover !important;
+  object-position: center !important;
+  filter: contrast(1.08) brightness(0.96) saturate(1.08) !important;
+  -webkit-filter: contrast(1.08) brightness(0.96) saturate(1.08) !important;
+  will-change: transform, filter;
+}
+
+/* 2. Unified Hero Scrim Overlay */
+.hero-scrim-overlay {
+  background: linear-gradient(180deg, rgba(10, 18, 12, 0.38) 0%, rgba(10, 18, 12, 0.52) 50%, rgba(10, 18, 12, 0.68) 100%) !important;
+}
+
+/* 3. Hero Headings: Razor-sharp legibility over bright skies and snow */
+section.relative.py-14 h1,
+section.relative.sm\:py-20 h1,
+section.relative.min-h-\[90vh\] h1,
+section.relative.overflow-hidden h1 {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95), 0 4px 18px rgba(0, 0, 0, 0.85), 0 1px 2px rgba(0, 0, 0, 0.95) !important;
+}
+
+/* 4. Hero Paragraphs: Crisp high-contrast shadow */
+section.relative.py-14 p,
+section.relative.sm\:py-20 p,
+section.relative.min-h-\[90vh\] p,
+section.relative.overflow-hidden p {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95), 0 2px 10px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* 5. Hero Badges & Category Labels: Frosted backdrop for guaranteed contrast */
+section.relative.overflow-hidden .inline-flex.rounded-full,
+section.relative.py-14 .inline-flex.rounded-full,
+section.relative.min-h-\[90vh\] .inline-flex.rounded-full {
+  background-color: rgba(14, 22, 16, 0.72) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(226, 218, 203, 0.45) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Hero Badge spans (for products, buying-guides, gallery, blog) */
+section.relative.overflow-hidden .text-xs.font-bold.tracking-widest.text-orange,
+section.relative.py-14 .text-xs.font-bold.tracking-widest.text-orange {
+  display: inline-block;
+  padding: 0.25rem 0.85rem;
+  background-color: rgba(14, 22, 16, 0.72) !important;
+  border: 1px solid rgba(215, 122, 60, 0.45) !important;
+  border-radius: 9999px !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35) !important;
+  color: #FFA559 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* 6. Hero Description Text Back Layer: Frosted glass capsule matching badge styling */
+.hero-desc-backlayer {
+  display: inline-block !important;
+  background-color: rgba(14, 22, 16, 0.72) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(226, 218, 203, 0.45) !important;
+  border-radius: 1.25rem !important;
+  padding: 0.85rem 1.5rem !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4) !important;
+  color: #F5F1E8 !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95) !important;
+}
+
+@media (min-width: 640px) {
+  .hero-desc-backlayer {
+    border-radius: 1.5rem !important;
+    padding: 1.15rem 2.25rem !important;
+  }
+}
+
+

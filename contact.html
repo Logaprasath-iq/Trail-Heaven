@@ -40,9 +40,9 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between gap-4">
         <!-- Brand Logo with Adaptive Dark/Light Mode Typography -->
-        <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 flex-shrink-0 group" aria-label="TrailHaven Home">
+        <a href="index.html" dir="ltr" class="brand-logo-container flex items-center gap-2.5 sm:gap-3 flex-shrink-0 group" aria-label="TrailHaven Home">
           <div class="w-11 sm:w-12 h-11 sm:h-12 rounded-xl bg-white dark:bg-[#222823] border border-[#E2DACB] dark:border-[#333C34] flex items-center justify-center p-1 shadow-sm flex-shrink-0 group-hover:border-[#D77A3C] transition-colors">
-            <img src="assets/images/trailhaven-emblem.png" alt="TrailHaven Compass Logo" class="h-9 sm:h-10 w-9 sm:w-10 object-contain rounded-lg group-hover:scale-105 transition-transform flex-shrink-0">
+            <img src="assets/images/trailhaven-emblem.svg" alt="TrailHaven Compass Logo" class="h-9 sm:h-10 w-9 sm:w-10 object-contain rounded-lg group-hover:scale-105 transition-transform flex-shrink-0">
           </div>
           <div class="flex flex-col justify-center select-none">
             <div class="flex items-baseline tracking-tight font-black leading-none font-display">
@@ -66,15 +66,15 @@
               <span>Home</span>
               <i class="fa-solid fa-chevron-down text-[10px] text-gray-400 group-hover:text-orange group-hover:rotate-180 transition-transform duration-200"></i>
             </button>
-            <div class="absolute top-full left-0 mt-1.5 w-48 bg-[#F5F1E8] dark:bg-[#1E2420] rounded-2xl shadow-xl border border-[#E2DACB] dark:border-[#2D372F] p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-              <a href="index.html" class="block p-2.5 rounded-xl hover:bg-sand/20 dark:hover:bg-sand/10 text-xs font-bold text-forest dark:text-cream hover:text-orange transition">
-                <div>Home</div>
-                <div class="text-[10px] font-normal text-gray-500">Expedition Theme</div>
+            <div class="absolute top-full left-0 mt-1.5 w-52 bg-[#F5F1E8] dark:bg-[#1A221C] rounded-2xl shadow-xl border border-[#E2DACB] dark:border-[#38463B] p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <a href="index.html" class="block p-2.5 rounded-xl hover:bg-sand/20 dark:hover:bg-sand/20 text-xs font-bold text-forest dark:text-white group/item transition">
+                <div class="text-forest dark:text-white group-hover/item:text-orange transition-colors">Home</div>
+                <div class="text-[10px] font-medium text-gray-600 dark:text-[#D4C3A3]">Expedition Theme</div>
               </a>
-              <div class="my-1 border-t border-[#E2DACB] dark:border-[#2D372F]"></div>
-              <a href="home2.html" class="block p-2.5 rounded-xl hover:bg-sand/20 dark:hover:bg-sand/10 text-xs font-bold text-forest dark:text-cream hover:text-orange transition">
-                <div>Home 2</div>
-                <div class="text-[10px] font-normal text-gray-500">Wilderness Theme</div>
+              <div class="my-1 border-t border-[#E2DACB] dark:border-[#38463B]"></div>
+              <a href="home2.html" class="block p-2.5 rounded-xl hover:bg-sand/20 dark:hover:bg-sand/20 text-xs font-bold text-forest dark:text-white group/item transition">
+                <div class="text-forest dark:text-white group-hover/item:text-orange transition-colors">Home 2</div>
+                <div class="text-[10px] font-medium text-gray-600 dark:text-[#D4C3A3]">Wilderness Theme</div>
               </a>
             </div>
           </div>
@@ -88,10 +88,6 @@
         </nav>
 
                 <div class="flex items-center gap-2 sm:gap-3">
-          <!-- Search Button -->
-          <button class="open-search-btn w-9 h-9 inline-flex items-center justify-center rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Search TrailHaven">
-            <i class="fa-solid fa-magnifying-glass text-forest dark:text-sand text-base"></i>
-          </button>
 
           <!-- Theme Toggle Button -->
           <button class="theme-toggle-btn w-9 h-9 inline-flex items-center justify-center rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Switch theme mode">
@@ -105,16 +101,10 @@
             <span class="dir-label text-forest dark:text-sand leading-none">RTL</span>
           </button>
 
-          <!-- Wishlist Icon -->
-          <a href="wishlist.html" class="relative w-9 h-9 inline-flex items-center justify-center rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Wishlist">
-            <i class="fa-regular fa-heart text-forest dark:text-sand text-base"></i>
-            <span class="wishlist-count-badge hidden absolute -top-1 -right-1 bg-rose-500 text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">0</span>
-          </a>
-
-          <!-- Cart / Order Icon -->
-          <a href="order.html" class="relative w-9 h-9 inline-flex items-center justify-center rounded-lg hover:bg-[#E8DECF]/50 dark:hover:bg-[#2D372F]/50 transition" aria-label="Cart and Order">
-            <i class="fa-solid fa-cart-shopping text-forest dark:text-sand text-base"></i>
-            <span class="cart-count-badge hidden absolute -top-1 -right-1 bg-orange text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">0</span>
+          <!-- Shop Gear Action Button (Redirects to Products Page) -->
+          <a href="products.html" class="shop-gear-nav-btn h-9 px-3.5 sm:px-4 inline-flex items-center justify-center gap-1.5 rounded-lg bg-[#D77A3C] hover:bg-[#C26A2E] text-white text-xs sm:text-sm font-bold shadow-sm hover:shadow transition whitespace-nowrap" aria-label="Shop Gear">
+            <span>Shop Gear</span>
+            <i class="fa-solid fa-arrow-right text-xs rtl:rotate-180 transition-transform"></i>
           </a>
 
           <!-- Mobile Hamburger Menu Button -->
@@ -132,9 +122,9 @@
     <div class="flex-shrink-0">
       <div class="flex items-center justify-between pb-4 border-b border-[#E2DACB] dark:border-[#2D372F] mb-4">
         <!-- Brand Logo with Adaptive Dark/Light Mode Typography -->
-        <a href="index.html" class="flex items-center gap-2.5 flex-shrink-0 group" aria-label="TrailHaven Home">
+        <a href="index.html" dir="ltr" class="brand-logo-container flex items-center gap-2.5 flex-shrink-0 group" aria-label="TrailHaven Home">
           <div class="w-10 h-10 rounded-xl bg-white dark:bg-[#222823] border border-[#E2DACB] dark:border-[#333C34] flex items-center justify-center p-1 shadow-sm flex-shrink-0 group-hover:border-[#D77A3C] transition-colors">
-            <img src="assets/images/trailhaven-emblem.png" alt="TrailHaven Compass Logo" class="h-8 w-8 object-contain rounded-lg group-hover:scale-105 transition-transform flex-shrink-0">
+            <img src="assets/images/trailhaven-emblem.svg" alt="TrailHaven Compass Logo" class="h-8 w-8 object-contain rounded-lg group-hover:scale-105 transition-transform flex-shrink-0">
           </div>
           <div class="flex flex-col justify-center select-none">
             <div class="flex items-baseline tracking-tight font-black leading-none font-display">
@@ -169,6 +159,14 @@
           <i class="fa-solid fa-right-left text-xs dir-arrow-icon text-forest dark:text-sand"></i>
           <span class="dir-label text-xs font-semibold text-forest dark:text-cream leading-none">RTL</span>
         </button>
+      </div>
+
+      <!-- Shop Gear Quick CTA in Mobile Drawer -->
+      <div class="mb-3">
+        <a href="products.html" class="w-full h-10 px-4 inline-flex items-center justify-center gap-2 rounded-xl bg-[#D77A3C] hover:bg-[#C26A2E] text-white text-sm font-bold shadow-sm transition" aria-label="Shop Gear">
+          <span>Shop Gear</span>
+          <i class="fa-solid fa-arrow-right text-xs rtl:rotate-180 transition-transform"></i>
+        </a>
       </div>
 
       <!-- Quick Search Trigger inside Drawer -->
@@ -222,18 +220,6 @@
         <a href="contact.html" class="mobile-nav-link py-1.5 px-3 rounded-lg hover:bg-sand/20 dark:hover:bg-sand/10 text-forest dark:text-cream flex items-center gap-2">
           <i class="fa-solid fa-envelope text-xs text-orange/70"></i> Contact Us
         </a>
-        <a href="wishlist.html" class="mobile-nav-link py-1.5 px-3 rounded-lg hover:bg-sand/20 dark:hover:bg-sand/10 text-forest dark:text-cream flex items-center justify-between">
-          <span class="flex items-center gap-2">
-            <i class="fa-solid fa-heart text-xs text-rose-500"></i> Saved Wishlist
-          </span>
-          <span class="wishlist-count-badge hidden bg-rose-500 text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">0</span>
-        </a>
-        <a href="order.html" class="mobile-nav-link py-1.5 px-3 rounded-lg hover:bg-sand/20 dark:hover:bg-sand/10 text-forest dark:text-cream flex items-center justify-between">
-          <span class="flex items-center gap-2">
-            <i class="fa-solid fa-cart-shopping text-xs text-orange"></i> Cart & Orders
-          </span>
-          <span class="cart-count-badge hidden bg-orange text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">0</span>
-        </a>
       </nav>
     </div>
 
@@ -256,7 +242,7 @@
         <img src="assets/images/contact.jpg" 
              alt="Mountain Valley Trail and Expedition Outpost" 
              class="w-full h-full object-cover">
-        <div class="absolute inset-0" style="background: linear-gradient(180deg, rgba(22, 38, 27, 0.85) 0%, rgba(15, 24, 18, 0.92) 100%);"></div>
+        <div class="absolute inset-0 hero-scrim-overlay" style="background: linear-gradient(180deg, rgba(10, 18, 12, 0.38) 0%, rgba(10, 18, 12, 0.52) 50%, rgba(10, 18, 12, 0.68) 100%);"></div>
       </div>
 
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -267,9 +253,11 @@
           <h1 class="text-3xl sm:text-4xl md:text-5xl font-black font-display mt-1 mb-4 leading-tight drop-shadow-md">
             We Are Here for Your Next Expedition
           </h1>
-          <p class="text-sm sm:text-base text-sand font-medium leading-relaxed max-w-2xl mx-auto mb-6 drop-shadow-sm">
-            Have questions about tent weather ratings, backpack torso sizing, monsoon gear maintenance, or corporate expedition orders? Reach out to our technical specialists based in Chennai, Tamil Nadu.
-          </p>
+          <div class="max-w-2xl mx-auto mb-6">
+            <p class="hero-desc-backlayer inline-block text-sm sm:text-base text-[#F5F1E8] font-medium leading-relaxed drop-shadow-sm px-5 py-3 sm:px-6 sm:py-3.5 rounded-xl sm:rounded-2xl">
+              Have questions about tent weather ratings, backpack torso sizing, monsoon gear maintenance, or corporate expedition orders? Reach out to our technical specialists based in Chennai, Tamil Nadu.
+            </p>
+          </div>
           <div class="flex flex-wrap items-center justify-center gap-4 text-xs">
             <div class="flex items-center gap-2 bg-white/10 px-3.5 py-2 rounded-xl backdrop-blur-sm border border-white/10">
               <i class="fa-solid fa-clock text-orange"></i>
@@ -660,7 +648,7 @@
         <div>
           <a href="index.html" class="inline-flex items-center gap-2.5 sm:gap-3 mb-4 group" aria-label="TrailHaven Home">
             <div class="w-11 sm:w-12 h-11 sm:h-12 rounded-xl bg-[#222823] border border-[#333C34] flex items-center justify-center p-1 shadow-sm flex-shrink-0 group-hover:border-[#D77A3C] transition-colors">
-              <img src="assets/images/trailhaven-emblem.png" alt="TrailHaven Compass Logo" class="h-9 sm:h-10 w-9 sm:w-10 object-contain rounded-lg group-hover:scale-105 transition-transform flex-shrink-0">
+              <img src="assets/images/trailhaven-emblem.svg" alt="TrailHaven Compass Logo" class="h-9 sm:h-10 w-9 sm:w-10 object-contain rounded-lg group-hover:scale-105 transition-transform flex-shrink-0">
             </div>
             <div class="flex flex-col justify-center select-none">
               <div class="flex items-baseline tracking-tight font-black leading-none font-display">

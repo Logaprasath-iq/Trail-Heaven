@@ -251,13 +251,16 @@ assert(updatedStylesCss.includes('@media (min-width: 1024px) {\n  #main-navbar #
 
 expectedPages.forEach(file => {
   const content = fs.readFileSync(path.join(root, file), 'utf8');
-  assert(content.includes('class="open-search-btn w-9 h-9 inline-flex items-center justify-center rounded-lg'), `${file} search button uses w-9 h-9 inline-flex uniform sizing`);
-  assert(content.includes('class="theme-toggle-btn w-9 h-9 inline-flex items-center justify-center rounded-lg'), `${file} theme toggle uses w-9 h-9 inline-flex uniform sizing`);
-  assert(content.includes('class="dir-toggle-btn h-9 px-2.5 inline-flex items-center justify-center'), `${file} dir toggle uses h-9 px-2.5 inline-flex uniform sizing`);
-  assert(content.includes('href="wishlist.html" class="relative w-9 h-9 inline-flex items-center justify-center rounded-lg'), `${file} wishlist link uses w-9 h-9 inline-flex uniform sizing`);
-  assert(content.includes('href="order.html" class="relative w-9 h-9 inline-flex items-center justify-center rounded-lg'), `${file} order link uses w-9 h-9 inline-flex uniform sizing`);
-  assert(content.includes('id="mobile-menu-toggle" class="lg:hidden w-9 h-9 inline-flex items-center justify-center rounded-lg'), `${file} mobile toggle uses w-9 h-9 inline-flex uniform sizing`);
-  assert(!content.includes('class="dir-toggle-btn px-2.5 py-1 rounded-lg text-xs font-bold border border-sand'), `${file} must not use old unequal py-1 dir button`);
+  const navMatch = content.match(/<header id="main-navbar"[\s\S]*?<\/header>/);
+  assert(navMatch, `${file} contains #main-navbar`);
+  const navHtml = navMatch[0];
+  assert(!navHtml.includes('class="open-search-btn w-9 h-9 inline-flex items-center justify-center rounded-lg'), `${file} navbar correctly excludes search button as per feedback`);
+  assert(navHtml.includes('class="theme-toggle-btn w-9 h-9 inline-flex items-center justify-center rounded-lg'), `${file} theme toggle uses w-9 h-9 inline-flex uniform sizing`);
+  assert(navHtml.includes('class="dir-toggle-btn h-9 px-2.5 inline-flex items-center justify-center'), `${file} dir toggle uses h-9 px-2.5 inline-flex uniform sizing`);
+  assert(!navHtml.includes('href="wishlist.html" class="relative w-9 h-9 inline-flex items-center justify-center rounded-lg'), `${file} navbar correctly excludes wishlist as per requirements`);
+  assert(!navHtml.includes('href="order.html" class="relative w-9 h-9 inline-flex items-center justify-center rounded-lg'), `${file} navbar correctly excludes cart/order as per requirements`);
+  assert(navHtml.includes('id="mobile-menu-toggle" class="lg:hidden w-9 h-9 inline-flex items-center justify-center rounded-lg'), `${file} mobile toggle uses w-9 h-9 inline-flex uniform sizing`);
+  assert(!navHtml.includes('class="dir-toggle-btn px-2.5 py-1 rounded-lg text-xs font-bold border border-sand'), `${file} must not use old unequal py-1 dir button`);
 });
 
 // 18. HOME 2 INSIDE CARD ALIGNMENT
@@ -543,6 +546,88 @@ console.log('\n--- SUITE 24: GUIDE NAVIGATION PILLS (HEADER BOX) & SCROLLSPY ---
 
   const dirJs = fs.readFileSync(path.join(root, 'assets', 'js', 'direction.js'), 'utf8');
   assert(dirJs.includes('-translate-x-full') && dirJs.includes('translate-x-full'), 'direction.js aligns drawer translate classes with RTL / LTR text direction');
+}
+
+// 26. QA REVIEW FEEDBACK FIXES (ITEMS 2, 3, 4, 6, 7, 8, 9)
+{
+  console.log('\n--- SUITE 26: QA REVIEW FEEDBACK FIXES ---');
+  const stylesCssContent = fs.readFileSync(path.join(root, 'assets', 'css', 'styles.css'), 'utf8');
+
+  // Item 9: 360px sticky navbar
+  assert(stylesCssContent.includes('overflow-x: clip !important;'), 'styles.css enforces overflow-x: clip to preserve position: sticky on mobile');
+  assert(stylesCssContent.includes('position: sticky !important;'), 'styles.css enforces position: sticky on #main-navbar');
+
+  // Item 8: Brand Logo RTL protection
+  assert(stylesCssContent.includes('direction: ltr !important;'), 'styles.css protects brand logo direction: ltr in RTL view');
+  assert(stylesCssContent.includes('unicode-bidi: isolate !important;'), 'styles.css isolates brand logo bidi in RTL view');
+
+  // Item 6: Home dropdown dark contrast
+  assert(stylesCssContent.includes('.dark #home-dropdown-nav .absolute') && stylesCssContent.includes('background-color: #1A221C !important;'), 'styles.css optimizes Home dropdown container in dark mode');
+  assert(stylesCssContent.includes('.dark #home-dropdown-nav a div:first-child') && stylesCssContent.includes('color: #FFFFFF !important;'), 'styles.css enforces pure white Home title in dark mode');
+  assert(stylesCssContent.includes('.dark #home-dropdown-nav a div:last-child') && stylesCssContent.includes('color: #D4C3A3 !important;'), 'styles.css enforces warm sand description in dark mode');
+
+  // Item 3: Outdoor-relevant SVG emblem
+  assert(fs.existsSync(path.join(root, 'assets', 'images', 'trailhaven-emblem.svg')), 'assets/images/trailhaven-emblem.svg exists on disk');
+  const emblemSvg = fs.readFileSync(path.join(root, 'assets', 'images', 'trailhaven-emblem.svg'), 'utf8');
+  assert(emblemSvg.includes('<polygon') && emblemSvg.includes('Tent') || emblemSvg.includes('Mountain'), 'trailhaven-emblem.svg contains mountain peaks and outdoor elements');
+
+  // Item 7: Home 1 Seasonal Outdoor Collection alignment
+  const indexHtml = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  assert(indexHtml.includes('min-h-[3.5rem] flex items-center leading-snug">Monsoon Cloudburst Defense</h3>'), 'index.html Card 1 title uses min-h-[3.5rem]');
+  assert(indexHtml.includes('min-h-[3.5rem] flex items-center leading-snug">Sub-Zero Alpine Winter</h3>'), 'index.html Card 2 title uses min-h-[3.5rem]');
+  assert(indexHtml.includes('min-h-[3.5rem] flex items-center leading-snug">Ultralight Summer Treks</h3>'), 'index.html Card 3 title uses min-h-[3.5rem]');
+  assert(indexHtml.includes('min-h-[3.5rem] flex items-center leading-snug">Desert & Stargazing Camps</h3>'), 'index.html Card 4 title uses min-h-[3.5rem]');
+  assert(indexHtml.includes('min-h-[3rem] flex items-start leading-relaxed'), 'index.html seasonal cards enforce min-h-[3rem] descriptions');
+
+  // Item 4: Buying Guides Section 5B card alignment
+  const bgHtml = fs.readFileSync(path.join(root, 'buying-guides.html'), 'utf8');
+  assert(bgHtml.includes('grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch'), 'buying-guides.html Section 5B grid uses items-stretch');
+  assert(bgHtml.includes('min-h-[3rem]'), 'buying-guides.html Section 5B cards enforce min-h-[3rem] on headers');
+  assert(bgHtml.includes('h-9') && bgHtml.includes('h-11'), 'buying-guides.html Section 5B tables use uniform header and row heights');
+  assert(bgHtml.includes('min-h-[2.5rem] flex items-center'), 'buying-guides.html Section 5B cards enforce min-h-[2.5rem] on footers');
+
+  // Shop Gear Button in Navbar & Mobile Drawer
+  assert(stylesCssContent.includes('.shop-gear-nav-btn') && stylesCssContent.includes('background-color: #D77A3C'), 'styles.css defines .shop-gear-nav-btn with #D77A3C');
+
+  // Per-page navbar assertions (Items 2, 3, 8 + Shop Gear CTA)
+  expectedPages.forEach(file => {
+    const pageHtml = fs.readFileSync(path.join(root, file), 'utf8');
+    const navMatch = pageHtml.match(/<header id="main-navbar"[\s\S]*?<\/header>/);
+    assert(navMatch, `${file} contains #main-navbar`);
+    const navHtml = navMatch[0];
+    assert(!navHtml.includes('open-search-btn'), `${file} #main-navbar excludes search button as per feedback`);
+    assert(navHtml.includes('src="assets/images/trailhaven-emblem.svg"'), `${file} #main-navbar uses trailhaven-emblem.svg`);
+    assert(navHtml.includes('dir="ltr"') && navHtml.includes('brand-logo-container'), `${file} #main-navbar protects brand logo with dir="ltr"`);
+    assert(navHtml.includes('shop-gear-nav-btn') && navHtml.includes('href="products.html"') && navHtml.includes('Shop Gear'), `${file} #main-navbar includes Shop Gear button redirecting to products.html`);
+
+    const drawerMatch = pageHtml.match(/<div id="mobile-nav-drawer"[\s\S]*?<\/div>\s*<\/div>\s*<\/div>/);
+    if (drawerMatch) {
+      assert(drawerMatch[0].includes('Shop Gear') && drawerMatch[0].includes('href="products.html"'), `${file} mobile drawer includes Shop Gear button`);
+      assert(!drawerMatch[0].includes('href="wishlist.html"'), `${file} mobile drawer excludes wishlist as requested`);
+      assert(!drawerMatch[0].includes('href="order.html"'), `${file} mobile drawer excludes cart/orders as requested`);
+    }
+  });
+
+  // --- SUITE 26: HERO SECTION BACKGROUND IMAGE CLARITY & CONTRAST INTEGRITY ---
+  console.log('\n--- SUITE 26: HERO SECTION BACKGROUND IMAGE CLARITY & CONTRAST INTEGRITY ---');
+  assert(stylesCssContent.includes('HERO SECTIONS: IMAGE CLARITY, CONTRAST & WCAG AAA TEXT LEGIBILITY'), 'styles.css includes Hero clarity and contrast section');
+  assert(stylesCssContent.includes('.hero-scrim-overlay'), 'styles.css defines .hero-scrim-overlay class');
+  assert(stylesCssContent.includes('filter: contrast(1.08) brightness(0.96) saturate(1.08)'), 'styles.css includes image clarity filter boosting contrast and saturation');
+  assert(stylesCssContent.includes('text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95)'), 'styles.css enforces razor-sharp text-shadow on hero h1 headings');
+  assert(stylesCssContent.includes('.hero-desc-backlayer') && stylesCssContent.includes('backdrop-filter: blur(10px)'), 'styles.css defines .hero-desc-backlayer with frosted glass effect');
+
+  const heroImagePages = [
+    'index.html', 'about.html', 'products.html', 'buying-guides.html',
+    'gallery.html', 'pricing.html', 'blog.html', 'contact.html'
+  ];
+
+  heroImagePages.forEach(file => {
+    const pageHtml = fs.readFileSync(path.join(root, file), 'utf8');
+    assert(pageHtml.includes('hero-scrim-overlay'), `${file} hero section has calibrated .hero-scrim-overlay`);
+    assert(pageHtml.includes('hero-desc-backlayer'), `${file} hero description paragraph has .hero-desc-backlayer`);
+    assert(!pageHtml.includes('rgba(22, 38, 27, 0.85)'), `${file} does not use muddy 85% dark overlay`);
+    assert(!pageHtml.includes('from-[#1A2B20]/95'), `${file} does not use heavy 95% black overlay`);
+  });
 }
 
 console.log('\n====================================================');
